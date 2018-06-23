@@ -1,0 +1,113 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: black;
+    overflow-x: hidden;
+    transition: all 0.5s;
+    padding-top: 60px;
+}
+@keyframes intro{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+body{
+  animation:intro .5s 1 ease-in;
+}
+.red{
+  color:red !important;
+
+
+}
+.search{
+  color:white;
+}
+.find{
+  text-align: center;
+}
+.subTitle{
+  text-align:center;color:#e6e6e6;font-weight:bold;margin-bottom:5%;margin-top:2.5%;
+}
+.slabo{
+  font-family: 'Slabo', serif;
+}
+.sidenav a {
+    padding-top: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #e6e6e6;
+    display:block;
+    transition: 0.3s;
+}
+body{
+  background:url("./../images/landing2.jpg")
+}
+.sidenav .item:hover{
+  background:#e6e6e6;
+  color:black !important;
+}
+.logo{
+  width:50px;
+  float:right;
+  margin-right:2%;
+}
+.title{
+  text-align:center;color:white;float:right;margin-right:5%;position:relative;top:5px;
+}
+.profileImage{
+  width:100px;height:100px;margin-left:20%;border-radius:50%;
+}
+.names{
+  color:#e6e6e6;
+  padding-top:15px;
+  text-align: center;
+}
+.userName{
+  font-size:15px;
+}
+.space{
+  padding:10px;
+}
+.spanner{
+  font-size:40px;cursor:pointer;color:white;
+}
+.searchButton{
+  margin-left: 35%;
+  width:25%;
+  margin-top:2.5%;
+}
+.searchButton:hover{
+  background:#b3b3b3;
+}
+.finder{
+  width:100%;
+  margin-top:5%;
+  text-align: center;
+
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.noborder{
+  border:none !important;
+}
+.item{
+  border-top:1px white solid;
+  padding-bottom:20px;
+}
+ .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+.closebtn:hover{
+  color:blue !important;
+}
