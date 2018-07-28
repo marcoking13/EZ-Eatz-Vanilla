@@ -5,7 +5,15 @@ const UserSchema = new Schema({
     username:String,
     name:String,
     id:String,
-    photos:Array
+    photos:Array,
+    orders:Array,
+    currentOrder:Object,
+    card:Object,
+    location:String,
+    phone:Object,
+    language:String,
+    party:Boolean,
+    
 
 });
 

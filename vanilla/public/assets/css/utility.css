@@ -1,0 +1,152 @@
+
+@keyframes intro{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+.red{
+  color:red !important;
+
+
+}
+body{
+  animation:intro .5s 1 ease-in;
+}
+.madjL{
+  margin-left:25%;
+}
+.fo{
+  padding-bottom:5%;
+}
+.adjT{
+  margin-top:5%;
+}
+.paT{
+  padding-top:2.5%;
+}
+.bpaB{
+  padding-bottom:5%;
+}
+.bte6{
+  border-top:1px solid #e6e6e6;
+}
+.gb{
+  border-bottom:transparent 2px solid;
+}
+.qu{
+  width:25%;
+}
+.fr{
+  float:right;
+}
+.gc{
+  color:green;
+}
+.profileContainer{
+  border:1px solid #e6e6e6;
+}
+.c{
+  text-align: center !important;
+}
+.b{
+  font-weight: bold;
+}
+.gb:hover{
+  opacity:1;
+}
+.rb{
+  background:#9B6D6D;
+}
+.wb{
+  background:white !important;
+}
+.w{
+  color:white;
+}
+.search{
+  color:white;
+}
+.right{
+  float:right;
+}
+.left{
+  float:left;
+}
+.s{
+  opacity:0;
+}
+
+
+.space{
+  padding:10px;
+}
+body{
+
+  overflow-x: hidden;
+}
+.origi{
+  background:url("./../images/landing2.jpg");
+}
+.white{
+  background: white !important;
+}
+.micro{
+  height: 0px !important;
+  width:0px !important;
+}
+.x {
+  text-align: center;
+}
+.e6{
+  color:#e6e6e6;
+}
+.e6b{
+  background:#f2f2f2;
+}
+.adjB{
+  margin-bottom:5%;
+}
+.bbb{
+  border-bottom:#e6e6e6 solid 1px;
+}
+.db{
+  background:url("./../images/navy.jpg");
+
+
+}
+@keyframes fadeb{
+  0%{
+    background:navy;
+  }
+  100%{
+    background:blue;
+  }
+}
+.bb{
+  background:black;
+}
+.nob{
+  font-weight: normal !important;
+}
+.adjR{
+  margin-right:5%;
+}
+.adjL{
+  margin-left:5%;
+}
+
+.green{
+  color:green;
+}
+.adjT{
+  margin-top:5%;
+}
+.adj{
+  margin:5%;
+}
+.b{
+  font-weight:bold;
+}

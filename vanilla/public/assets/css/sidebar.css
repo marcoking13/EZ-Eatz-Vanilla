@@ -1,0 +1,64 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: black;
+    overflow-x: hidden;
+    transition: all 0.5s;
+    padding-top: 60px;
+
+}
+.container-fluid{
+  padding:0;
+}
+.sidenav a {
+    padding-top: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #e6e6e6;
+    display:block;
+    transition: 0.3s;
+}
+.sidenav .item:hover{
+  background:#e6e6e6;
+  color:black !important;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.noborder{
+  border:none !important;
+}
+.item{
+  border-top:1px white solid;
+  padding-bottom:20px;
+}
+ .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    color:red;
+
+    border-radius:10px;
+}
+.closebtn:hover{
+  color:blue !important;
+}
+.profileImage{
+  width:100px;height:100px;margin-left:20%;border-radius:50%;
+}
+a{
+  color:white !important;
+}
+.names{
+  color:#e6e6e6;
+  padding-top:15px;
+  text-align: center;
+}
+.userName{
+  font-size:15px;
+}

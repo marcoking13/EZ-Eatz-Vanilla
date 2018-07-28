@@ -7,19 +7,20 @@ const database = "EZ_db";
 const db = mongojs(database,collections);
 
 passport.serializeUser((user,done)=>{
-  //Learn More
 
   done(null,user.id);
 
-console.log(user);
+  console.log(user);
 });
 //Learn More
 passport.deserializeUser((id,done)=>{
     Customer.findById(id).then((user)=>{
-      //Learn More
-      console.log(user);
 
-      done(null,user);
+      console.log(user);
+      if(user){
+      return done(null,user);
+    }
+
 
     });
 });
@@ -56,7 +57,9 @@ passport.use(
           username:profile.emails[0].value,
           photos:profile.photos[0].value
         }).save().then((newUser)=>{
-          done(null,newUser);
+          if(newUser){
+          return done(null,newUser);
+        }
         });
       }
     });

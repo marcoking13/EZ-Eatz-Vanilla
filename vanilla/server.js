@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const mongojs = require("mongojs");
 const database = "EZ_db";
 const passportGoogle = require("./config/google.js");
+const FoodTruckSample = require("./config/FoodTruckData.js");
 const collections = ["customers","owners","currentOwner","currentCustomer"];
 const db = mongojs(database,collections);
 const path = require("path");
@@ -27,6 +28,9 @@ app.get("/",(req,res)=>{
 });
 app.get("/finder",(req,res)=>{
   res.sendFile(path.resolve(__dirname+"/public/finder.html"));
+});
+app.get("/menu",(req,res)=>{
+  res.sendFile(path.resolve(__dirname+"/public/newmenu.html"));
 })
 app.get("/auth/google",passport.authenticate("google",{
   scope:["email","profile"],
@@ -46,3 +50,29 @@ app.get("/api/currentCustomer",(req,res)=>{
     res.json(data);
   });
 });
+app.get("/profile",(req,res)=>{
+  res.sendFile(__dirname+"/public/profile.html");
+});
+app.get("/api/foodtruckSample",(req,res)=>{
+  var i=0;
+  var total=0;
+  FoodTruckSample[1].menu.map((item)=>{
+
+    item.food.map((meal)=>{
+      i++;
+      total+=meal.price;
+
+
+    });
+  });
+
+    total = Math.floor(total/i);
+
+    console.log(total);
+    FoodTruckSample.priceAverage = total;
+  res.json(FoodTruckSample);
+})
+app.get("/api/profile",(req,res)=>{
+  console.log(req.body);
+
+})
