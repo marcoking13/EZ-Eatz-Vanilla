@@ -78,8 +78,23 @@ body{
 .s{
   opacity:0;
 }
+.form-control{
+  text-align: center;
+}
 
-
+.pb{
+  margin-top:10%;
+  margin-left:40%;
+  width:150px !important;
+  height:150px !important;
+}
+.fl{
+  float:left;
+  margin-left:2.5%;
+}
+.rc{
+  color:red;
+}
 .space{
   padding:10px;
 }
@@ -144,6 +159,7 @@ body{
 .adjT{
   margin-top:5%;
 }
+
 .adj{
   margin:5%;
 }

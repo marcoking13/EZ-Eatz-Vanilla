@@ -3,6 +3,14 @@
   float:right;
 
 }
+@keyframes cc{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
 .truckLogo{
   width:25%;
 
@@ -16,6 +24,7 @@
     border-right:2px solid #e6e6e6;
 
 }
+
 .box{
   padding:1%;
 }
@@ -25,9 +34,13 @@
 .list-group{
   margin-top:1%;
 }
-.list-group-item:hover{
+.ccc{
+  animation: cc 1s 1 ease-in;
+}
+.box:hover{
   background:#e6e6e6;
 }
+
 .description{
   clear:both;
   color:gray;
@@ -42,6 +55,10 @@ background:#f2f2f2;
 
 
 
+}
+.gh{
+  opacity:0 !important;
+  height:0;
 }
 .mbbb{
   width:10px;
@@ -76,4 +93,7 @@ padding:0 !important;
 }
 body{
   background:white;
+}
+.list-group-item:hover{
+  background:white !important;
 }

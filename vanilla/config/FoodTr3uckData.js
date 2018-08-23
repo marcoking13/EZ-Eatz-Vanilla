@@ -135,8 +135,8 @@ price:.50
 ]
 },
 {
-  ownerID:"mveonv49eeee8hj3vm930fc2m0",
-  objectID:"er54g7g484g5g4gm2f09rjf09cncff948fn4920",
+  ownerID:"mveonv498hj3vm930fc2m0",
+  objectID:"m2f09rjf09cncff948fn4920",
   name:"Pita Jungle",
   logo:"./assets/images/pita.png",
   background:"./assets/images/samplebanner.jpg",
@@ -640,11 +640,11 @@ address:{
  }]
 },
 {
-  ownerID:"39384rh393939393939393939393939393939348hdj8m",
-  objectID:"102293ednfuvb4tuig4tuivbt4uivb4utfnu4k92kfdc4900ecm",
+  ownerID:"39384rh48hdj8m",
+  objectID:"102293edk92kfdc4900ecm",
   name:"Burger Joint",
   logo:"./assets/images/burgerjoint.png",
-  background:"./assets/images/burgerjointbanner.jpg",
+  background:"./assets/images/samplebanner.jpg",
   display:"./assets/images/burger33.jpg",
   type:["all-american","burgers"],
   priceAverage:total,
@@ -937,11 +937,11 @@ address:{
  }]
 },
 {
-  ownerID:"12345678webgfhurfi3ufin43uifb4ivn4uivgbdj328jd389omss",
-  objectID:"sjkdxm33103vub3i4vbu4f 34uif5474578455785478457845784578542dn992d201ks1",
+  ownerID:"12345678wedj328jd389omss",
+  objectID:"sjkdxm33102dn992d201ks1",
   name:"Acai Shop",
   logo:"./assets/images/acaishop.png",
-  background:"./assets/images/acaishopbanner.jpg",
+  background:"./assets/images/samplebanner.jpg",
   display:"./assets/images/acai02.jpg",
   type:["all-american","burgers"],
   priceAverage:total,
@@ -1234,11 +1234,11 @@ address:{
  }]
 },
 {
-  ownerID:"39384rh4854854th45gh54gh4u9g5hjufecnovtbnuivhw9jfi3rgn94uhn39gi4hdj8m",
-  objectID:"102293edkfnhubv4tuif4huth45th7tg548gt54h78t592kfdc4900ecm",
+  ownerID:"39384rh48hdj8m",
+  objectID:"102293edk92kfdc4900ecm",
   name:"The Rotating Chicken",
   logo:"./assets/images/rotatingchicken.png",
-  background:"./assets/images/rotatingchickenbanner.jpg",
+  background:"./assets/images/samplebanner.jpg",
   display:"./assets/images/chicken2029.jpg",
   type:["all-american","burgers"],
   priceAverage:total,
@@ -1531,11 +1531,11 @@ address:{
  }]
 },
 {
-  ownerID:"xn1mi9fdm2ntuibt4ugn4tjign4tjibnt9jfcm20q1sj120392029",
-  objectID:"210e91320irnvrgunov45uibt4nuivbnt4uibnt4ui3280ei129ei30i09ei1ddxcx",
+  ownerID:"xn1mi9fdm29jfcm20q1sj120392029",
+  objectID:"210e91320i3280ei129ei30i09ei1ddxcx",
   name:"Salad Go",
   logo:"./assets/images/saladgo.png",
-  background:"./assets/images/saladgobanner.jpg",
+  background:"./assets/images/samplebanner.jpg",
   display:"./assets/images/salad999.jpg",
   type:["all-american","burgers"],
   priceAverage:total,
@@ -1828,22 +1828,22 @@ address:{
  }]
 },
 {
-  ownerID:"39384rfhu34h45tfh478th89rht78ty7t8t548tg4578gh48hdj8m",
-  objectID:"10229ifgn4utgn49ug5u9h54ug54hgub5t4hg93h98ht49gh5gh3493edk92kfdc4900ecm",
+  ownerID:"39384rh48hdj8m",
+  objectID:"102293edk92kfdc4900ecm",
   name:"Steak Truck",
   logo:"./assets/images/firegrill.png",
-  background:"./assets/images/steaktruckbanner.jpg",
+  background:"./assets/images/steakruckbanner.jpg",
   display:"./assets/images/steak498.jpg",
-  type:["all-american","burgers"],
+  type:["all-american","steak"],
   priceAverage:total,
   menu:[{
     catagory:"Burgers",
-      id:"cmoicrewcvnew92290923923",
+      id:"cmoicrewcvnew9229092vm3toino1bi3tnov1n[obniofjdi4ojfo4i3fn4of343923",
     food:[
 
     {
-      item:"Double Burger Meal",
-      id:"2ewjsdxme2dcxk203x298292298",
+      item:"Cheese Burger",
+      id:"2ewjsdxme2dm3r0ivm3roivnvcxk203x298292298",
 
       ingredients:[{
         name:"toasted bun",
@@ -1866,7 +1866,7 @@ address:{
         display:true
       },
       {
-        name:"side of secret sauce",
+        name:"side of  ketchup",
         display:true
       }
     ],
@@ -1876,88 +1876,72 @@ address:{
     }]
 },
 {
-  catagory:"Sliders",
-    id:"-20239049fjjj--",
+  catagory:"Steak",
+    id:"-20239049ffnc3rovnrvrnojjj--",
   food:[{
-    item:"6 burger slider",
-    id:"33456789dmxewicm",
+    item:"Top Sirloin",
+    id:"33456789dmxfrmcoivniovnewicm",
     ingredients:[{
-      name:"toasted bun",
+      name:"fries",
       display:true
     },
     {
-      name:"ground beef",
+      name:"side of steam veggies",
       display:true
     },
     {
-      name:"cheese",
-      display:true
-    },
-    {
-      name:"tomato",
-      display:true
-    },
-    {
-      name:"secret sauce",
-      display:true
-    },
-    {
-      name:"side of fries",
-      display:true
+      name:"top sirloin",
+      display:false
     }
   ],
 
     calories:600,
-    price:2.99,
-    description:"6 slider burgers with a side of fries"
+    price:12.99,
+    description:"Top grade sirloin"
   },
   {
-    item:"buffalo wings",
-    id:"2029e0i3290r203",
+    item:"New York Strip",
+    id:"33456789dmxewicmreiocvnoivnm",
     ingredients:[{
-      name:"buffalo wings",
+      name:"fries",
+      display:true
+    },
+    {
+      name:"side of steam veggies",
+      display:true
+    },
+    {
+      name:"top sirloin",
       display:false
-    },
-    {
-      name:"side of A01 sauce",
-      display:true
     }
   ],
 
-    calories:450,
-    price:5.99,
-    description:"Our fresh seasoned buffalo wings"
+    calories:600,
+    price:12.99,
+    description:"Top grade New York strip"
   },
   {
-    item:"Greek Salad",
-    id:"aa2442020393939838jgjgjg",
+    item:"Top Sirloin",
+    id:"33456789dmxewicm",
     ingredients:[{
-      name:"olives",
+      name:"fries",
       display:true
     },
     {
-      name:"tomato",
+      name:"side of steam veggies",
       display:true
     },
     {
-      name:"onion",
-      display:true
-    },
-    {
-      name:"greens",
-      display:true
-    },
-    {
-      name:"feta",
-      display:true
+      name:"top sirloin",
+      display:false
     }
   ],
 
-    calories:400,
-    price:4.99,
-    description:"A classic greek salad"
-  }]
-},
+    calories:600,
+    price:12.99,
+    description:"Top grade sirloin"
+  },
+
 {
   catagory:"Pizzas",
   id:"nojdmi0ednemide",
@@ -2125,8 +2109,8 @@ address:{
  }]
 },
 {
-  ownerID:"39384rh4rfngu4igbi81w1cexjouqcchsk290d2edj8m",
-  objectID:"y543u8dn3uirvbr3vgui3ng34ubg3gf329dxdn2i1ocd2ocmwco100eal",
+  ownerID:"39384rh481w1cexjouqcchsk290d2edj8m",
+  objectID:"y543u829dxdn2i1ocd2ocmwco100eal",
   name:"China Bowl",
   logo:"./assets/images/chinabowl.png",
   background:"./assets/images/chinabowlbanner.jpg",
@@ -2320,7 +2304,7 @@ address:{
   objectID:"102293edk92kfdc4900ecm2020209",
   name:"Johnny Rocket",
   logo:"./assets/images/johnnyrocket.png",
-  background:"./assets/images/johnnyrocketbanner.jpg",
+  background:"./assets/images/johhnyrocketbanner.jpg",
   display:"./assets/images/america33.jpg",
   type:["all-american","burgers"],
   priceAverage:total,
@@ -2613,8 +2597,8 @@ address:{
  }]
 },
 {
-  ownerID:"39384rh48nfrvurivgrn8gh54n9g579ghhdj8mfj230f08",
-  objectID:"102293edntuivb4fvgn45gu4n39vfng54ug8b34bgk92kfdc4900ecmceroinveiu",
+  ownerID:"39384rh48hdj8mfj230f08",
+  objectID:"102293edk92kfdc4900ecmceroinveiu",
   name:"The Stand",
   logo:"./assets/images/thestand.png",
   background:"./assets/images/thestandbanner.jpg",
@@ -2693,7 +2677,7 @@ address:{
   {
     item:"Greek Salad",
     id:"aa244340904909412020393939838jgjgjg",
-    modal:false,
+    modal:true,
     ingredients:[{
       name:"olives",
       display:true
@@ -2719,79 +2703,6 @@ address:{
     calories:400,
     price:4.99,
     description:"A classic greek salad"
-  }]
-},
-{
-  catagory:"Pizzas",
-  id:"nojdmi0ednemide",
-  food:[{
-    item:"Classic Cheese",
-    id:"19292929229384567438920394857",
-    ingredients:[{
-      name:"cheese",
-      display:false
-    },
-    {
-      name:"tomato sauce",
-      display:true
-    },
-    {
-      name:"sour dough bread",
-      display:false
-    }
-  ],
-
-    calories:1000,
-    price:9.53,
-    description:"Original cheese pizzas on sour dough bread"
-  },
-  {
-    item:"Veggie Pizza",
-    id:"jnnvnvnreivvnvnvnvnrvnvrrvnj22",
-    ingredients:[{
-      name:"olives",
-      display:false
-    },
-    {
-      name:"tomato",
-      display:true
-    },
-    {
-      name:"bell pepper",
-      display:false
-    },
-    {
-      name:"onion",
-      display:false
-    },
-    {
-      name:"spinach",
-      display:false
-    },
-    {
-      name:"tomato sauce",
-      display:true
-    }
-  ],
-    calories:550,
-    price:2.41,
-    description:"Veggie pizza on sour dough"
-  },
-  {
-    id:"r3j29fj2f92m9mc9m29",
-    item:"Chicken Pizza",
-    ingredients:[{
-      name:"grilled chicken",
-      display:false
-    },
-    {
-      name:"tomato sauce",
-      display:true
-    }
-  ],
-    calories:900,
-    price:4.50,
-    description:"Grilled chicken on top of a cheese pizza"
   }]
 },
 {
@@ -2888,8 +2799,8 @@ address:{
  }]
 },
 {
-  ownerID:"32903209024nvtuericvn2ervut4bh93rnv3r895g4n9v3n598gr08d32dj0m0fcn290",
-  objectID:"fnc249fc94fhcnvtnuibvhteivnr3uibtruivnritubn49ovnrtbh4999898383298329",
+  ownerID:"32903209024r08d32dj0m0fcn290",
+  objectID:"fnc249fc94fhcn99898383298329",
   name:"Remmy's",
   logo:"./assets/images/remmy.png",
   background:"./assets/images/remmeybanner.jpg",
@@ -3165,11 +3076,11 @@ address:{
  }]
 },
 {
-  ownerID:"308eu023dfm20dj1mx231343e4ndcocdcndsoicndsocsndocdsnciod123e3e32130",
-  objectID:"93292398eui33cnewiovnklaSCMRI3UVNEIAONVRQ39V33343323248u483938r3320492",
+  ownerID:"308eu023dfm20dj1mx231343e4123e3e32130",
+  objectID:"93292398eui3333343323248u483938r3320492",
   name:"Pizza Town",
   logo:"./assets/images/pizzatown.png",
-  background:"./assets/images/pizzatownbanner.jpg",
+  background:"./assets/images/samplebanner.jpg",
   display:"./assets/images/pizza45.jpg",
   type:["all-american","pizza"],
   priceAverage:total,
@@ -3383,7 +3294,7 @@ address:{
     description:"Veggie pizza on sour dough"
   },
   {
-    id:"8323984394839483023902encjo940",
+    id:"8323984394839483023902940",
     item:"Chicken Pizza",
     ingredients:[{
       name:"grilled chicken",

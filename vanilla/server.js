@@ -5,8 +5,8 @@ const mongoose = require("mongoose");
 const mongojs = require("mongojs");
 const database = "EZ_db";
 const passportGoogle = require("./config/google.js");
-const FoodTruckSample = require("./config/FoodTruckData.js");
-const collections = ["customers","owners","currentOwner","currentCustomer"];
+const FoodTruck = require("./config/FoodTruckData.js");
+const collections = ["customers","owners","currentTruck","trucks","currentOwner","currentCustomer","checkouts","currentCheckout"];
 const db = mongojs(database,collections);
 const path = require("path");
 app.use(express.static("public"));
@@ -15,6 +15,8 @@ const passport = require("passport");
 const Accounts = require("./models/accountSchema.js");
   mongoose.connect("mongodb://localhost:27017/EZ_db",()=>{
     console.log("Database is connected");
+    db.trucks.remove({});
+    db.trucks.insert(FoodTruck);
   })
 app.use(passport.initialize());
 app.use(passport.session());
@@ -56,23 +58,34 @@ app.get("/profile",(req,res)=>{
 app.get("/api/foodtruckSample",(req,res)=>{
   var i=0;
   var total=0;
-  FoodTruckSample[1].menu.map((item)=>{
 
-    item.food.map((meal)=>{
-      i++;
-      total+=meal.price;
-
-
-    });
-  });
-
-    total = Math.floor(total/i);
-
-    console.log(total);
-    FoodTruckSample.priceAverage = total;
-  res.json(FoodTruckSample);
+  res.json(FoodTruck);
 })
 app.get("/api/profile",(req,res)=>{
   console.log(req.body);
 
 })
+app.post("/api/currentFoodtruckSample",(req,res)=>{
+  console.log(req.body.code);
+  db.currentTruck.remove({});
+  db.trucks.find({objectID:req.body.code},(err,data)=>{
+    db.currentTruck.insert(data);
+
+  })
+  app.get("/api/currentFoodtruckSample",(req,res)=>{
+    db.currentTruck.find({},(err,data)=>{
+      console.log(data,"Data");
+      res.json(data);
+    })
+  })
+  // db.currentTruck.insert(req.body,(err,res)=>{
+  //   console.log(err,"eronvrei");
+  //   db.currentTruck.find({},(err,data)=>{
+  //       console.log(data,"rino");
+  //       res.json(data);
+  //   });
+  });
+
+  app.get("/checkout",(req,res)=>{
+    res.sendFile(path.resolve(__dirname+"/public/checkout.html"))
+  })

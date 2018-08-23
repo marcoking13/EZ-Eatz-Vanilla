@@ -7,6 +7,15 @@
   margin-bottom:5%;
   margin-top:2.5%;
 }
+.ff{
+  float:left;
+  margin-left:5%;
+  position:relative;
+  bottom:20px;
+}
+.fh{
+  float:left;
+}
 .slabo{
   font-family: 'Slabo', serif;
 }
@@ -17,7 +26,7 @@
 }
 
 .FoodTruck:hover{
-  border:red 4px solid;
+  border-color:red
 }
 .col-2{
 margin-top:5% !important;
@@ -49,10 +58,10 @@ margin-top:5% !important;
 .info{
   display:inline;
   margin-left:2.5%;
-  font-weight: normal;
+
 }
 .companyName{
-    font-weight: bold !important;
+
     text-align: center;
 
 }
@@ -64,9 +73,10 @@ margin-top:5% !important;
   border-top:1px solid white;
   padding-bottom:5%;
 
+  padding-bottom:25%;
   margin-top:2.5%;
 }
-.FoodTruck{margin-top:2.5%;padding:0;border:2px black solid;opacity:0}
+.FoodTruck{margin-top:2.5%;padding:0;border:2px black solid;opacity:0;border:none 3px solid;width:25%}
 .type{
   font-weight:normal;color:gray;text-align:center
 }
@@ -78,10 +88,17 @@ body{
   background:url("./../images/landing2.jpg");
 }
 .TruckDetailContainer{
-  width:100%;background:white;
+  width:100%;
+}
+.FoodTruck{
+  background:black !important;
 }
 .TruckImage{
-  width:100%;height:50%;
+  width:100%;height:200px;
+
+}
+.type{
+  color:white !important;
 }
 .infoContainer{
   margin-left:2.5%;
@@ -92,7 +109,9 @@ body{
 .pricing{
   font-weight: bold;
 }
-
+.w{
+  background:white;
+}
 .sampleFadeIn{
   opacity:1;
   animation:intro .5s 1 ease-in;
@@ -101,5 +120,5 @@ body{
   width:50%;
   margin-left:25%;
   margin-bottom:5%;
-  padding-top:5%;
+
 }

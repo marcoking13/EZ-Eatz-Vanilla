@@ -22,9 +22,14 @@
 
   float:left;
 }
+.menuBanner{
+  opacity:1;
+
+}
 .blackbanner{
-  background:black;
-  opacity:.7;
+  background:#262626;
+
+border-radius:10px;
   padding-bottom:2%;
 }
 .namer{
