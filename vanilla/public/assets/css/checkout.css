@@ -16,14 +16,43 @@ h4{
 
 
 }
-
+.container-fluid{
+  width:75%;
+  margin-left:15%;
+  background:white;
+    border-radius:20px;
+}
+.d{
+background:#f2f2f2;
+}
+.totalm{
+  padding:0px 10px 0px 10px;
+}
+.vsa{
+  width:60% !important;
+}
+.d:hover{
+  background:#e6e6e6; !important;
+}
+.totals{
+  margin-right:7.5%;
+}
+.editors{
+  width:20px;
+  float:left;
+  margin-left:10px;
+}
+/* .totalt{
+  margin-left:7.5%;
+} */
 .orin{
 
   margin-top:2.5%;
   padding-bottom:1%;
 }
 .banner{
-  background:red;
+  background:#262626;
+
 padding-top:1%;
 padding-bottom:1%;
 
@@ -67,9 +96,14 @@ padding-bottom:1%;
   margin-left:25%;
   font-weight: bold;
   color:blue;
+  background:#e6e6e6 !important;
 }
+
 .totals{
   float:right;
+}
+.vsa{
+
 }
 .totalm{
     border-bottom:1px solid #e6e6e6;
@@ -96,18 +130,31 @@ padding-bottom:1%;
 }
 li{
   list-style-type: none;
-  border-top:1px #e6e6e6 solid;
+  border-bottom:1px #e6e6e6 solid;
   position:relative;
   left:10px;
+}
+.option{
+  float:right !important;
+  margin-right:5%;
+}
+.link{
+  float:right;
 }
 .review{
   text-align:center;
   color:white;
   font-weight:bold;
 }
+ul{
+  border-top:1px solid #e6e6e6;
+}
+.food{
+  padding:20px;
+}
 .list{
   list-style-type: none;
-  border-top:1px solid #e6e6e6;
+
   border-bottom:1px solid #e6e6e6;
   width:100%;
 
@@ -140,7 +187,7 @@ h5{
 }
 .tipbar{
   margin-top:2.5%;
-  padding-bottom:5%;
+  padding-bottom:10%;
 }
 
 h6{
@@ -152,9 +199,19 @@ h6{
 .mt{
   margin-top:5%;
 }
+body{
+  background:url("./../images/foodm.jpg")
+}
 .tipBox:hover{
   color:white;
   background:teal;
+}
+.orin{
+  width:90%;
+  margin-left:5%;
+}
+.orinh5{
+  margin-bottom:1%;
 }
 .tipContainer{
   margin-left:10%;
@@ -168,4 +225,61 @@ h6{
 }
 .paying{
   width:50%;
+}
+.cancel:hover{
+  color:red !important;
+}
+.food{
+
+}
+.icons{
+    width:10px;
+}
+.xx{
+  width:15px;
+  margin-top:10px;
+
+}
+.icon-edi{
+  float:left;
+  padding-right:1%;
+}
+.totals{
+  margin-left:5% !important;
+}
+@keyframes ghost{
+  0%{opacity:1}
+  100%{opacity:0}
+}
+.gho{
+  opacity:0;
+  animation:.5s 1 ghost ease-out;
+}
+.review{
+  margin-right:10%;
+}
+@media only screen and (max-width: 580px) {
+    .container-fluid {
+        width:100%;
+        margin-left:0;
+        padding-bottom:10%;
+    }
+    body{
+      background:none;
+    }
+    .tipContainer{
+      padding-bottom:20%;
+    }
+    .totalm{
+height:100px;
+border-bottom:none;
+
+    }
+    .totalt, .totals{
+      margin-top:5%;
+
+    }
+    .payContainer{
+      padding-top:10%;
+    }
 }

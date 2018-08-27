@@ -85,7 +85,21 @@ app.post("/api/currentFoodtruckSample",(req,res)=>{
   //       res.json(data);
   //   });
   });
-
+app.post("/data/cancel",(req,res)=>{
+  db.currentCheckout.remove({});
+  res.redirect("/menu");
+})
   app.get("/checkout",(req,res)=>{
     res.sendFile(path.resolve(__dirname+"/public/checkout.html"))
+  })
+  app.post("/api/currentCheckout",(req,res)=>{
+
+    db.currentCheckout.insert(req.body,(err,res)=>{
+      console.log(res);
+    })
+  });
+  app.get("/api/currentCheckout",(req,res)=>{
+    db.currentCheckout.find({},(err,data)=>{
+        res.json(data);
+    })
   })

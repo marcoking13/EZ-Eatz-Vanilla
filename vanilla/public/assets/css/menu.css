@@ -91,9 +91,21 @@ padding:0 !important;
 .catagory:hover{
   color:red;
 }
+.link, .option{
+  margin-left:50%;
+}
+.namer{
+  margin-left:50%;
+}
 body{
   background:white;
 }
 .list-group-item:hover{
   background:white !important;
+}
+.nmeucn{
+  width:50px !important;
+  height:50px !important;
+  float:right;
+  margin-right:5%;
 }

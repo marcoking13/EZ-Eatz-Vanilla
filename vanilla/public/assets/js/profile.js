@@ -11,24 +11,6 @@ $.ajax({
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function renderNL(pro){
   $("<div>").addClass("row NC").appendTo(".fo");
   $("<div>").addClass("col-6 N").appendTo(".NC");

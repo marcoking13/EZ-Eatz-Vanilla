@@ -9,18 +9,24 @@
 //   renderTipBoxes();
 // })
 
+$.ajax({
+  url:"http://localhost:8000/api/currentCheckout",
+  method:"GET"
+}).done((response)=>{
 
-function renderHTML(){
-  renderBanner();
-  renderInstructions();
-  renderTipBoxes();
-  renderOrder();
-  renderPay();
+
+  renderHTML(response);
+  console.log(response);
+})
+function renderHTML(response){
+  renderBanner(response);
+  renderInstructions(response);
+  renderTipBoxes(response);
+  renderOrder(response);
+  renderPay(response);
 
 }
 
-
-renderHTML();
 function PayPalRender(){
   paypal.Button.render({
   // Configure environment
@@ -59,29 +65,33 @@ function PayPalRender(){
 }
 
 
-function renderBanner(){
+function renderBanner(response){
 
   $("<div>").addClass("banner").appendTo(".container-fluid");
-  $("<h5>").addClass("cancel").appendTo(".banner").text("Cancel");
-  $("<h4>").addClass("review").text("Your Order").appendTo(".banner");
+  $("<h5>").addClass("cancel").appendTo(".banner").text("Cancel Order");
+  $("<h4>").addClass("review").text("Checkout").appendTo(".banner");
 
   $(".cancel").on("click",(event)=>{
-    window.location.assign("/finder");
+    $.ajax({
+      url:"http://localhost:8000/data/cancel",
+      method:"POST"
+    });
+    window.location.assign("/menu");
   })
 
 }
-function renderInstructions(){
+function renderInstructions(response){
 
 $("<div>").addClass("orin").appendTo(".container-fluid");
 $("<h5>").addClass("orinh5").text("Order Instructions").appendTo(".orin");
 $("<div>").addClass("input-group").appendTo(".orin");
-$("<input>").addClass("form-control centerText").attr("placeholder"," Search for a food truck").appendTo(".input-group");
+$("<input>").addClass("form-control centerText").attr("placeholder"," Add instructions for your order").appendTo(".input-group");
 $("<div>").addClass("input-group-append").appendTo(".input-group");
 $("<button>").addClass("btn btn-outline-secondary").text("Search").appendTo(".input-group-append");
 
 }
 
-function renderTipBoxes(){
+function renderTipBoxes(response){
   var percentages = [10,15,20,30];
   var i =0;
   $("<div>").addClass("tipbar").appendTo(".container-fluid");
@@ -96,57 +106,51 @@ function renderTipBoxes(){
     i++;
   })
 }
-function renderOrder(){
-  var order = [
-    {
-      name:"Lavash Pizza",
-      mods:["tomato","onion"],
-      price:3.99,
 
-    },
-    {
-      name:"Coconut Curry Soup",
-      mods:[],
-      price:2.99,
+function renderOrder(response){
+  var order=[];
+  response.map((orders)=>{
+      order.push(orders);
+      console.log(order);
+  })
 
-    },
-    {
-      name:"Gyro",
-      mods:["gyro meat","onion"],
-      price:5.99,
-
-    },
-
-  ]
   var total = 0;
-  $("<div>").addClass("orderbarf").appendTo(".container-fluid");
-  $("<h5>").addClass("ordernow").text("Your Order").appendTo(".orderbarf");
+  // $("<div>").addClass("orderbarf").appendTo(".container-fluid");
+  // $("<h5>").addClass("ordernow").text("Your Order").appendTo(".orderbarf");
   $("<div>").addClass("revieworder").appendTo(".container-fluid");
   $("<ul>").addClass("orderlist").appendTo(".revieworder");
   var i = 0;
   order.map((food)=>{
+    console.log(food);
+    food.price = parseFloat(food.price);
     total += food.price;
     $("<li>").addClass("food food"+i).appendTo(".revieworder");
+    $("<div>").addClass("icon-edi icon-edi"+i).appendTo(".food"+i);
+    $("<img>").addClass("editors xx").attr("src","assets/images/delete.png").appendTo(".icon-edi"+i);
+    $("<img>").addClass("editors").attr("src","assets/images/edit.png").appendTo(".icon-edi"+i);;
       $("<p>").addClass("dollar").text("$"+food.price).appendTo(".food"+i);
-    $("<p>").addClass("orderl").appendTo(".food"+i).text(food.name);
-    food.mods.map((mod)=>{
-      $("<p>").addClass("orderm").appendTo(".food"+i).text("-No "+mod);
-    });
+    $("<p>").addClass("orderl").appendTo(".food"+i).text(food.item);
+    // food.mods.map((mod)=>{
+    //   $("<p>").addClass("orderm").appendTo(".food"+i).text("-No "+mod);
+    // });
 i++;
-  })
+});
+
+total =Math.round(total * 100) / 100
   $("<div>").addClass("totalm").appendTo(".container-fluid");
+
   $("<h4>").addClass("totalt").text("Total").appendTo(".totalm");
   $("<h4>").addClass("totals").text("$"+total).appendTo(".totalm");
 }
 
 
 
-function renderPay(){
+function renderPay(response){
   $("<div>").addClass("payContainer").appendTo(".container-fluid");
   $("<h4>").addClass("pay").text("Pay Now").appendTo(".payContainer");
   $("<div>").addClass("payC").appendTo(".payContainer");
   $("<button>").addClass("btn d paying").attr("id","paypal-button").appendTo(".payC");
   $("<img>").addClass("payimage").appendTo("#paypal-button").attr("src","assets/images/paypal.png");
   $("<button>").addClass("btn paying vis").attr("id","visa").appendTo(".payC");
-  $("<img>").addClass("payimage").appendTo("#visa").attr("src","assets/images/visa.png");
+  $("<img>").addClass("payimage vsa").appendTo("#visa").attr("src","assets/images/visa.png");
 }
