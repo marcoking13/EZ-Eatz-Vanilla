@@ -6,6 +6,7 @@ const mongojs = require("mongojs");
 const database = "EZ_db";
 const passportGoogle = require("./config/google.js");
 const FoodTruck = require("./config/FoodTruckData.js");
+
 const collections = ["customers","owners","currentTruck","trucks","currentOwner","currentCustomer","checkouts","currentCheckout"];
 const db = mongojs(database,collections);
 const path = require("path");
@@ -13,15 +14,18 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 const passport = require("passport");
 const Accounts = require("./models/accountSchema.js");
+
   mongoose.connect("mongodb://localhost:27017/EZ_db",()=>{
     console.log("Database is connected");
     db.trucks.remove({});
+    db.currentCustomer.remove({});
+    db.currentTruck.remove({});
     db.trucks.insert(FoodTruck);
   })
 app.use(passport.initialize());
 app.use(passport.session());
 app.listen(8000,()=>{
-  console.log("App is running on localhost:3000");
+  console.log("App is running on localhost:8000");
 })
 
 app.get("/",(req,res)=>{
@@ -60,9 +64,10 @@ app.get("/api/foodtruckSample",(req,res)=>{
   var total=0;
 
   res.json(FoodTruck);
+
 })
 app.get("/api/profile",(req,res)=>{
-  console.log(req.body);
+
 
 })
 app.post("/api/currentFoodtruckSample",(req,res)=>{
@@ -74,9 +79,19 @@ app.post("/api/currentFoodtruckSample",(req,res)=>{
   })
   app.get("/api/currentFoodtruckSample",(req,res)=>{
     db.currentTruck.find({},(err,data)=>{
-      console.log(data,"Data");
+
       res.json(data);
     })
+  })
+  app.post("/api/profileChanges",(req,res)=>{
+
+    console.log(req.body,"PROFILE");
+
+  });
+
+  app.get("/api/edit",(req,res)=>{
+      console.log(req.body);
+    res.redirect("/profile")
   })
   // db.currentTruck.insert(req.body,(err,res)=>{
   //   console.log(err,"eronvrei");
@@ -95,7 +110,7 @@ app.post("/data/cancel",(req,res)=>{
   app.post("/api/currentCheckout",(req,res)=>{
 
     db.currentCheckout.insert(req.body,(err,res)=>{
-      console.log(res);
+
     })
   });
   app.get("/api/currentCheckout",(req,res)=>{
