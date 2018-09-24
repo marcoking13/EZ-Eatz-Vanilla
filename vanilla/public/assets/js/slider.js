@@ -423,4 +423,25 @@ var element =  $(tag).text(text).appendTo(append);
   }
 }
 
-function 
+function organizer(data,err){
+  console.log(data,err);
+  var catagories = {
+    american:[],
+    me:[],
+    chinese:[],
+    sushi:[],
+    healthy:[],
+    near:[],
+    popular:[],
+    searched:
+  }
+    data.catagories.map((catagory)=>{
+      console.log(catagory);
+      switch(catagory){
+        case "all-american":
+          catagories.american.push(data);
+          case "chinese":
+            catagories.chinese.push(data);
+      }
+    })
+}

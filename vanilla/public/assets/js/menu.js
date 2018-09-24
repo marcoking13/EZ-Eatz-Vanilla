@@ -9,6 +9,7 @@ var truck = response[0];
 var checkout = [];
 var flag = false;
 var checkout = [];
+console.log(response)
   renderTruckDetail(truck);
    renderBanner(truck);
   for(var i =0; i<truck.menu.length; i++){
@@ -124,11 +125,11 @@ function renderCatagories(catagories,i){
 
 function renderTruckDetail(truck){
 
-
+console.log(truck)
 
     $("<div>").addClass("row ladjT  b4 bbb").appendTo(".companyDetail");
       $("<div>").addClass("col-3 imc").appendTo(".b4")
-        $("<img>").addClass("adjL truckLogo").attr("src",truck.image).appendTo(".imc");
+        $("<img>").addClass("adjL truckLogo").attr("src",truck.background).appendTo(".imc");
 
         $("<div>").addClass("col-3 nmc").appendTo(".b4")
 

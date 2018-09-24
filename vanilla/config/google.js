@@ -45,7 +45,12 @@ var profile = {
       if(response){
          console.log("User already in database");
          db.currentCustomer.remove({});
-         db.currentCustomer.insert(profile);
+         db.customers.find({id:response.id},(err,data)=>{
+           console.log(data,"DATA");
+           db.currentCustomer.insert(data,(err,data)=>{
+             console.log("DATA2",data);
+           });
+         })
          return done(null,response);
 
       }else{

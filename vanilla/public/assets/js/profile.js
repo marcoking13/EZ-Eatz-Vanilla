@@ -55,7 +55,7 @@ function renderPD(pro){
   $("<button>").addClass("btn btn-primary ha madjL final").attr("type","submit").text("Save Changes").appendTo(".fo");
 
   $(".madjL").on("click",(event)=>{
-
+      event.preventDefault();
     var element = event.target;
 
     var last = $("#last").val();
@@ -72,7 +72,7 @@ function renderPD(pro){
       photos:[]
     }
     $.ajax({
-      url:"http://localhost:8000/api/profileChanges",
+      url:"http://localhost:8000/api/profileChange",
       method:"POST",
       data:profile
     }).done((response)=>{

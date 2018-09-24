@@ -4,24 +4,23 @@ const port = 8000;
 
 
 
-app.post("/api/profileChanges",(req,res)=>{
+app.post("/api/profileChange",(req,res)=>{
+
+
   var profile = req.body;
-   console.log(profile,"PROFILE");
-
-   db.customers.find({
-     username:profile.username
-   },(err,data)=>{
-     console.log(data);
-
-     db.customers.update({id:data.id},{$set:
-       {
-        name:data.last
-     }
-   },(err,data)=>{
-     console.log(data,"FEEDBACK")
-   })
-   })
-
+  console.log(profile);
+    db.currentCustomer.find({},(err,data)=>{
+      console.log(data);
+      db.customers.update(
+        {id:data.id},
+        {
+        id:data.id,
+        name:profile.name,
+        email:profile.email,
+        phone:profile.phone,
+        language:profile.language
+      })
+    })
 
 });
 module.exports = app;

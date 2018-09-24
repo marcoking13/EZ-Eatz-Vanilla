@@ -6,7 +6,7 @@ const mongojs = require("mongojs");
 const database = "EZ_db";
 const passportGoogle = require("./config/google.js");
 const FoodTruck = require("./config/FoodTruckData.js");
-
+const ProfileChange = require("./config/profileChange.js");
 const collections = ["customers","owners","currentTruck","trucks","currentOwner","currentCustomer","checkouts","currentCheckout"];
 const db = mongojs(database,collections);
 const path = require("path");
@@ -27,6 +27,36 @@ app.use(passport.session());
 app.listen(8000,()=>{
   console.log("App is running on localhost:8000");
 })
+
+
+
+
+app.post("/api/profileChange",(req,res)=>{
+
+
+  var profile = req.body;
+  console.log(profile);
+    db.currentCustomer.find({},(err,data)=>{
+
+      data = data[0];
+      console.log(data,"DATA");
+  console.log(profile,"PROFILE");
+      db.customers.update({id:data.id},{
+        name:profile.name,
+        username:profile.username,
+        phone:profile.phone,
+        language:profile.language
+      },(err,data)=>{
+        if(err){
+          console.log(err);
+        }
+        console.log(data);
+        db.currentCustomer.remove({});
+        db.currentCustomer.insert({data})
+      })
+    })
+
+});
 
 app.get("/",(req,res)=>{
   db.currentCustomer.remove({});
@@ -66,10 +96,7 @@ app.get("/api/foodtruckSample",(req,res)=>{
   res.json(FoodTruck);
 
 })
-app.get("/api/profile",(req,res)=>{
 
-
-})
 app.post("/api/currentFoodtruckSample",(req,res)=>{
   console.log(req.body.code);
   db.currentTruck.remove({});
@@ -83,11 +110,7 @@ app.post("/api/currentFoodtruckSample",(req,res)=>{
       res.json(data);
     })
   })
-  app.post("/api/profileChanges",(req,res)=>{
 
-    console.log(req.body,"PROFILE");
-
-  });
 
   app.get("/api/edit",(req,res)=>{
       console.log(req.body);
