@@ -1,8 +1,8 @@
 
 
 function renderModal(signup){
-  $(".container2").empty();
-  $("<div>").addClass("modal modl col-6").attr("id","exampleModal").appendTo(".container2");
+  $(".container").empty();
+  $("<div>").addClass("modal modl col-6").attr("id","exampleModal").appendTo(".container");
   $("<div>").addClass("modal-dialog12").appendTo(".modl");
   $("<div>").addClass("modal-content").appendTo(".modal-dialog12");
   $("<div>").addClass("modal-header").appendTo(".modal-content");
@@ -37,8 +37,8 @@ function inputMake(data,i,col){
 }
 
 
-$(".landButton").on("click",(event)=>{
-  var data = event.target.classList[0];
+$(".btn").on("click",(event)=>{
+  var data = event.target.classList[1];
   if(data == "signup"){
     renderModal(false);
   }else{

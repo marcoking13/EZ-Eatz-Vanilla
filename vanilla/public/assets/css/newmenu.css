@@ -29,8 +29,8 @@
 .checkout{
 
   width:100%;
-  margin-top:6%;
-  padding-bottom:1%;
+
+margin-top:20%;
 
 }
 .rlogo{
@@ -57,13 +57,14 @@ border-radius:10px;
 .namer{
     color:white;
 }
-.menux{
-  padding-bottom:7.5%;
-}
+
 .list-group{
   width:100%;
 }
 .list-group-item:hover{
   background:#e6e6e6;
 
+}
+.checkout{
+  margin-top:30%;
 }

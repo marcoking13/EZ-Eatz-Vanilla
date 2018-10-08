@@ -8,6 +8,12 @@ const FoodTrucks =  [{
   background:"./assets/images/samplebanner2.jpg",
   display:"./assets/images/smoothie.jpg",
   type:["dessert","all-american"],
+  address:{
+    street:"4 E University Dr",
+    city:"Tempe",
+    state:"AZ",
+    zip: 85281
+  },
   priceAverage:total,
   menu:[{
     catagory:"Sandwiches",
@@ -97,12 +103,6 @@ const FoodTrucks =  [{
 }],
 
 images:["image2.png","image3.png","image4.png"],
-address:{
-   street:"7474 W Ocean Drive",
-   zip:843848,
-   city:"phoenix",
-   state:"az"
- },
  sides:[
    {
    name:"skittles",
@@ -608,11 +608,12 @@ price:.50
 
 images:["image2p.png","image3p.png","image4p.png"],
 address:{
-   street:"7474 W Desert Drive",
-   zip:84848,
-   city:"phoenix",
-   state:"az"
- },
+
+  street:"4005 N Scottsdale Rd",
+  city:"Scottsdale",
+  state:"AZ",
+  zip: 85251
+},
  sides:[{
    name:"hummus",
    type:null,
@@ -915,11 +916,12 @@ address:{
 
 images:["image2p.png","image3p.png","image4p.png"],
 address:{
-   street:"7474 W Desert Drive",
-   zip:84848,
-   city:"phoenix",
-   state:"az"
- },
+  zip:85054,
+  street:"7111 E Mayo Blvd",
+  city:"Phoenix",
+  state:"AZ"
+
+},
  sides:[{
    name:"fries",
    type:null,
@@ -1212,11 +1214,12 @@ address:{
 
 images:["image2p.png","image3p.png","image4p.png"],
 address:{
-   street:"7474 W Desert Drive",
-   zip:84848,
-   city:"phoenix",
-   state:"az"
- },
+
+  street:"7354 E Shea Blvd",
+  city:"Scottsdale",
+  state:"AZ",
+  zip: 85260
+},
  sides:[{
    name:"fries",
    type:null,
@@ -1509,11 +1512,12 @@ address:{
 
 images:["image2p.png","image3p.png","image4p.png"],
 address:{
-   street:"7474 W Desert Drive",
-   zip:84848,
-   city:"phoenix",
-   state:"az"
- },
+
+  street:"7354 E Shea Blvd",
+  city:"Scottsdale",
+  state:"AZ",
+  zip: 85260
+},
  sides:[{
    name:"fries",
    type:null,
@@ -1806,11 +1810,11 @@ address:{
 
 images:["image2p.png","image3p.png","image4p.png"],
 address:{
-   street:"7474 W Desert Drive",
-   zip:84848,
-   city:"phoenix",
-   state:"az"
- },
+  street:"1290 S Normal Ave",
+  city:"Tempe",
+  state:"AZ",
+  zip: 85260
+},
  sides:[{
    name:"fries",
    type:null,
@@ -2103,11 +2107,11 @@ address:{
 
 images:["image2p.png","image3p.png","image4p.png"],
 address:{
-   street:"7474 W Desert Drive",
-   zip:84848,
-   city:"phoenix",
-   state:"az"
- },
+  zip:85251,
+  street:"7333 E Indian Plaza",
+  city:"Scottsdale",
+  state:"AZ"
+},
  sides:[{
    name:"fries",
    type:null,
@@ -2294,11 +2298,11 @@ address:{
 
 images:["image2p.png","image3p.png","image4p.png"],
 address:{
-   street:"7474 W Desert Drive",
-   zip:84848,
-   city:"phoenix",
-   state:"az"
- },
+  street:"3123 N Scottsdale Rd",
+  city:"Scottsdale",
+  state:"AZ",
+  zip: 85260
+},
  sides:[{
    name:"wontons",
    type:null,
@@ -2591,11 +2595,11 @@ address:{
 
 images:["image2p.png","image3p.png","image4p.png"],
 address:{
-   street:"7474 W Desert Drive",
-   zip:84848,
-   city:"phoenix",
-   state:"az"
- },
+  street:"7354 E Shea Blvd",
+  city:"Scottsdale",
+  state:"AZ",
+  zip: 85260
+},
  sides:[{
    name:"fries",
    type:null,
@@ -2866,11 +2870,12 @@ address:{
 
 images:["image2p.png","image3p.png","image4p.png"],
 address:{
-   street:"7474 W Desert Drive",
-   zip:84848,
-   city:"phoenix",
-   state:"az"
- },
+
+  street:"4385 E Indian School Rd",
+  city:"Phoenix",
+  state:"AZ",
+  zip: 85018
+},
  sides:[{
    name:"fries",
    type:null,
@@ -3143,11 +3148,12 @@ address:{
 
 images:["image2p.png","image3p.png","image4p.png"],
 address:{
-   street:"7474 W Desert Drive",
-   zip:84848,
-   city:"phoenix",
-   state:"az"
- },
+
+  street:"4340 E Indian School Rd",
+  city:"Phoenix",
+  state:"AZ",
+  zip: 85018
+},
  sides:[{
    name:"fries",
    type:null,
@@ -3471,11 +3477,12 @@ address:{
 
 images:["image2p.png","image3p.png","image4p.png"],
 address:{
-   street:"7474 W Desert Drive",
-   zip:84848,
-   city:"phoenix",
-   state:"az"
- },
+  zip:85014,
+  street:"5505 N 7th St",
+  city:"Phoenix",
+  state:"AZ"
+
+},
  sides:[{
    name:"fries",
    type:null,

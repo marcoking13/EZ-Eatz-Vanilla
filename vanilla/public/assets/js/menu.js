@@ -186,11 +186,14 @@ function renderBanner(truck){
     $("<img>").addClass("banner").attr("src",truck.background).appendTo(".menuBanner");
     $("<div>").addClass("blackbanner").appendTo(".banners");
     $("<a>").addClass("link2 link").attr("href","/routes").appendTo(".blackbanner");
-    $("<button>").addClass("option btn-info btn").appendTo(".link2").text("Get Directions");
+    $("<h5>").addClass("option").appendTo(".link2").text("Directions/Routes");
+
 
 
     $("<img>").addClass("rlogo").attr("src",truck.logo).appendTo(".blackbanner");
     $("<h4>").addClass("namer").text(truck.name).appendTo(".blackbanner");
+
+
 
 }
 function MenuRoll(food,i){

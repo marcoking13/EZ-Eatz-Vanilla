@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const mongojs = require("mongojs");
+const Routers = require("./routes/router.js");
 const database = "EZ_db";
 const passportGoogle = require("./config/google.js");
 const FoodTruck = require("./config/FoodTruckData.js");
@@ -14,7 +15,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
 const passport = require("passport");
 const Accounts = require("./models/accountSchema.js");
-
+app.use(Routers);
   mongoose.connect("mongodb://localhost:27017/EZ_db",()=>{
     console.log("Database is connected");
     db.trucks.remove({});
@@ -108,8 +109,22 @@ app.post("/api/currentFoodtruckSample",(req,res)=>{
     db.currentTruck.find({},(err,data)=>{
 
       res.json(data);
+    });
+  });
+
+  app.get("/routes",(req,res)=>{
+    console.log(req);
+
+    db.currentFoodtruckSample.find({},(err,data)=>{
+      if(data){
+        return res.sendFile(__dirname+"/public/routes.html")
+      }
     })
-  })
+    res.json({
+      hello:"hello"
+    })
+     res.sendFile(__dirname+"/public/routes.html")
+  });
 
 
   app.get("/api/edit",(req,res)=>{
