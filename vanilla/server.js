@@ -18,10 +18,16 @@ const Accounts = require("./models/accountSchema.js");
 app.use(Routers);
   mongoose.connect("mongodb://localhost:27017/EZ_db",()=>{
     console.log("Database is connected");
-    db.trucks.remove({});
+    console.log(FoodTruck);
+    db.trucks.remove({},(message)=>{
+      console.log(message);
+    })
+    db.trucks.insert(FoodTruck,(err,data)=>{
+      console.log(data);
+    })
     db.currentCustomer.remove({});
     db.currentTruck.remove({});
-    db.trucks.insert(FoodTruck);
+
   })
 app.use(passport.initialize());
 app.use(passport.session());
@@ -61,6 +67,10 @@ app.post("/api/profileChange",(req,res)=>{
 
 app.get("/",(req,res)=>{
   db.currentCustomer.remove({});
+  console.log(FoodTruck,"LOL")
+  db.trucks.insert(FoodTruck,(err,message)=>{
+    console.log(message);
+  });
   res.sendFile(path.resolve(__dirname+"/public/index.html"));
 });
 app.get("/finder",(req,res)=>{
@@ -93,8 +103,11 @@ app.get("/profile",(req,res)=>{
 app.get("/api/foodtruckSample",(req,res)=>{
   var i=0;
   var total=0;
+  db.trucks.find({},(err,data)=>{
+    console.log(data,'DATA');
+      res.json(data);
+  })
 
-  res.json(FoodTruck);
 
 })
 

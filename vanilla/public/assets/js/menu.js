@@ -4,7 +4,7 @@ $.ajax({
   url:"http://localhost:8000/api/currentFoodtruckSample",
   method:"GET"
 }).done((response)=>{
-console.log(response[0]);
+console.log(response[0],"Response");
 var truck = response[0];
 var checkout = [];
 var flag = false;

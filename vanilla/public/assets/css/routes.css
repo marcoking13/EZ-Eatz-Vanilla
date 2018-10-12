@@ -8,4 +8,67 @@ ul{
 .currentLocation{
   width:100%;
 
+
+
+}
+
+.RR{
+  color:red;
+}
+.back{
+  color:black;
+  text-align: center;
+
+
+}
+.back:hover{
+  color:red;
+  font-weight: bold;
+}
+.a{
+  font-style: none;
+
+}
+.llC{
+  width:100%;
+
+  background:#262626 !important;
+  border-top:1px solid white;
+  color: white;
+  margin-top:1% !important;
+  border-bottom:1px solid white;
+}
+
+.llC:hover{
+  background:white !important;
+  transition: all 1s ease-in 1;
+  color: black
+}
+.aS{
+  text-align: left;
+  padding:0;
+  position:relative;
+
+  font-weight: normal;
+}
+.aR{
+  margin-left:70%;
+    margin-top:0% !important;
+  padding:0;
+  font-weight: normal;
+}
+.jumbotron{
+  padding:1%;
+}
+.routesT{
+  text-align: center;
+  margin-bottom: 2.5%;
+  color:white
+}
+.lV{
+  background:black !important;
+  border-top:1px solid black;
+}
+body{
+  background:white;
 }

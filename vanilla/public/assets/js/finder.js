@@ -14,6 +14,7 @@ $.ajax({
     i++;
   });
   $(".FoodTruck").on("click",(event)=>{
+    console.log(event.target);
     var _id = event.target.attributes._id.value;
 
       response.map((truck)=>{
