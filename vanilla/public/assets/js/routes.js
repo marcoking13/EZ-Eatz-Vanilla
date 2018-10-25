@@ -14,7 +14,13 @@ response = response[0];
   var routes = response.routes;
   console.log(routes);
   var ul = "<ul className='list-group'";
+  var counter = 0;
+  var routeArray = [];
+    $("<img>").addClass("loader").appendTo(".routesEE").attr("src","./assets/images/loader.gif");
     routes.map((route)=>{
+
+setTimeout(()=>{
+        $(".routesEE").empty();
         var geokey = "AIzaSyC39c6JQfUTYtacJlXTKRjIRVzebGpZ-GM";
         var formatAddress = `${route.street} ${route.city} ${route.state}`;
         axios.get("https://maps.googleapis.com/maps/api/geocode/json",{
@@ -23,41 +29,20 @@ response = response[0];
             key:geoKey
           }
         }).then((response)=>{
-          console.log(response);
-          // var geolocation = response.data.results[0].geometry.location;
-          // var lat = geolocation.lat;
-          // var lng = geolocation.lng;
-          // var address  = response.data.results[0].formatted_address;
-          var addressOutput = `<ul list-group>
-          <li class="list-group-item llC">
-          <strong class="aS" >${formatAddress}</strong>
-            <strong class="aR RR">8:30am - 12:00pm</strong>
-          </li>
-          <li class="list-group-item llC">
-          <strong class="aS">${formatAddress}</strong>
-            <strong class="aR GG">8:30am - 12:00pm</strong>
-          </li>
-          <li class="list-group-item llC">
-          <strong class="aS">${formatAddress}</strong>
-            <strong class="aR">8:30am - 12:00pm</strong>
-          </li>
-          <li class="list-group-item llC">
-          <strong class="aS">${formatAddress}</strong>
-            <strong class="aR">8:30am - 12:00pm</strong>
-          </li>
-          <li class="list-group-item llC">
-          <strong class="aS">${formatAddress}</strong>
-            <strong class="aR">8:30am - 12:00pm</strong>
-          </li>
-          <li class="list-group-item llC">
-          <strong class="aS">${formatAddress}</strong>
-            <strong class="aR">8:30am - 12:00pm</strong>
-          </li>
-          </ul>`;
-          var addressE = document.querySelector(".routesEE").innerHTML=addressOutput;
 
-
+          var geolocation = response.data.results[0].geometry.location;
+          var lat = geolocation.lat;
+          var lng = geolocation.lng;
+          var address  = response.data.results[0].formatted_address;
+          console.log(lat,lng,address);
+            $("<li>").addClass("list-group-item llC llC"+counter).appendTo(".routesEE");
+            $("<h6>").addClass("aS").text(address).appendTo(".llC"+counter);
+            $("<p>").addClass("aR").text(counter+3+":30 -"+counter+2+":30pm").appendTo(".llC"+counter);
+          counter++;
         });
+},2000);
+
+
     });
   console.log(address);
   var geoKey = "AIzaSyC39c6JQfUTYtacJlXTKRjIRVzebGpZ-GM";

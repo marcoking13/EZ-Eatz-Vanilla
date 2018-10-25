@@ -144,7 +144,7 @@ price:.50
   logo:"./assets/images/pita.png",
   background:"./assets/images/samplebanner.jpg",
   display:"./assets/images/pitajungle.jpg",
-  type:["all-american","greek","middle eastern"],
+  type:["all-american","greek"],
   priceAverage:total,
   menu:[{
     catagory:"Wraps",
@@ -2144,7 +2144,7 @@ address:{
   logo:"./assets/images/chinabowl.png",
   background:"./assets/images/chinabowlbanner.jpg",
   display:"./assets/images/china9292.jpg",
-  type:["all-american","burgers"],
+  type:["all-american","burgers","chinese"],
   priceAverage:total,
   menu:[{
     catagory:"Appetizer",
@@ -2336,7 +2336,7 @@ address:{
   logo:"./assets/images/johnnyrocket.png",
   background:"./assets/images/johnnyrocketbanner.jpg",
   display:"./assets/images/america33.jpg",
-  type:["all-american","burgers"],
+  type:["all-american","burgers","healthy","dessert"],
   priceAverage:total,
   menu:[{
     catagory:"Burgers",
@@ -2634,7 +2634,7 @@ address:{
   logo:"./assets/images/thestand.png",
   background:"./assets/images/thestandbanner.jpg",
   display:"./assets/images/burger339.jpg",
-  type:["all-american","burgers"],
+  type:["all-american","burgers","dessert","healthy","chinese"],
   priceAverage:total,
   menu:[{
     catagory:"Burgers",

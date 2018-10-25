@@ -76,7 +76,7 @@ function renderBanner(response){
       url:"http://localhost:8000/data/cancel",
       method:"POST"
     });
-    window.location.assign("/menu");
+    window.location.assign("/finder");
   })
 
 }

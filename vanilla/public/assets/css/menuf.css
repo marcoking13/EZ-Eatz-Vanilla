@@ -1,0 +1,32 @@
+.navbar{
+  background:black;
+  padding:1%;
+}
+.bar{
+  float:left;
+  width:50px;
+  height:50px;
+
+}
+.logo{
+    width:60px;
+    height:60px;
+  float:right;
+
+}
+.titleM{
+  color:white;
+  text-align: right;
+  margin-right:5%;
+}
+@media only screen and (min-width: 880px) {
+    .logo{
+      width:40%;
+      float:right;
+      padding-bottom:2%;
+
+    }
+    .titleM{
+      font-size: 25px;
+    }
+}

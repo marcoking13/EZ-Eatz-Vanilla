@@ -11,7 +11,23 @@ ul{
 
 
 }
+.loader{
+  width:50%;
+  margin-left:25%;
+  margin-top:5%;
+}
+.aS{
+  font-size:11px;
+  position:relative;
+  top:10px;
+  float:left;
+}
+.aR{
+  font-size:9px;
+  font-family: sans-serif;
+  font-weight: bold;
 
+}
 .RR{
   color:red;
 }
@@ -66,7 +82,7 @@ ul{
   color:white
 }
 .lV{
-  background:black !important;
+  background:#262626 !important;
   border-top:1px solid black;
 }
 body{

@@ -82,5 +82,27 @@ background:#b3b3b3;
 }
 /*----------------------------------------------------------------------------*/
 @media only screen and (max-width: 480px) {
-.logo{width: 60%;}
+.logo{
+  width: 60%;
+  margin-left:25%;
+
+
+
+}
+.title{
+  font-size: 30px;
+  left:45%;
+  top:10%;
+}
+.landButton{
+  width:99px;
+  float:left;
+  margin-left: 1px;
+}
+.buttonContainer{
+  width:200px;
+  position:relative;
+  left:-9%;
+  margin-top:60%;
+}
 }

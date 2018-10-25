@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const mongojs = require("mongojs");
 const Routers = require("./routes/router.js");
 const database = "EZ_db";
+const GeoCode = require("./config/geocode.js");
+// app.use(GeoCode);
 const passportGoogle = require("./config/google.js");
 const FoodTruck = require("./config/FoodTruckData.js");
 const ProfileChange = require("./config/profileChange.js");
@@ -18,12 +20,12 @@ const Accounts = require("./models/accountSchema.js");
 app.use(Routers);
   mongoose.connect("mongodb://localhost:27017/EZ_db",()=>{
     console.log("Database is connected");
-    console.log(FoodTruck);
+
     db.trucks.remove({},(message)=>{
-      console.log(message);
+
     })
     db.trucks.insert(FoodTruck,(err,data)=>{
-      console.log(data);
+
     })
     db.currentCustomer.remove({});
     db.currentTruck.remove({});
@@ -46,7 +48,7 @@ app.post("/api/profileChange",(req,res)=>{
     db.currentCustomer.find({},(err,data)=>{
 
       data = data[0];
-      console.log(data,"DATA");
+
   console.log(profile,"PROFILE");
       db.customers.update({id:data.id},{
         name:profile.name,
@@ -162,10 +164,17 @@ app.post("/data/cancel",(req,res)=>{
 
     db.currentCheckout.insert(req.body,(err,res)=>{
 
-    })
+    });
   });
   app.get("/api/currentCheckout",(req,res)=>{
     db.currentCheckout.find({},(err,data)=>{
         res.json(data);
     })
+  });
+
+
+
+  app.get("/test",(req,res)=>{
+    console.log(req.body);
+    res.sendFile(path.resolve(__dirname+"/public/samples.html"))
   })

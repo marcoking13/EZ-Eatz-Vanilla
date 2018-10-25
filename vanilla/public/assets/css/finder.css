@@ -122,3 +122,27 @@ body{
   margin-bottom:5%;
 
 }
+@media only screen and (max-width: 480px) {
+    .FoodTruck{
+      width:120px !important;
+    padding:.5 !important;
+      margin-left:1%;
+      margin-top:5%;
+    }
+    .row{
+      padding:0;
+    }
+    .finderContainer,.w,.dbb{
+      padding-left:7.5% !important
+    }
+    .TruckContainer{
+      width:119px;
+      height:50px;
+    }
+    div{
+      padding-right:0 !important;
+    }
+    .TruckImage{
+      width:98%;
+    }
+}

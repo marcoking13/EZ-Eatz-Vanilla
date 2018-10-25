@@ -17,8 +17,8 @@ h4{
 
 }
 .container-fluid{
-  width:75%;
-  margin-left:15%;
+  width:95%;
+
   background:white;
     border-radius:20px;
 }
@@ -200,7 +200,7 @@ h6{
   margin-top:5%;
 }
 body{
-  background:url("./../images/foodm.jpg")
+background:black;
 }
 .tipBox:hover{
   color:white;
