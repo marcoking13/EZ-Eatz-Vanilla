@@ -5,11 +5,10 @@ const mongoose = require("mongoose");
 const mongojs = require("mongojs");
 const Routers = require("./routes/router.js");
 const database = "EZ_db";
-const GeoCode = require("./config/geocode.js");
+// const GeoCode = require("./config/geocode.js");
 // app.use(GeoCode);
 const passportGoogle = require("./config/google.js");
 const FoodTruck = require("./config/FoodTruckData.js");
-const ProfileChange = require("./config/profileChange.js");
 const collections = ["customers","owners","currentTruck","trucks","currentOwner","currentCustomer","checkouts","currentCheckout"];
 const db = mongojs(database,collections);
 const path = require("path");
@@ -76,10 +75,10 @@ app.get("/",(req,res)=>{
   res.sendFile(path.resolve(__dirname+"/public/index.html"));
 });
 app.get("/finder",(req,res)=>{
-  res.sendFile(path.resolve(__dirname+"/public/finder.html"));
+  res.sendFile(path.resolve(__dirname+"/public/samples.html"));
 });
 app.get("/menu",(req,res)=>{
-  res.sendFile(path.resolve(__dirname+"/public/newmenu.html"));
+  res.sendFile(path.resolve(__dirname+"/public/menuF.html"));
 })
 app.get("/auth/google",passport.authenticate("google",{
   scope:["email","profile"],
@@ -177,4 +176,11 @@ app.post("/data/cancel",(req,res)=>{
   app.get("/test",(req,res)=>{
     console.log(req.body);
     res.sendFile(path.resolve(__dirname+"/public/samples.html"))
-  })
+  });
+
+
+
+    app.get("/test2",(req,res)=>{
+      console.log(req.body);
+      res.sendFile(path.resolve(__dirname+"/public/menuf.html"))
+    })

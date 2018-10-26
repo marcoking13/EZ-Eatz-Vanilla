@@ -55,7 +55,7 @@ console.log(response)
                     })
                 })
 
-            })
+            });
   $(".catas").on("click",(event)=>{
 
     var listID = event.target.attributes._id.value;
