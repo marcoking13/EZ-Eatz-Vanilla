@@ -1,5 +1,3 @@
-
-
 function renderModal(signup){
   $(".container2").empty();
   $("<div>").addClass("modal modl col-6").attr("id","exampleModal").appendTo(".container2");
@@ -21,13 +19,9 @@ function renderModal(signup){
         inputMake("username",2,6);
         inputMake("password",4,12);
       }
-
-              $("<div>").addClass("modal-footer").appendTo(".modal-content");
-              $("<button>").addClass("btn btn-secondary").attr("data-dismiss","modal").text("Close").appendTo(".modal-footer");
-              $("<button>").addClass("btn btn-primary").text("Submit").appendTo(".modal-footer");
-
-
-
+    $("<div>").addClass("modal-footer").appendTo(".modal-content");
+    $("<button>").addClass("btn btn-secondary").attr("data-dismiss","modal").text("Close").appendTo(".modal-footer");
+    $("<button>").addClass("btn btn-primary").text("Submit").appendTo(".modal-footer");
 }
 
 function inputMake(data,i,col){
@@ -35,8 +29,7 @@ function inputMake(data,i,col){
   $("<h5>").addClass("ce").text(data).appendTo(".col-g"+i);
   $("<input>").attr("type",data).attr("name",data).addClass("form-control").attr("placeholder"," Enter "+data).appendTo(".col-g"+i);
 }
-
-
+//-------------------------------------------------------------------------
 $(".landButton").on("click",(event)=>{
   var data = event.target.classList[0];
   if(data == "signup"){

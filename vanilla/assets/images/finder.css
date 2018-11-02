@@ -1,0 +1,226 @@
+
+
+.subTitle{
+  text-align:center;
+  color:#e6e6e6;
+  font-weight:bold;
+  margin-bottom:5%;
+  margin-top:2.5%;
+}
+.ff{
+  float:left;
+  margin-left:5%;
+  position:relative;
+  bottom:20px;
+}
+.fh{
+  float:left;
+}
+.slabo{
+  font-family: 'Slabo', serif;
+}
+
+.searcher{
+  width:95% !important;
+  margin-left:5%;
+}
+
+.FoodTruck:hover{
+  border-color:red
+}
+.col-2{
+margin-top:5% !important;
+}
+
+.searchButton{
+  margin-left: 35%;
+  width:25%;
+  margin-top:2.5%;
+}
+.searchButton:hover{
+  background:#b3b3b3;
+}
+.finder{
+  width:100%;
+  margin-top:5%;
+  text-align: center;
+
+}
+
+.line{
+  width:29%;
+  height:5px;
+  background:white;
+  margin-top:4%;
+}
+
+
+.info{
+  display:inline;
+  margin-left:2.5%;
+
+}
+.companyName{
+
+    text-align: center;
+
+}
+.dollar{float:right;color:green;margin-right:1%;}
+.companyLogo{
+  width:20%;height:20%;
+}
+.finderContainer{
+  border-top:1px solid white;
+  padding-bottom:5%;
+
+  padding-bottom:25%;
+  margin-top:2.5%;
+}
+.FoodTruck{margin-top:2.5%;padding:0;border:2px black solid;opacity:0;border:none 3px solid;width:25%}
+.type{
+  font-weight:normal;color:gray;text-align:center
+}
+.searchContainer{
+
+  padding-bottom:5%;
+}
+body{
+  background:url("./../images/landing2.jpg");
+}
+.TruckDetailContainer{
+  width:100%;
+}
+.FoodTruck{
+  background:black !important;
+}
+.TruckImage{
+  width:100%;height:200px;
+
+}
+.type{
+  color:white !important;
+}
+.infoContainer{
+  margin-left:2.5%;
+}
+.FoodTruck{
+  margin-left:7%;
+}
+.pricing{
+  font-weight: bold;
+}
+.w{
+  background:white;
+}
+.sampleFadeIn{
+  opacity:1;
+  animation:intro .5s 1 ease-in;
+}
+.sloganContainer{
+  width:50%;
+  margin-left:25%;
+  margin-bottom:5%;
+
+}
+.truckI{
+  border-radius: 20px;
+
+}
+.nameT{
+  margin-top: 5%;
+}
+@media only screen and (max-width: 480px) {
+    .FoodTruck{
+      width:120px !important;
+    padding:.5 !important;
+      margin-left:1%;
+      margin-top:5%;
+    }
+    .row{
+      padding:0;
+    }
+    .finderContainer,.w,.dbb{
+      padding-left:7.5% !important
+    }
+    .TruckContainer{
+      width:119px;
+      height:50px;
+    }
+    div{
+      padding-right:0 !important;
+    }
+    .TruckImage{
+      width:98%;
+    }
+    .truckC{
+    padding:2.5%;
+    margin-top: 5%;
+
+    }
+    .w{
+      float:left;
+      margin-left:1%;
+    }
+    .dataC{
+      width:100%;
+      margin-top: 1%;
+    }
+    .jc{
+      float:left;
+      background:#f4f4f4;
+      padding-top: 2.5%;
+      margin-left:2.5%;
+      margin-top:2.5%;
+      width: 25%;
+      height:35px;
+      text-align: center;
+    }
+    .p{
+      color:grey;
+      opacity:1;
+      margin-top: 2.5%;
+      margin-left: 5%;
+    }
+    .nameT{
+      margin-top:5%;
+      margin-left:5%;
+      font-size: 15px;
+      margin-top: 15px;
+      padding-top: 5% !important;
+    }
+
+    .truckI{
+      border-radius: 10px;
+      width: 100% ;
+
+    }
+    .truckmm{
+        width: 200px !important ;
+    }
+    .m1{
+      color:grey;
+text-align: center;
+    }
+    .when{
+      float:left;
+    }
+    .box1{
+
+      border: #f2f2f2 1px groove;
+      text-align: center;
+      background: white;
+    }
+    .full{
+      width: 100%;
+
+    }
+    .where{
+      float:right;
+    }
+    .w1{
+      width:100%;
+    }
+    .addressReturn{
+      margin-top: 5%;
+    }
+}

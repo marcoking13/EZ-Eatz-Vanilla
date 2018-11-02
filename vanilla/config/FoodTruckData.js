@@ -1,6 +1,5 @@
-const routes = require("./routeSample.js");
-
 var total = 0;
+var routes = require("./routeSample.js");
 const FoodTrucks =  [{
   ownerID:"jfu3fb3u9f2ufh2408fj24hr42089fnceorm0d32uj0p324",
   objectID:"319ei310328eu30ejsnm0i32ds320dj230d",

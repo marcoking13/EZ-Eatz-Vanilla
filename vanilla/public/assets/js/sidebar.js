@@ -5,13 +5,11 @@ $.ajax({
   url:"http://localhost:8000/api/currentCustomer",
   method:"GET"
 }).done((response)=>{
-
   if(response.length == 0){
     return profileFill(sample.photo,sample.name,sample.username);
   }
   var information = response[0];
   return profileFill(information.photos,information.name,information.username);
-
 });
 var sample = {
   photo:"assets/images/sample.png",
@@ -27,7 +25,6 @@ close.addEventListener("click",()=>{
 });
 
 const SideToggle=(width)=>{
-  console.log("Function Executed");
   sidenav.style.width=width;
 }
 const profileFill = (photo,name,username)=>{

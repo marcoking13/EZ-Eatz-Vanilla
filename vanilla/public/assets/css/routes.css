@@ -1,90 +1,9 @@
 .mapE{
-  width:100%;
   height:400px;
 }
-ul{
-  padding:0px;
+.l2{
+  width:60%;
 }
-.currentLocation{
-  width:100%;
-
-
-
-}
-.loader{
-  width:50%;
-  margin-left:25%;
-  margin-top:5%;
-}
-.aS{
-  font-size:11px;
-  position:relative;
-  top:10px;
-  float:left;
-}
-.aR{
-  font-size:9px;
-  font-family: sans-serif;
-  font-weight: bold;
-
-}
-.RR{
-  color:red;
-}
-.back{
-  color:black;
-  text-align: center;
-
-
-}
-.back:hover{
-  color:red;
-  font-weight: bold;
-}
-.a{
-  font-style: none;
-
-}
-.llC{
-  width:100%;
-
-  background:#262626 !important;
-  border-top:1px solid white;
-  color: white;
-  margin-top:1% !important;
-  border-bottom:1px solid white;
-}
-
-.llC:hover{
-  background:white !important;
-  transition: all 1s ease-in 1;
-  color: black
-}
-.aS{
-  text-align: left;
-  padding:0;
-  position:relative;
-
-  font-weight: normal;
-}
-.aR{
-  margin-left:70%;
-    margin-top:0% !important;
-  padding:0;
-  font-weight: normal;
-}
-.jumbotron{
-  padding:1%;
-}
-.routesT{
-  text-align: center;
-  margin-bottom: 2.5%;
-  color:white
-}
-.lV{
-  background:#262626 !important;
-  border-top:1px solid black;
-}
-body{
-  background:white;
+.r2{
+  width:40%;
 }

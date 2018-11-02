@@ -1,154 +1,99 @@
-    var i =0;
-var k =0;
+function renderMenu(){
 $.ajax({
   url:"http://localhost:8000/api/currentFoodtruckSample",
   method:"GET"
 }).done((response)=>{
-console.log(response[0],"Response");
-var truck = response[0];
-var checkout = [];
-var flag = false;
-var checkout = [];
-console.log(response)
-  renderTruckDetail(truck);
-   renderMainBanner(truck);
+  var truck = response[0];
+  renderBanner(truck);
+  $(".top").css({opacity:1});
+  $(".loader").remove();
   for(var i =0; i<truck.menu.length; i++){
+
     renderCatagoriesChoices(truck.menu[i])
+
   }
-
+  var k , i =0;
   truck.menu.map((item)=>{
-
-    item.catagory=  item.catagory.charAt(0).toUpperCase() + item.catagory.slice(1);
+    item.catagory= capitalizeFirstLetter(item.catagory);
       item.food.map((food)=>{
-
         MenuRoll(food,i);
         menuModal(truck,food,i);
         i++;
       });
       k++;
   });
-  $("<a>").addClass("link1 link").attr("href","/checkout").appendTo(".container-fluid");
+
+  $("<a>").addClass("link1 link").attr("href","/checkout").appendTo(".n");
   $("<button>").addClass("checkout btn-danger btn").appendTo(".link1");
   $("<h5>").addClass("wc center").appendTo(".checkout").text("Checkout");
+
   $(".list-group-item").on("click",(event)=>{
+      var chosen = event.target.attributes._id.value
+      $("#"+event.target.attributes._id.value).modal("show");
+      $(".modal").removeClass("gho");
+    });
 
-               var chosen = event.target.attributes._id.value
-              $("#"+event.target.attributes._id.value).modal("show");
-              $(".modal").removeClass("gho");
-            });
-            $(".add").on("click",(event)=>{
-                var chosen = event.target.attributes._id.value;
-                response[0].menu.map((foodtruck)=>{
-                    foodtruck.food.map((truck)=>{
-                      if(chosen == truck.id){
-                          $(".modal").modal("hide");
+    $(".add").on("click",(event)=>{
+        var chosen = event.target.attributes._id.value;
+        response[0].menu.map((foodtruck)=>{
+        foodtruck.food.map((truck)=>{
+        if(chosen == truck.id){
+            $(".modal").modal("hide");
+              $.ajax({
+                    url:"http://localhost:8000/api/currentCheckout",
+                    method:"POST",
+                    data:truck
+                });
+          }
+        });
+      });
+    });
 
-                          $.ajax({
-                            url:"http://localhost:8000/api/currentCheckout",
-                            method:"POST",
-                            data:truck
-                          }).done((response)=>{
-                              console.log(response);
-
-                          })
-                      }
-                    })
-                })
-
-            });
   $(".catas").on("click",(event)=>{
-
     var listID = event.target.attributes._id.value;
-
     $(event.target).removeClass("catas");
     var i =0;
       truck.menu.map((item)=>{
         if(item.id == listID){
-          console.log("Success",item.id);
           item.food.map((food)=>{
             $("."+food.id).remove();
             renderChoices(food,item,i);
-
-             });
-}
-
-
-});
-            i++;
           });
-
+        }
       });
+        i++;
+   });
 
+   ///END///
+});
 
-
-
+//-----------------------------------------------------------------------------
+function renderCatagoriesChoices(catagory){
+  $("<li>").addClass("list-group-item catas i "+catagory.id).appendTo(".menux").attr("_id",catagory.id);
+  $("<h5>").addClass("hu").appendTo("."+catagory.id).text(catagory.catagory).attr("_id",catagory.id);;
+  $("<ul>").addClass("list-group d"+catagory.catagory).appendTo("."+catagory.id).attr("_id",catagory.id);
+}
 
 function renderChoices(item,catagory,i){
 
-      console.log(item)
       $("<li>").addClass("list-group-item list-order gh ccc "+item.id).appendTo(".d"+catagory.catagory).attr("_id",item.id).attr("food",item.id);
       $("<div>").addClass("box gh b"+item.id).appendTo("."+item.id)
       $("<p>").text(item.item).addClass("l").appendTo(".b"+item.id);
       $("<p>").text("$"+item.price).addClass("r").appendTo(".b"+item.id);
-        $(".list-order").on("click",(event)=>{
-            var order = event.target.attributes.food.value;
+  }
 
-          })
+  function MenuRoll(food,i){
+    $("<div>").addClass("col-3 foodItem adjT  foodItem"+i).appendTo(".menu"+i).attr("data-toggle","modal").attr("data-target","#modal"+i);
+    $("<p>").addClass("bold left").text(food.item).appendTo(".foodItem"+i)
+    $("<p>").addClass("bold right").text("$"+food.price).appendTo(".foodItem"+i);
+    $("<p>").addClass("description adjT").text(food.description).appendTo(".foodItem"+i);
+  }
 
-
-      }
-
-
-
-function renderCatagoriesChoices(catagory){
-console.log(catagory)
-  $("<li>").addClass("list-group-item catas i "+catagory.id).appendTo(".menux").attr("_id",catagory.id);
-
-  $("<h5>").addClass("hu").appendTo("."+catagory.id).text(catagory.catagory).attr("_id",catagory.id);;
-  $("<ul>").addClass("list-group d"+catagory.catagory).appendTo("."+catagory.id);
-}
-
-
-function renderMainCatagory(catagory,k){
-  $("<div>").addClass("foodContainer  foodContainer"+k).appendTo(".menuContain");
-  $("<h3>").addClass("catagoryName").text(catagory.catagory).appendTo(".foodContainer"+k);
-  $("<div>").addClass("row adjT menu"+k).appendTo(".foodContainer"+k);
-}
-
-function renderCatagories(catagories,i){
-
-
-  $("<div>").addClass("catagoryContainer cc"+i).appendTo(".CC");
-  $("<h6>").addClass("center adjL gb catagory").text(catagories).appendTo(".cc"+i);
-
-}
-
-function renderTruckDetail(truck){
-
-console.log(truck)
-
-    $("<div>").addClass("row ladjT  b4 bbb").appendTo(".companyDetail");
-      $("<div>").addClass("col-3 imc").appendTo(".b4")
-        $("<img>").addClass("adjL truckLogo").attr("src",truck.background).appendTo(".imc");
-
-        $("<div>").addClass("col-3 nmc").appendTo(".b4")
-
-          $("<h3>").addClass("truckName left").appendTo(".nmc").text(truck.name);
-
-        $("<div>").addClass("dmc col-6").appendTo(".b4");
-            $("<ul>").addClass("details").appendTo(".dmc");
-                $("<li>").addClass("detailItem adjR right").text("Average Calories:" +240).appendTo(".details");
-                    $("<li>").addClass("detailItem adjR right").text("Average Time: " +24+" minutes").appendTo(".details");
-                $("<li>").addClass("detailItem adjR right green").text("$3-$10").appendTo(".details");
-
-}
 function menuModal (menu,food,i){
   var k =0;
   var j=0;
   var order = [];
-  console.log(i);
-
-      $("<div>").addClass("modal fade").attr("id",food.id).addClass("item"+i).appendTo(".container-fluid");
+      $("<div>").addClass("modal fade").attr("id",food.id).addClass("item"+i).appendTo(".n");
       $("<div>").addClass("modal-dialog md"+i).attr('role',"document").appendTo("#"+food.id);
       $("<div>").addClass("modal-content mc"+i).appendTo(".md"+i);
       $("<div>").addClass("modal-header mh"+i).appendTo("mc"+i);
@@ -181,46 +126,28 @@ function menuModal (menu,food,i){
 
 }
 function renderBanner(truck){
-    console.log(truck.logo,truck.background);
-    $("<div>").addClass("menuBanner").appendTo(".banners");
-    $("<img>").addClass("banner").attr("src",truck.background).appendTo(".menuBanner");
-    $("<div>").addClass("blackbanner").appendTo(".banners");
-    $("<a>").addClass("link2 link").attr("href","/routes").appendTo(".blackbanner");
-    $("<h5>").addClass("option").appendTo(".link2").text("Directions/Routes");
-
-
-
-    $("<img>").addClass("rlogo").attr("src",truck.logo).appendTo(".blackbanner");
-    $("<h4>").addClass("namer").text(truck.name).appendTo(".blackbanner");
-
-
-
-}
-function renderMainBanner(truck,i){
-  var banner  = `
-  <div class="menuBanner">
-    <img class="banner" src = ${truck.background}/>
-    <div class="blackbanner">
-      <a class="link2 link" href="/routes"><h5 class="option">Direction/Routes<h5>
-      <img class="rlogo" src=${truck.logo}/>
-      <h4 class="namer">${truck.name}></h4>
-    </div>
-  </div>
-  `
-
-
-  $(".banners").innerHTML = banner;
-}
-
-function MenuRoll(food,i){
-
-
-  $("<div>").addClass("col-3 foodItem adjT  foodItem"+i).appendTo(".menu"+k).attr("data-toggle","modal").attr("data-target","#modal"+i);
-  $("<p>").addClass("bold left").text(food.item).appendTo(".foodItem"+i)
-  $("<p>").addClass("bold right").text("$"+food.price).appendTo(".foodItem"+i);
-  $("<p>").addClass("description adjT").text(food.description).appendTo(".foodItem"+i);
-
+  var banner = `
+          <div class="imageContainer col-12">
+              <img class="foodtruckI" src="${truck.background}"/>
+          </div>
+          <div class="blackbanner col-12">
+            <img class="logot"src="${truck.logo}"/>
+            <p class="namef">${truck.name}</p>
+            <a href="/routes" class="link">Directions/Routes</a>
+          </div>`;
+var element = document.querySelector(".bannerContainer");
+element.innerHTML = banner;
 }
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
+}
+}
+
+
+if(window.innerWidth < 490){
+  $(".top").css({opacity:0});
+  $("<img>").addClass("loader ll25").appendTo(".n").attr("src","./assets/images/loader.gif");
+setTimeout(()=>{renderMenu()},1000);
+}else{
+  $("body").text("Make Screen Smaller")
 }

@@ -9,8 +9,6 @@ $.ajax({
   renderPH(response);
   renderPD(response);
 })
-
-
 function renderNL(pro){
   $("<div>").addClass("row NC").appendTo(".fo");
   $("<div>").addClass("col-6 N").appendTo(".NC");
@@ -21,8 +19,6 @@ function renderNL(pro){
   $("<div>").addClass("inputBox lbn").appendTo(".L");
   $("<h4>").addClass("inputT").text("Location").appendTo(".lbn")
   $("<input>").addClass("form-control fl").attr("name","location").val("N/A").attr("placeholder","Location").appendTo(".lbn");
-
-
 }
 function renderEL(pro){
   $("<div>").addClass("EL row").appendTo(".fo");
@@ -30,7 +26,6 @@ function renderEL(pro){
   $("<div>").addClass("inputBox em").appendTo(".E");
   $("<h4>").addClass("inputT").text("Email").appendTo(".em");
   $("<input>").addClass("form-control fl").val(pro.username).attr("id","email").attr("placeholder","Email").appendTo(".em");
-
   $("<div>").addClass("col-6 LA").appendTo(".EL");
   $("<div>").addClass("inputBox lm").appendTo(".LA");
   $("<h4>").addClass("inputT").text("Language").appendTo(".lm");
@@ -53,11 +48,9 @@ function renderPD(pro){
   $("<button>").addClass("btn fr change").text("Change").appendTo(".PC");
   $("<input>").addClass("fr qu form-control pass").attr("id","password").attr("type","password").val(pro.id).attr("placeholder","Password").appendTo(".PC");
   $("<button>").addClass("btn btn-primary ha madjL final").attr("type","submit").text("Save Changes").appendTo(".fo");
-
   $(".madjL").on("click",(event)=>{
-      event.preventDefault();
+    event.preventDefault();
     var element = event.target;
-
     var last = $("#last").val();
     var email = $("#email").val();
     var language = $("#language").val();
@@ -75,9 +68,6 @@ function renderPD(pro){
       url:"http://localhost:8000/api/profileChange",
       method:"POST",
       data:profile
-    }).done((response)=>{
-      console.log(profile);
-      console.log(response);
-    })
+    });
   })
 }

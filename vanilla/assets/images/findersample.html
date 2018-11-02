@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Fira+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link rel="icon" href="http://example.com/favicon.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <link href="assets/css/sidebar.css"rel="stylesheet"type="text/css"/>
+  <link href="assets/css/navbar.css"rel="stylesheet"type="text/css"/>
+    <link href="assets/css/utility.css"rel="stylesheet"type="text/css"/>
+  <link rel="stylesheet" type="text/css" href="./assets/css/checkout.css"/>
+      <link rel="stylesheet" type="text/css" href="./assets/css/finder.css"/>
+    <title>Easy Eatz:Finder</title>
+    <style>
+    .truckC{
+    padding:2.5%;
+    margin-top: 5%;
+
+    }
+    .w{
+      float:left;
+      margin-left:1%;
+    }
+    .dataC{
+      width:100%;
+      margin-top: 1%;
+    }
+    .jc{
+      float:left;
+      background:#f4f4f4;
+      padding-top: 2.5%;
+      margin-left:2.5%;
+      margin-top:2.5%;
+      width: 25%;
+      height:35px;
+      text-align: center;
+    }
+    .p{
+      color:grey;
+      opacity:1;
+      margin-top: 2.5%;
+      margin-left: 5%;
+    }
+    .nameT{
+      margin-top:2.5%;
+      margin-left:5%;
+      font-size: 20px;
+    }
+    .truckI{
+      border-radius: 10px;
+    }
+    .m1{
+      color:grey;
+text-align: center;
+    }
+    .when{
+      float:left;
+    }
+    .box1{
+
+      border: #f2f2f2 1px groove;
+      text-align: center;
+      background: white;
+    }
+    .full{
+      width: 100%;
+
+    }
+    .where{
+      float:right;
+    }
+    .w1{
+      width:100%;
+    }
+    .addressReturn{
+      margin-top: 5%;
+    }
+    </style>
+  </head>
+  <body class="origin">
+    <div id="mySidenav" class="sidenav">
+      <div class="profileInfo"></div>
+      <div class="space"></div>
+      <a  class="closebtn">&times;</a>
+      <a href="/profile" class="noborder item">My Profile</a>
+      <a class="item">Find Food Trucks</a>
+      <a class="item" href="/checkout">Checkout</a>
+      <a href="/"class="red item">Logout</a>
+    </div>
+    <div class="container-fluid">
+      <div class="top">
+        <img class="logo"src="assets/images/logo.png"/>
+        <h3 class="title">EZeatz</h3>
+      <span class="spanner">&#9776;</span>
+    </div>
+
+  <div class="row addressReturn">
+      <div class="w1 where">
+        <p class="m1">Where Are You</p>
+        <div class="box1 full">Address</div>
+      </div>
+  </div>
+      <div class="finderContainer">
+        <div class="row">
+        <div class="col-1"></div>
+          <div class="col-10 truckC">
+            <img  class="truckI" src="assets/images/acaishop.jpg"/>
+            <h3 class="nameT"> Acai Bowl </h3>
+            <p class="p">$: Healthy</p>
+            <div class="dataC">
+              <div class="jc">
+                <p>Wait</p>
+              </div>
+              <div class="jc">
+                <p>Distance</p>
+              </div>
+              <div class="jc">
+                <p>4.8/5</p>
+              </div>
+            </div>
+          </div>
+              <div class="col-1"></div>
+</div>
+<div class="row">
+<div class="col-1"></div>
+  <div class="col-10 truckC">
+    <img  class="truckI" src="assets/images/pitajungle.jpg"/>
+    <h3 class="nameT"> Pita Jungle </h3>
+    <p class="p">$ Healthy  All-American</p>
+    <div class="dataC">
+      <div class="jc">
+        <p>Wait</p>
+      </div>
+      <div class="jc">
+        <p>Distance</p>
+      </div>
+      <div class="jc">
+        <p>4.8/5</p>
+      </div>
+    </div>
+  </div>
+      <div class="col-1"></div>
+</div>
+<div class="row">
+<div class="col-1"></div>
+  <div class="col-10 truckC">
+    <img  class="truckI" src="assets/images/burger339.jpg"/>
+    <h3 class="nameT"> The Stand </h3>
+    <p class="p">$: Burgers  All-American</p>
+    <div class="dataC">
+      <div class="jc">
+        <p>Wait</p>
+      </div>
+      <div class="jc">
+        <p>Distance</p>
+      </div>
+      <div class="jc">
+        <p>4.8/5</p>
+      </div>
+    </div>
+  </div>
+      <div class="col-1"></div>
+</div>
+      </div>
+
+   </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/js/finder.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+  </body>
+</html>

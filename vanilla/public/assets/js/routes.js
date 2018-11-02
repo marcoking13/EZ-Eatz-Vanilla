@@ -1,5 +1,5 @@
 
-$("document").ready(()=>{
+if(window.innerWidth <490 ){
 $.ajax({
   url:"http://localhost:8000/api/currentFoodtruckSample",
   method:"GET"
@@ -12,14 +12,12 @@ response = response[0];
     state:response.address.state
   }
   var routes = response.routes;
-  console.log(routes);
   var ul = "<ul className='list-group'";
   var counter = 0;
   var routeArray = [];
     $("<img>").addClass("loader").appendTo(".routesEE").attr("src","./assets/images/loader.gif");
     routes.map((route)=>{
-
-setTimeout(()=>{
+      setTimeout(()=>{
         $(".routesEE").empty();
         var geokey = "AIzaSyC39c6JQfUTYtacJlXTKRjIRVzebGpZ-GM";
         var formatAddress = `${route.street} ${route.city} ${route.state}`;
@@ -29,45 +27,42 @@ setTimeout(()=>{
             key:geoKey
           }
         }).then((response)=>{
-
           var geolocation = response.data.results[0].geometry.location;
           var lat = geolocation.lat;
           var lng = geolocation.lng;
           var address  = response.data.results[0].formatted_address;
-          console.log(lat,lng,address);
-            $("<li>").addClass("list-group-item llC llC"+counter).appendTo(".routesEE");
-            $("<h6>").addClass("aS").text(address).appendTo(".llC"+counter);
-            $("<p>").addClass("aR").text(counter+3+":30 -"+counter+2+":30pm").appendTo(".llC"+counter);
+        address = address.replace(',USA','');
+          $("<li>").addClass("list-group-item llC full cb bbw sans btf2 llC"+counter).appendTo(".routesEE");
+
+          $("<p>").addClass("fll f12 l2").appendTo(".llC"+counter).text(`${address}`);
+
+          $("<p>").addClass("fllr f12 t-right r2").appendTo(".llC"+counter).text(`12:00am-1:30pm`);
           counter++;
         });
 },2000);
-
-
-    });
-  console.log(address);
+  });
   var geoKey = "AIzaSyC39c6JQfUTYtacJlXTKRjIRVzebGpZ-GM";
   var formatAddress = `${address.street} ${address.city} ${address.state}`;
-
   axios.get("https://maps.googleapis.com/maps/api/geocode/json",{
     params:{
       address:formatAddress,
       key:geoKey
     }
   }).then((response)=>{
-  var geolocation = response.data.results[0].geometry.location;
-  var lat = geolocation.lat;
-  var lng = geolocation.lng;
-  var address  = response.data.results[0].formatted_address;
-console.log(lat,lng);
-var addressOutput = `<ul card-block list-group>
-<li class="list-group-item"><strong>Current Address: </strong>${address}</li>
-</ul>`
-var addressE = document.querySelector(".currentLocation").innerHTML=addressOutput;
+    var geolocation = response.data.results[0].geometry.location;
+    var lat = geolocation.lat;
+    var lng = geolocation.lng;
+    var address  = response.data.results[0].formatted_address;
+    var addressOutput = `<ul full mr10 list-group>
+    <li class="list-group-item full bf6"><strong>Current Address: </strong>${address}</li>
+    </ul>`
+    var addressE = document.querySelector(".currentLocation").innerHTML=addressOutput;
     mapInit(lat,lng,address);
+    });
   });
-
-});
-});
+}else{
+  $("body").text("Make Screen Smaller(490<)");
+}
 function mapInit(lat,lon,address){
   var mapE = document.querySelector(".mapE");
   var scope = {

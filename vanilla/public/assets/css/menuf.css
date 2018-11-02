@@ -13,9 +13,16 @@
 }
 .checkout{
   position: absolute;
-  margin-top:35%;
+  margin-top:45%;
   width:100%;
   left:0%;
+}
+.ll25{
+  margin-top:40%;
+}
+.loader{
+  width:75%;
+  margin-left: 15%;
 }
 body{
   overflow-x:hidden

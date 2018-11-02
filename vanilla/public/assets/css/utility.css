@@ -10,11 +10,11 @@
 .red{
   color:red !important;
 
-
 }
 body{
   animation:intro .5s 1 ease-in;
 }
+.
 .madjL{
   margin-left:25%;
 }
@@ -23,6 +23,13 @@ body{
 }
 .adjT{
   margin-top:5%;
+}
+.ll25{
+  margin-top:40%;
+}
+.loader{
+  width:75%;
+  margin-left: 15%;
 }
 .paT{
   padding-top:2.5%;
@@ -165,4 +172,199 @@ body{
 }
 .b{
   font-weight:bold;
+}
+.full{
+  width:100%;
+
+}
+
+.bbw{
+  border-bottom:1px solid white;
+}
+.btf2{
+  border-top:1px solid white;
+}
+.sans{
+  font-family: sans-serif;
+}
+.half{
+  width:50%;
+}
+.quarter{
+  width:25%;
+}
+.nopad{
+  padding:0;
+}
+.fnorm{
+  font-weight: normal;
+}
+.cb{
+  color:black;
+}
+.t-left{
+  text-align: left;
+}
+.t-right{
+  text-align: right;
+}
+.pb5{
+  padding-bottom:5%;
+}
+.fll{
+  float:left;
+}
+
+.fllr{
+  float:right;
+}
+.rc{
+  color:red;
+}
+.t-center{
+  text-align:center;
+
+}
+.bf6{
+  background:#f6f6f6;
+}
+.t-bold{
+  font-weight: bold;
+}
+.mtop2.5{
+  margin-top: 2.5%;
+}
+.bw{
+  background:white;
+}
+.bf22{
+    border:#f2f2f2 2px solid;
+}
+.smallcut{
+    border-radius:5%;
+}
+.tc{
+  color:teal;
+}
+.boe6{
+  border:1px #e6e6e6 solid;
+}
+
+.boete6{
+    border-top:1px solid #e6e6e6;
+}
+.p1{
+    padding:1%;
+}
+.almostQuarter{
+    width:20%;
+}
+.mr5{
+  margin-right: 5%;
+}
+.half{
+  width:50%;
+}
+.br{
+  background-color:red;
+
+}
+.smallcut5{
+  border-radius:10px;
+}
+.mt5{
+  margin-top:5%;
+}
+.prl10px{
+  padding-left: 20px;
+    padding-right: 20px;
+}
+.ml25{
+  margin-left:25%;
+}
+.mt2.5{
+  margin-top:2.5%;
+}
+.w100{
+  width:100px;
+}
+.ptop2{
+    padding-top:2%;
+}
+.bobe6{
+    border-bottom:1px solid #e6e6e6;
+}
+.pt5{
+  padding-top:5%;
+}
+.f20{
+  font-size: 20px;
+}
+.almostFull{
+  width:90%;
+}
+.ml10{
+  margin-left: 10%;
+}
+.mt2.5{
+    margin-top:2.5%;
+}
+.ml5{
+margin-left:5%;
+}
+.mb1{
+    margin-bottom:1%;
+}
+.pb10{
+  padding-bottom:10%;
+}
+.mt2.5{
+    margin-top:2.5%;
+}
+.db{
+  color:black;
+}
+.mr10{
+  margin-right:10%;
+}
+.tch:hover{
+    color:white;
+    background:teal;
+}
+.pr1{
+  padding-right:1%;
+}
+.p20px{
+    padding:20px;
+}
+.pb20{
+  padding-bottom:20%;
+}
+.mr10{
+  padding-right: 10%;
+}
+.bte6{
+    border-top:1px solid #e6e6e6;
+}
+.b26{
+  background:#262626
+}
+.bbe6{
+  border-bottom:1px #e6e6e6 solid;
+}
+.ptb1{
+  padding-top:1%;
+  padding-bottom:1%;
+}
+.pt5{
+  padding-top:5%;
+}
+.h100{
+  height:100px;
+}
+.cw{
+  color:white;
+}
+.fl{
+  float: left;
 }

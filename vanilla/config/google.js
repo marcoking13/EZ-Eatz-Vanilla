@@ -5,23 +5,14 @@ const collections = ["customers","owners","currentOwner","currentCustomer"];
 const mongojs=require("mongojs");
 const database = "EZ_db";
 const db = mongojs(database,collections);
-
 passport.serializeUser((user,done)=>{
-
   done(null,user.id);
-
-
 });
-//Learn More
 passport.deserializeUser((id,done)=>{
     Customer.findById(id).then((user)=>{
-
-      console.log(user);
       if(user){
       return done(null,user);
     }
-
-
     });
 });
 passport.use(
@@ -37,22 +28,15 @@ var profile = {
   picture:profile.photos[0].value,
   phone:"",
   language:"",
-
-
 }
-
     Customer.findOne({id:profile.id}).then((response)=>{
       if(response){
          console.log("User already in database");
          db.currentCustomer.remove({});
          db.customers.find({id:response.id},(err,data)=>{
-           console.log(data,"DATA");
-           db.currentCustomer.insert(data,(err,data)=>{
-             console.log("DATA2",data);
-           });
+           db.currentCustomer.insert(data);
          })
          return done(null,response);
-
       }else{
         db.currentCustomer.remove({});
         db.currentCustomer.insert(profile);
@@ -64,6 +48,4 @@ var profile = {
       }
     });
   }));
-
-
 module.export = passport;
