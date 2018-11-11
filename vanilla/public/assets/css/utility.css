@@ -18,8 +18,43 @@ body{
 .madjL{
   margin-left:25%;
 }
+.m10{
+  margin-top: 10%;
+}
+.w100px{
+  width:100px;
+}
+.w30{
+  width:30%;
+}
+.w40{
+  width:40%;
+}
+.h200px{
+  height:200px;
+}
+.chf4:hover{
+  background:#f6f6f6;
+}
 .fo{
   padding-bottom:5%;
+}
+.shadowf2{
+  box-shadow:1px 1px 1px 2px #f2f2f2;
+}
+.rela{
+  position:relative;
+}
+.ml{
+  margin-left: 5%;
+}
+.chr:hover{
+  background:red !important;
+  color:white;
+}
+.chb:hover{
+  background:teal !important;
+  color:white;
 }
 .adjT{
   margin-top:5%;
@@ -362,9 +397,19 @@ margin-left:5%;
 .h100{
   height:100px;
 }
+.ptb5{
+  padding-top:4%;
+  padding-bottom:5%;
+}
 .cw{
   color:white;
 }
 .fl{
   float: left;
+}
+.currentLocation{
+  width:100% !important;
+}
+.currentLocation > li ul{
+  width:100% !important;
 }

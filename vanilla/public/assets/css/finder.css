@@ -5,7 +5,10 @@
 
 }
 .finderContainer{
-  width:100%;
+
+  width:90%;
+  margin-left:6%;
+
 }
 .jumbotron{
   margin-top:5%;
@@ -15,6 +18,18 @@
 
   padding:0;
 
+}
+.findBar{
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 2px solid #f2f2f2;
+
+  margin-left:5%;
+  margin-top:3%;
+}
+.findSearchBar{
+  width:90%;
 }
 .name{
   padding-top:1%;
@@ -156,4 +171,7 @@ body{
 
 
 
+}
+.truckC{
+  border-radius:5px !important;
 }

@@ -25,7 +25,8 @@ const FoodTrucks =  [{
       ingredients:[{name:"ice cream sandwich",display:false}],
       calories:300,
       price:9.53,
-      description:"A giant ice cream sandwich"
+      description:"A giant ice cream sandwich",
+      image:"./assets/images/kingicecreamsandwich.png"
     },
     {
       item:"Oreo Sandwich",
@@ -33,13 +34,14 @@ const FoodTrucks =  [{
      ingredients:[{name:"oreo sandwich",display:false}],
       calories:450,
       price:10.41,
-      description:"A oreo ice cream sandwich"
+      description:"A oreo ice cream sandwich",
+      image:"./assets/images/oreoicecreamsandwich.png"
     },
     {
       item:"Toll House Sandwich",
       id:"39393939392eie39488494839849348983943948398490228t43798",
       ingredients:[{name:"toll house sandwich",display:false}],
-
+      image:"./assets/images/tollhouse.png",
       calories:1000,
       price:4.50,
       description:"Classic ice cream sandwich"
@@ -54,7 +56,8 @@ const FoodTrucks =  [{
     ingredients:[{name:"vanilla ice cream",display:false}],
     calories:400,
     price:2.99,
-    description:"A scoop of vanilla ice cream"
+    description:"A scoop of vanilla ice cream",
+    image:"./assets/images/vanillaicecream.png"
   },
   {
     item:"Strawberry Ice Cream",
@@ -62,7 +65,8 @@ const FoodTrucks =  [{
     ingredients:[{name:"strawberry ice cream",display:false}],
     calories:450,
     price:2.99,
-    description:"A scoop of strawberry ice cream"
+    description:"A scoop of strawberry ice cream",
+    image:"./assets/images/strawberryicecream.png"
   },
   {
     item:"Rocky Road Ice Cream",
@@ -70,7 +74,8 @@ const FoodTrucks =  [{
     ingredients:[{name:"chocolate ice cream",display:false},{name:"marshmallow",display:true},{name:"twix bars",display:true}],
     calories:400,
     price:4.99,
-    description:"A scoop of rocky road ice cream"
+    description:"A scoop of rocky road ice cream",
+    image:"./assets/images/rockyicecream.png"
   }]
 },
 {
@@ -82,7 +87,8 @@ const FoodTrucks =  [{
     ingredients:[{name:"chocolate ice cream",display:false},{name:"strawberries",display:true},{name:"fudge",display:true}],
     calories:2000,
     price:11.53,
-    description:"A 2 pound ice cream cookie we recommend it"
+    description:"A 2 pound ice cream cookie we recommend it",
+    image:"./assets/images/endcake.png"
   },
   {
     item:"Flamingo Cake",
@@ -90,13 +96,14 @@ const FoodTrucks =  [{
     ingredients:[{name:"strawberry ice cream",display:false},{name:"lemon",display:true},{name:"mango",display:true}],
     calories:550,
     price:2.41,
-    description:"Affordable and fancy cake"
+    description:"Affordable and fancy cake",
+    image:"./assets/images/flamingocake.png"
   },
   {
     item:"Fried Ice Cream",
     id:"rhy7f92j9fhj209fduj013ed9j01ss02982928",
    ingredients:[{name:"chocolate ice cream",display:false},{name:"fudge",display:true}],
-
+   image:"./assets/images/firedicecream.jpg",
     calories:800,
     price:4.50,
     description:"Fried ice  cream"
@@ -107,27 +114,34 @@ images:["image2.png","image3.png","image4.png"],
  sides:[
    {
    name:"skittles",
-   price:.50
+   price:.50,
+   image:"./assets/images/samplebanner2.jpg"
  },
  {
  name:"fudge",
- price:.40
+ price:.40,
+ image:"./assets/images/samplebanner2.jpg"
 },
 {
 name:"m&m",
-price:.30
+price:.30,
+image:"./assets/images/samplebanner2.jpg"
 },
 {
 name:"oreos",
-price:.60
+price:.60,
+image:"./assets/images/samplebanner2.jpg"
 },
 {
 name:"sprinkles",
-price:.50
+price:.50,
+image:"./assets/images/samplebanner2.jpg"
 },
 {
 name:"marshmallow",
-price:.50
+price:.50,
+image:"./assets/images/samplebanner2.jpg"
+
 }
 
 
@@ -153,7 +167,7 @@ price:.50
     {
       item:"Gyro",
       id:"skm1pdm12309e120esjm1209e102",
-
+      image:"./assets/images/gyro.png",
       ingredients:[{
         name:"mixed greens",
         display:true
@@ -188,6 +202,7 @@ price:.50
   catagory:"Pizzas",
     id:"mcocimcnceicnnnnnnn",
   food:[{
+    image:"./assets/images/lavashpizza.png",
     item:"Lavosh Pizza",
     id:"xkwnccwococne",
     ingredients:[{
@@ -221,12 +236,14 @@ price:.50
     description:"A lavosh Pizza"
   },
   {
+    image:"./assets/images/mushroompizza.png",
     item:"Garlic Mushroom Pizza",
     id:"021wo220w2o0e2o202",
     ingredients:[{
       name:"tomato",
       display:true
     },
+
     {
       name:"garlic",
       display:true
@@ -252,6 +269,7 @@ price:.50
   {
     item:"Pesto Pizza",
     id:"ek102eke1209e201",
+    image:"./assets/images/pestopizza.png",
     ingredients:[{
       name:"pesto",
       display:true
@@ -288,6 +306,7 @@ price:.50
   id:"nojdmi0ednemide",
   food:[{
     item:"Avocado Hummus",
+    image:"./assets/images/avacadohummus.png",
     id:"nd39d3d8end2o9d2nodj29",
     ingredients:[{
       name:"olive oil",
@@ -322,6 +341,7 @@ price:.50
   {
     item:"Red Bell Pepper Hummus",
     id:"nc2enfdun298d29dj2398jdm2",
+    image:"./assets/images/redhummus.png",
     ingredients:[{
       name:"olive oil",
       display:false
@@ -358,6 +378,7 @@ price:.50
   {
     item:"Cilantro Hummus",
     id:"cdmi30dn32dn3d23o",
+    image:"./assets/images/greenhummus.png",
     ingredients:[{
       name:"olive oil",
       display:false
@@ -401,6 +422,7 @@ price:.50
   id:"nojdmi0ednemid3399339e2882",
   food:[{
     item:"Wood-fired Salmon",
+    image:"./assets/images/woodfiredsalmon.png",
     id:"nd39d3d8end2o44449d2nodj29",
     ingredients:[{
       name:"garlic",
@@ -435,6 +457,7 @@ price:.50
   {
     item:"Garbanzo Bowl",
     id:"2932939nddneudn932",
+    image:"./assets/images/garbanzo.jpg",
     ingredients:[{
       name:"garbanzo beans",
       display:true
@@ -467,6 +490,7 @@ price:.50
   },
   {
     item:"Chicken del Sol",
+    image:"./assets/images/chickendelsol.png",
     id:"nc2enfd399393un298d29dj2398jdm2",
     ingredients:[{
       name:"chicken",
@@ -503,6 +527,7 @@ price:.50
   },
   {
     item:"Avocado Tostada",
+    image:"./assets/images/tostada.png",
     id:"cvnjjdn3d23o3939393993",
     ingredients:[{
       name:"avocado",
@@ -543,6 +568,7 @@ price:.50
   id:"2390nojdmi0ednemid339934894389489894303r4382939e2882",
   food:[{
     item:"Coca-Cola",
+    image:"./assets/images/coke.png",
     id:"2923923ei3290832928210010",
     ingredients:[],
     modal:false,
@@ -553,15 +579,7 @@ price:.50
   {
     item:"Orange Fanta",
     id:"392930203dj923jdcncnbvnf-2-",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Coca-Cola",
-    id:"203298fdj82d2djjcnneocno2e",
+    image:"./assets/images/fanta.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -570,16 +588,19 @@ price:.50
   },
   {
     item:"Diet Coca-Cola",
-    id:"29ei3290832928210301002022",
+    image:"./assets/images/dietcoke.png",
+    id:"203298fdj82d2djjcnneocno2e",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
     description:""
   },
+
   {
     item:"Dr Pepper",
     id:"29ei32908329238210010222dc",
+      image:"./assets/images/drpepper.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -590,6 +611,7 @@ price:.50
     item:"Sirra Mist",
     id:"9029ei3290832928210010cmkc",
     ingredients:[],
+      image:"./assets/images/sprite.png",
     modal:false,
     calories:300,
     price:2.99,
@@ -602,8 +624,9 @@ price:.50
     modal:false,
     calories:300,
     price:2.99,
-    description:""
-  },
+    description:"",
+    image:"./assets/images/rootbeer.png"
+  }
   ]
 }
 ],
@@ -660,7 +683,7 @@ address:{
     {
       item:"Double Burger Meal",
       id:"2ewjsdxme2dcxk203x298292298",
-
+      image:"./assets/images/burger3.png",
       ingredients:[{
         name:"toasted bun",
         display:true
@@ -697,6 +720,7 @@ address:{
   food:[{
     item:"6 burger slider",
     id:"33456789dmxewicm",
+    image:"./assets/images/burger1.png",
     ingredients:[{
       name:"toasted bun",
       display:true
@@ -730,6 +754,7 @@ address:{
   {
     item:"buffalo wings",
     id:"2029e0i3290r203",
+    image:"./assets/images/wings.png",
     ingredients:[{
       name:"buffalo wings",
       display:false
@@ -747,6 +772,7 @@ address:{
   {
     item:"Greek Salad",
     id:"aa2442020393939838jgjgjg",
+        image:"./assets/images/salad1.png",
     ingredients:[{
       name:"olives",
       display:true
@@ -779,6 +805,7 @@ address:{
   id:"nojdmi0ednemide",
   food:[{
     item:"Classic Cheese",
+        image:"./assets/images/cheesepizza.png",
     id:"19292929229384567438920394857",
     ingredients:[{
       name:"cheese",
@@ -801,6 +828,7 @@ address:{
   {
     item:"Veggie Pizza",
     id:"jnnvnvnreivvnvnvnvnrvnvrrvnj22",
+        image:"./assets/images/mushroompizza.png",
     ingredients:[{
       name:"olives",
       display:false
@@ -833,6 +861,7 @@ address:{
   {
     id:"r3j29fj2f92m9mc9m29",
     item:"Chicken Pizza",
+        image:"./assets/images/pestopizza.png",
     ingredients:[{
       name:"grilled chicken",
       display:false
@@ -852,7 +881,8 @@ address:{
   id:"nojdmi0ednemid3399339e2882",
   food:[{
     item:"Coca-Cola",
-    id:"29ei3290832928210010",
+    image:"./assets/images/coke.png",
+    id:"2923923ei3290832928210010",
     ingredients:[],
     modal:false,
     calories:300,
@@ -861,16 +891,8 @@ address:{
   },
   {
     item:"Orange Fanta",
-    id:"29ei32908329282100102",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Coca-Cola",
-    id:"29ei32908329282100103",
+    id:"392930203dj923jdcncnbvnf-2-",
+    image:"./assets/images/fanta.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -879,16 +901,19 @@ address:{
   },
   {
     item:"Diet Coca-Cola",
-    id:"29ei32908329282103010",
+    image:"./assets/images/dietcoke.png",
+    id:"203298fdj82d2djjcnneocno2e",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
     description:""
   },
+
   {
     item:"Dr Pepper",
-    id:"29ei32908329238210010",
+    id:"29ei32908329238210010222dc",
+      image:"./assets/images/drpepper.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -897,8 +922,9 @@ address:{
   },
   {
     item:"Sirra Mist",
-    id:"9029ei3290832928210010",
+    id:"9029ei3290832928210010cmkc",
     ingredients:[],
+      image:"./assets/images/sprite.png",
     modal:false,
     calories:300,
     price:2.99,
@@ -906,13 +932,14 @@ address:{
   },
   {
     item:"Root Beer",
-    id:"w29ei3290832928210010",
+    id:"w29ei3290832928210010cpmrmp",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
-    description:""
-  },
+    description:"",
+    image:"./assets/images/rootbeer.png"
+  }
   ]
 }
 ],
@@ -1151,7 +1178,8 @@ address:{
   id:"nojdmi0ednemid3399339e2882",
   food:[{
     item:"Coca-Cola",
-    id:"29ei3290832928210010",
+    image:"./assets/images/coke.png",
+    id:"2923923ei3290832928210010",
     ingredients:[],
     modal:false,
     calories:300,
@@ -1160,16 +1188,8 @@ address:{
   },
   {
     item:"Orange Fanta",
-    id:"29ei32908329282100102",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Coca-Cola",
-    id:"29ei32908329282100103",
+    id:"392930203dj923jdcncnbvnf-2-",
+    image:"./assets/images/fanta.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -1178,16 +1198,19 @@ address:{
   },
   {
     item:"Diet Coca-Cola",
-    id:"29ei32908329282103010",
+    image:"./assets/images/dietcoke.png",
+    id:"203298fdj82d2djjcnneocno2e",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
     description:""
   },
+
   {
     item:"Dr Pepper",
-    id:"29ei32908329238210010",
+    id:"29ei32908329238210010222dc",
+      image:"./assets/images/drpepper.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -1196,8 +1219,9 @@ address:{
   },
   {
     item:"Sirra Mist",
-    id:"9029ei3290832928210010",
+    id:"9029ei3290832928210010cmkc",
     ingredients:[],
+      image:"./assets/images/sprite.png",
     modal:false,
     calories:300,
     price:2.99,
@@ -1205,12 +1229,13 @@ address:{
   },
   {
     item:"Root Beer",
-    id:"w29ei3290832928210010",
+    id:"w29ei3290832928210010cpmrmp",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
-    description:""
+    description:"",
+    image:"./assets/images/rootbeer.png"
   },
   ]
 }
@@ -1258,7 +1283,7 @@ address:{
     {
       item:"Double Burger Meal",
       id:"2ewjsdxme2dcxk203x298292298",
-
+      image:"./assets/images/burger1.png",
       ingredients:[{
         name:"toasted bun",
         display:true
@@ -1295,6 +1320,7 @@ address:{
   food:[{
     item:"6 burger slider",
     id:"33456789dmxewicm",
+        image:"./assets/images/burger2.png",
     ingredients:[{
       name:"toasted bun",
       display:true
@@ -1328,6 +1354,7 @@ address:{
   {
     item:"buffalo wings",
     id:"2029e0i3290r203",
+        image:"./assets/images/wings.png",
     ingredients:[{
       name:"buffalo wings",
       display:false
@@ -1378,6 +1405,7 @@ address:{
   food:[{
     item:"Classic Cheese",
     id:"19292929229384567438920394857",
+        image:"./assets/images/cheesepizza.png",
     ingredients:[{
       name:"cheese",
       display:false
@@ -1399,6 +1427,7 @@ address:{
   {
     item:"Veggie Pizza",
     id:"jnnvnvnreivvnvnvnvnrvnvrrvnj22",
+        image:"./assets/images/pestopizza.png",
     ingredients:[{
       name:"olives",
       display:false
@@ -1431,6 +1460,7 @@ address:{
   {
     id:"r3j29fj2f92m9mc9m29",
     item:"Chicken Pizza",
+        image:"./assets/images/mushroompizza.png",
     ingredients:[{
       name:"grilled chicken",
       display:false
@@ -1450,7 +1480,8 @@ address:{
   id:"nojdmi0ednemid3399339e2882",
   food:[{
     item:"Coca-Cola",
-    id:"29ei3290832928210010",
+    image:"./assets/images/coke.png",
+    id:"2923923ei3290832928210010",
     ingredients:[],
     modal:false,
     calories:300,
@@ -1459,16 +1490,8 @@ address:{
   },
   {
     item:"Orange Fanta",
-    id:"29ei32908329282100102",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Coca-Cola",
-    id:"29ei32908329282100103",
+    id:"392930203dj923jdcncnbvnf-2-",
+    image:"./assets/images/fanta.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -1477,16 +1500,19 @@ address:{
   },
   {
     item:"Diet Coca-Cola",
-    id:"29ei32908329282103010",
+    image:"./assets/images/dietcoke.png",
+    id:"203298fdj82d2djjcnneocno2e",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
     description:""
   },
+
   {
     item:"Dr Pepper",
-    id:"29ei32908329238210010",
+    id:"29ei32908329238210010222dc",
+      image:"./assets/images/drpepper.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -1495,8 +1521,9 @@ address:{
   },
   {
     item:"Sirra Mist",
-    id:"9029ei3290832928210010",
+    id:"9029ei3290832928210010cmkc",
     ingredients:[],
+      image:"./assets/images/sprite.png",
     modal:false,
     calories:300,
     price:2.99,
@@ -1504,13 +1531,14 @@ address:{
   },
   {
     item:"Root Beer",
-    id:"w29ei3290832928210010",
+    id:"w29ei3290832928210010cpmrmp",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
-    description:""
-  },
+    description:"",
+    image:"./assets/images/rootbeer.png"
+  }
   ]
 }
 ],
@@ -1749,7 +1777,8 @@ address:{
   id:"nojdmi0ednemid3399339e2882",
   food:[{
     item:"Coca-Cola",
-    id:"29ei3290832928210010",
+    image:"./assets/images/coke.png",
+    id:"2923923ei3290832928210010",
     ingredients:[],
     modal:false,
     calories:300,
@@ -1758,16 +1787,8 @@ address:{
   },
   {
     item:"Orange Fanta",
-    id:"29ei32908329282100102",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Coca-Cola",
-    id:"29ei32908329282100103",
+    id:"392930203dj923jdcncnbvnf-2-",
+    image:"./assets/images/fanta.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -1776,16 +1797,19 @@ address:{
   },
   {
     item:"Diet Coca-Cola",
-    id:"29ei32908329282103010",
+    image:"./assets/images/dietcoke.png",
+    id:"203298fdj82d2djjcnneocno2e",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
     description:""
   },
+
   {
     item:"Dr Pepper",
-    id:"29ei32908329238210010",
+    id:"29ei32908329238210010222dc",
+      image:"./assets/images/drpepper.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -1794,8 +1818,9 @@ address:{
   },
   {
     item:"Sirra Mist",
-    id:"9029ei3290832928210010",
+    id:"9029ei3290832928210010cmkc",
     ingredients:[],
+      image:"./assets/images/sprite.png",
     modal:false,
     calories:300,
     price:2.99,
@@ -1803,13 +1828,14 @@ address:{
   },
   {
     item:"Root Beer",
-    id:"w29ei3290832928210010",
+    id:"w29ei3290832928210010cpmrmp",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
-    description:""
-  },
+    description:"",
+    image:"./assets/images/rootbeer.png"
+  }
   ]
 }
 ],
@@ -1850,12 +1876,13 @@ address:{
   menu:[{
     catagory:"Burgers",
       id:"cmoicrewcvnew92290923923",
+          image:"./assets/images/burger1.png",
     food:[
 
     {
       item:"Double Burger Meal",
       id:"2ewjsdxme2dcxk203x298292298",
-
+    image:"./assets/images/burger2.png",
       ingredients:[{
         name:"toasted bun",
         display:true
@@ -1891,6 +1918,7 @@ address:{
     id:"-20239049fjjj--",
   food:[{
     item:"6 burger slider",
+        image:"./assets/images/burger2.png",
     id:"33456789dmxewicm",
     ingredients:[{
       name:"toasted bun",
@@ -1925,6 +1953,7 @@ address:{
   {
     item:"buffalo wings",
     id:"2029e0i3290r203",
+        image:"./assets/images/wings.png",
     ingredients:[{
       name:"buffalo wings",
       display:false
@@ -1942,6 +1971,7 @@ address:{
   {
     item:"Greek Salad",
     id:"aa2442020393939838jgjgjg",
+    image:"./assets/images/salad1.png",
     ingredients:[{
       name:"olives",
       display:true
@@ -1975,6 +2005,7 @@ address:{
   food:[{
     item:"Classic Cheese",
     id:"19292929229384567438920394857",
+        image:"./assets/images/cheesepizza.png",
     ingredients:[{
       name:"cheese",
       display:false
@@ -1996,6 +2027,7 @@ address:{
   {
     item:"Veggie Pizza",
     id:"jnnvnvnreivvnvnvnvnrvnvrrvnj22",
+        image:"./assets/images/pestopizza.png",
     ingredients:[{
       name:"olives",
       display:false
@@ -2028,6 +2060,7 @@ address:{
   {
     id:"r3j29fj2f92m9mc9m29",
     item:"Chicken Pizza",
+        image:"./assets/images/mushroompizza.png",
     ingredients:[{
       name:"grilled chicken",
       display:false
@@ -2047,7 +2080,8 @@ address:{
   id:"nojdmi0ednemid3399339e2882",
   food:[{
     item:"Coca-Cola",
-    id:"29ei3290832928210010",
+    image:"./assets/images/coke.png",
+    id:"2923923ei3290832928210010",
     ingredients:[],
     modal:false,
     calories:300,
@@ -2056,16 +2090,8 @@ address:{
   },
   {
     item:"Orange Fanta",
-    id:"29ei32908329282100102",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Coca-Cola",
-    id:"29ei32908329282100103",
+    id:"392930203dj923jdcncnbvnf-2-",
+    image:"./assets/images/fanta.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -2074,16 +2100,19 @@ address:{
   },
   {
     item:"Diet Coca-Cola",
-    id:"29ei32908329282103010",
+    image:"./assets/images/dietcoke.png",
+    id:"203298fdj82d2djjcnneocno2e",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
     description:""
   },
+
   {
     item:"Dr Pepper",
-    id:"29ei32908329238210010",
+    id:"29ei32908329238210010222dc",
+      image:"./assets/images/drpepper.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -2092,8 +2121,9 @@ address:{
   },
   {
     item:"Sirra Mist",
-    id:"9029ei3290832928210010",
+    id:"9029ei3290832928210010cmkc",
     ingredients:[],
+      image:"./assets/images/sprite.png",
     modal:false,
     calories:300,
     price:2.99,
@@ -2101,13 +2131,14 @@ address:{
   },
   {
     item:"Root Beer",
-    id:"w29ei3290832928210010",
+    id:"w29ei3290832928210010cpmrmp",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
-    description:""
-  },
+    description:"",
+    image:"./assets/images/rootbeer.png"
+  }
   ]
 }
 ],
@@ -2152,6 +2183,7 @@ address:{
       {
         item:"Rice Bowl",
         id:"3345jciekjijmiomoinceiu6789dmxewicm",
+            image:"./assets/images/ricebowl.png",
         ingredients:[{
           name:"brown rice",
           display:true
@@ -2168,7 +2200,7 @@ address:{
     {
       item:"Tariaki Chicken",
       id:"2ew32i3290ei3j32cmiovc32dcsdxme2dcxk203x298292298",
-
+    image:"./assets/images/chinachicken.png",
       ingredients:[{
         name:"brown rice",
         display:true
@@ -2192,6 +2224,7 @@ address:{
     id:"-2023904cmoicncemowocknc1ei9fjjj--",
   food:[{
     name:"Wonton Salad",
+        image:"./assets/images/wontonsalad.png",
     id:"fj308jv39iqnq3u9tvbverwmncnucqvnrutpg293nqfcvneifjvcenroii",
     ingredients:[
     {name:"olives",display:true},
@@ -2204,6 +2237,7 @@ address:{
   },
   {
     name:"Wonton Soup",
+        image:"./assets/images/wontonsoup.png",
     id:"fj308jv39iqnq3u9tvbvnucqvnrutpg293nqfcvneifjveeeecenroicndwoixqoxmmoxqmocmqcmoi",
     ingredients:[
     {name:"wontons",display:true}
@@ -2214,6 +2248,7 @@ address:{
   },
   {
     item:"China Special",
+        image:"./assets/images/china1.png",
     id:"2029e0i3mecpqcm290r203",
     ingredients:[{
       name:"chicken",
@@ -2239,7 +2274,8 @@ address:{
   id:"nojdmi0edncmwkecnkemid3399339e2882",
   food:[{
     item:"Coca-Cola",
-    id:"29ei329083292821ecewwec0010",
+    image:"./assets/images/coke.png",
+    id:"2923923ei3290832928210010",
     ingredients:[],
     modal:false,
     calories:300,
@@ -2248,16 +2284,8 @@ address:{
   },
   {
     item:"Orange Fanta",
-    id:"29ewcmkwecni32908329282100102",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Coca-Cola",
-    id:"29ei329cnewic08329282100103",
+    id:"392930203dj923jdcncnbvnf-2-",
+    image:"./assets/images/fanta.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -2266,16 +2294,19 @@ address:{
   },
   {
     item:"Diet Coca-Cola",
-    id:"29ei3290832cwec9282103010",
+    image:"./assets/images/dietcoke.png",
+    id:"203298fdj82d2djjcnneocno2e",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
     description:""
   },
+
   {
     item:"Dr Pepper",
-    id:"29ei32908ceww329238210010",
+    id:"29ei32908329238210010222dc",
+      image:"./assets/images/drpepper.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -2284,8 +2315,9 @@ address:{
   },
   {
     item:"Sirra Mist",
-    id:"9029ei329083cece2928210010",
+    id:"9029ei3290832928210010cmkc",
     ingredients:[],
+      image:"./assets/images/sprite.png",
     modal:false,
     calories:300,
     price:2.99,
@@ -2293,13 +2325,14 @@ address:{
   },
   {
     item:"Root Beer",
-    id:"w29ei3290832cecdewcwdxew928210010",
+    id:"w29ei3290832928210010cpmrmp",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
-    description:""
-  },
+    description:"",
+    image:"./assets/images/rootbeer.png"
+  }
   ]
 }
 ],
@@ -2345,7 +2378,7 @@ address:{
     {
       item:"Double Burger Meal",
       id:"2ewjsdxme2dcxk203x298292298",
-
+          image:"./assets/images/burger1.png",
       ingredients:[{
         name:"toasted bun",
         display:true
@@ -2379,6 +2412,7 @@ address:{
 {
   catagory:"Sliders",
     id:"-20239049fjjj--",
+        image:"./assets/images/burger2.png",
   food:[{
     item:"6 burger slider",
     id:"33456789dmxewicm",
@@ -2415,6 +2449,7 @@ address:{
   {
     item:"buffalo wings",
     id:"2029e0i3290r203",
+        image:"./assets/images/wings.png",
     ingredients:[{
       name:"buffalo wings",
       display:false
@@ -2431,6 +2466,7 @@ address:{
   },
   {
     item:"Greek Salad",
+        image:"./assets/images/salad2.png",
     id:"aa2442020393939838jgjgjg",
     ingredients:[{
       name:"olives",
@@ -2462,8 +2498,10 @@ address:{
 {
   catagory:"Pizzas",
   id:"nojdmi0ednemide",
+
   food:[{
     item:"Classic Cheese",
+      image:"./assets/images/cheesepizza.png",
     id:"19292929229384567438920394857",
     ingredients:[{
       name:"cheese",
@@ -2486,6 +2524,7 @@ address:{
   {
     item:"Veggie Pizza",
     id:"jnnvnvnreivvnvnvnvnrvnvrrvnj22",
+        image:"./assets/images/mushroompizza.png",
     ingredients:[{
       name:"olives",
       display:false
@@ -2518,6 +2557,7 @@ address:{
   {
     id:"r3j29fj2f92m9mc9m29",
     item:"Chicken Pizza",
+        image:"./assets/images/pestopizza.png",
     ingredients:[{
       name:"grilled chicken",
       display:false
@@ -2537,7 +2577,8 @@ address:{
   id:"nojdmi0ednemid3399339e2882",
   food:[{
     item:"Coca-Cola",
-    id:"29ei3290832928210010",
+    image:"./assets/images/coke.png",
+    id:"2923923ei3290832928210010",
     ingredients:[],
     modal:false,
     calories:300,
@@ -2546,16 +2587,8 @@ address:{
   },
   {
     item:"Orange Fanta",
-    id:"29ei32908329282100102",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Coca-Cola",
-    id:"29ei32908329282100103",
+    id:"392930203dj923jdcncnbvnf-2-",
+    image:"./assets/images/fanta.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -2564,16 +2597,19 @@ address:{
   },
   {
     item:"Diet Coca-Cola",
-    id:"29ei32908329282103010",
+    image:"./assets/images/dietcoke.png",
+    id:"203298fdj82d2djjcnneocno2e",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
     description:""
   },
+
   {
     item:"Dr Pepper",
-    id:"29ei32908329238210010",
+    id:"29ei32908329238210010222dc",
+      image:"./assets/images/drpepper.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -2582,8 +2618,9 @@ address:{
   },
   {
     item:"Sirra Mist",
-    id:"9029ei3290832928210010",
+    id:"9029ei3290832928210010cmkc",
     ingredients:[],
+      image:"./assets/images/sprite.png",
     modal:false,
     calories:300,
     price:2.99,
@@ -2591,13 +2628,14 @@ address:{
   },
   {
     item:"Root Beer",
-    id:"w29ei3290832928210010",
+    id:"w29ei3290832928210010cpmrmp",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
-    description:""
-  },
+    description:"",
+    image:"./assets/images/rootbeer.png"
+  }
   ]
 }
 ],
@@ -2643,7 +2681,7 @@ address:{
     {
       item:"Cheese Burger",
       id:"2ewjsdxme2dcxk23e13erdcqdrvc2qwq03x298292298",
-
+          image:"./assets/images/burger3.png",
       ingredients:[{
         name:"toasted bun",
         display:true
@@ -2679,6 +2717,7 @@ address:{
     id:"-20239049fj4kd340f134jj--",
   food:[{
     item:"Fries",
+        image:"./assets/images/fries.png",
     id:"33456789dmxew3ekdc2jmo1cj12oiicm",
     modal:false,
     ingredients:[],
@@ -2690,6 +2729,7 @@ address:{
     item:"buffalo wings",
     id:"2029e0i3290r203",
     modal:true,
+        image:"./assets/images/wings.png",
     ingredients:[{
       name:"buffalo wings",
       display:false
@@ -2708,6 +2748,7 @@ address:{
     item:"Greek Salad",
     id:"aa244340904909412020393939838jgjgjg",
     modal:false,
+        image:"./assets/images/salad1.png",
     ingredients:[{
       name:"olives",
       display:true
@@ -2740,6 +2781,7 @@ address:{
   id:"nojdmi0ednemide",
   food:[{
     item:"Classic Cheese",
+        image:"./assets/images/cheesepizza.png",
     id:"19292929229384567438920394857",
     ingredients:[{
       name:"cheese",
@@ -2762,6 +2804,7 @@ address:{
   {
     item:"Veggie Pizza",
     id:"jnnvnvnreivvnvnvnvnrvnvrrvnj22",
+        image:"./assets/images/cheesepizza.png",
     ingredients:[{
       name:"olives",
       display:false
@@ -2794,6 +2837,7 @@ address:{
   {
     id:"r3j29fj2f92m9mc9m29",
     item:"Chicken Pizza",
+        image:"./assets/images/pestopizza.png",
     ingredients:[{
       name:"grilled chicken",
       display:false
@@ -2813,7 +2857,8 @@ address:{
   id:"nojdmi0ednemid3399339e2882",
   food:[{
     item:"Coca-Cola",
-    id:"29ei3290832928210010",
+    image:"./assets/images/coke.png",
+    id:"2923923ei3290832928210010",
     ingredients:[],
     modal:false,
     calories:300,
@@ -2822,16 +2867,8 @@ address:{
   },
   {
     item:"Orange Fanta",
-    id:"29ei32908329282100102",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Coca-Cola",
-    id:"29ei32908329282100103",
+    id:"392930203dj923jdcncnbvnf-2-",
+    image:"./assets/images/fanta.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -2840,16 +2877,19 @@ address:{
   },
   {
     item:"Diet Coca-Cola",
-    id:"29ei32908329282103010",
+    image:"./assets/images/dietcoke.png",
+    id:"203298fdj82d2djjcnneocno2e",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
     description:""
   },
+
   {
     item:"Dr Pepper",
-    id:"29ei32908329238210010",
+    id:"29ei32908329238210010222dc",
+      image:"./assets/images/drpepper.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -2858,8 +2898,9 @@ address:{
   },
   {
     item:"Sirra Mist",
-    id:"9029ei3290832928210010",
+    id:"9029ei3290832928210010cmkc",
     ingredients:[],
+      image:"./assets/images/sprite.png",
     modal:false,
     calories:300,
     price:2.99,
@@ -2867,13 +2908,14 @@ address:{
   },
   {
     item:"Root Beer",
-    id:"w29ei3290832928210010",
+    id:"w29ei3290832928210010cpmrmp",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
-    description:""
-  },
+    description:"",
+    image:"./assets/images/rootbeer.png"
+  }
   ]
 }
 ],
@@ -2902,285 +2944,7 @@ address:{
    price:.4
  }]
 },
-{
-  ownerID:"32903209024nvtuericvn2ervut4bh93rnv3r895g4n9v3n598gr08d32dj0m0fcn290",
-  objectID:"fnc249fc94fhcnvtnuibvhteivnr3uibtruivnritubn49ovnrtbh4999898383298329",
-  name:"Remmy's",
-  routes:routes,
-  logo:"./assets/images/remmy.png",
-  background:"./assets/images/remmeybanner.jpg",
-  display:"./assets/images/pizza290.jpg",
-  type:["all-american"],
-  priceAverage:total,
-  menu:[{
-    catagory:"Burgers",
-      id:"cmoicrewcvnew92290923923",
-    food:[
 
-    {
-      item:"Super Burger",
-      id:"2ewjsd30430-4-30xme2dcxk203x298292298",
-
-      ingredients:[{
-        name:"sesame bun",
-        display:true
-      },
-      {
-        name:"ground meat",
-        display:true
-      },
-      {
-        name:"cheese",
-        display:true
-      },
-      {
-        name:"onion",
-        display:false
-      },
-      {
-        name:"side of fries",
-        display:true
-      },
-      {
-        name:"ketchup",
-        display:true
-      },{
-        name:"mustard",
-        display:true
-      }
-    ],
-      calories:900,
-      price:4.99,
-      description:"A classic burger"
-    }]
-},
-{
-  catagory:"All American",
-    id:"-20239049fjjj--49438939",
-  food:[{
-    item:"6 burger slider",
-    id:"33456789d3232323e23dqdmxewicm",
-    ingredients:[{
-      name:"toasted bun",
-      display:true
-    },
-    {
-      name:"ground beef",
-      display:true
-    },
-    {
-      name:"cheese",
-      display:true
-    },
-    {
-      name:"tomato",
-      display:true
-    },
-    {
-      name:"secret sauce",
-      display:true
-    },
-    {
-      name:"side of fries",
-      display:true
-    }
-  ],
-
-    calories:500,
-    price:2.99,
-    description:"6 slider burgers with a side of fries"
-  },
-  {
-    item:"buffalo wings",
-    id:"2029e0i32943343430r203",
-    ingredients:[{
-      name:"buffalo wings",
-      display:false
-    },
-    {
-      name:"side of A01 sauce",
-      display:true
-    }
-  ],
-
-    calories:450,
-    price:5.99,
-    description:"Our fresh seasoned buffalo wings"
-  },
-  {
-    item:"Cesar Salad",
-    id:"aa2442020393939838jgjgjg",
-    ingredients:[{
-      name:"olives",
-      display:true
-    },
-    {
-      name:"tomato",
-      display:true
-    },
-    {
-      name:"onion",
-      display:true
-    },
-    {
-      name:"greens",
-      display:true
-    },
-    {
-      name:"feta",
-      display:true
-    }
-  ],
-
-    calories:400,
-    price:4.99,
-    description:"A classic tossed salad"
-  }]
-},
-{
-  catagory:"Dessert",
-  id:"nojdmi0ednemide",
-  food:[{
-    item:"Fudge Sundae",
-    id:"19292929229384439ri3409rf34fj34904567438920394857",
-    ingredients:[{
-      name:"fudge",
-      display:true
-    },
-    {
-      name:"vanilla ice cream",
-      display:true
-    },
-    {
-      name:"cherry",
-      display:true
-    }
-  ],
-
-    calories:900,
-    price:4.99,
-    description:"Fantastic fudge sundae"
-  },
-  {
-    item:"Vanilla Ice Cream",
-    id:"jnnvn3043vnreivvnvnvnvnrvnvrrvnj22",
-    ingredients:[],
-    calories:500,
-    price:2.99,
-    description:"Vanilla Ice Cream"
-  },
-  {
-    item:"Strawberry Ice Cream",
-    id:"jnnvn3043vnreivvnv-34034304nvnvnrvnvrrvnj22",
-    ingredients:[],
-    calories:500,
-    price:2.99,
-    description:"Strawberry Ice Cream"
-  },
-  {
-    item:"Chocolate Ice Cream",
-    id:"jnnvn3043vnreivvnvnvnvnrvnvrrvnj22",
-    ingredients:[],
-    calories:500,
-    price:2.99,
-    description:"Chocolate Ice Cream"
-  },
-]
-},
-{
-  catagory:"Drinks",
-  id:"nojdmi0ednemid339933393403499e2882",
-  food:[{
-    item:"Coca-Cola",
-    id:"29ei32908329282100104398ru3498eu328ru3298fjh",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Orange Fanta",
-    id:"29ei3290832431423r2fdc3r9282100102",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Coca-Cola",
-    id:"29ei3290832fcfvfdvfvdsveqwrca9282100103",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Diet Coca-Cola",
-    id:"29ei32908329282103010cerwvcvfevev",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Dr Pepper",
-    id:"29ei329083292382100fh3cn1qhn10",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Sirra Mist",
-    id:"9029ei329083292823vco1vniev10010",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Root Beer",
-    id:"w29ei329083292821nfc3irn2iv0010",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  ]
-}
-],
-
-images:["image2p.png","image3p.png","image4p.png"],
-address:{
-
-  street:"4340 E Indian School Rd",
-  city:"Phoenix",
-  state:"AZ",
-  zip: 85018
-},
- sides:[{
-   name:"fries",
-   type:null,
-   price:2.99
- },
- {
-   name:"onion rings",
-   type:null,
-   price:2.99
- },
- {
-   name:"secret sauce",
-   type:null,
-   price:.4
- }]
-},
 {
   ownerID:"308eu023dfm20dj1mx231343e4ndcocdcndsoicndsocsndocdsnciod123e3e32130",
   objectID:"93292398eui33cnewiovnklaSCMRI3UVNEIAONVRQ39V33343323248u483938r3320492",
@@ -3198,7 +2962,7 @@ address:{
       {
         item:"Golden Fries",
         id:"e2222222cmkemeockmekocmokmcxlwql222mceqn",
-
+            image:"./assets/images/fries.png",
         ingredients:[],
         calories:370,
         price:4.95,
@@ -3207,7 +2971,7 @@ address:{
       {
         item:"Buffalo Wings",
         id:"e239439039222222cmkemeockmekocmokmcxlwql222mceqn",
-
+            image:"./assets/images/wings.png",
         ingredients:[],
         calories:580,
         price:4.95,
@@ -3215,6 +2979,7 @@ address:{
       },
       {
         item:"Calamari",
+            image:"./assets/images/calamari.png",
         id:"e2222222cmkemeockmekocmokmcxlwq992093e0l222mceqn",
 
         ingredients:[{
@@ -3233,7 +2998,7 @@ address:{
   food:[{
     item:"Margerita Pizza",
     id:"ecmkemeockmekocmokmcxlwql222mceqn",
-
+        image:"./assets/images/cheesepizza.png",
     ingredients:[{
       name:"tomato",
       display:true
@@ -3258,6 +3023,7 @@ address:{
   {
     item:"Townstyle Pizza",
     id:"334567893940343490409dmxewicm",
+        image:"./assets/images/pepperonipizza.png",
     ingredients:[{
       name:"olives",
       display:true
@@ -3291,6 +3057,7 @@ address:{
   {
     item:"Chicken Pizza",
     id:"3930409eidsj0ci3cx01qcmeonv4ubgf9743bdq2dj9021cn",
+        image:"./assets/images/pestopizza.png",
     ingredients:[{
       name:"chicken",
       display:false
@@ -3317,6 +3084,7 @@ address:{
   {
     item:"Veggie Pizza",
     id:"aa2442309340020393939838jgjgjg",
+        image:"./assets/images/mushroompizza.png",
     ingredients:[{
       name:"olives",
       display:true
@@ -3349,6 +3117,7 @@ address:{
   id:"nojdmi0ednemide33",
   food:[{
     item:"Classic Cheese",
+        image:"./assets/images/cheesepizza.png",
     id:"1929292922938456743338920394857",
     ingredients:[{
       name:"cheese",
@@ -3370,6 +3139,7 @@ address:{
   },
   {
     item:"Veggie Pizza",
+        image:"./assets/images/mushroompizza.png",
     id:"jnnvnvnreivvnvnv33nvnrvnvrrvnj22",
     ingredients:[{
       name:"olives",
@@ -3403,6 +3173,7 @@ address:{
   {
     id:"8323984394839483023902encjo940",
     item:"Chicken Pizza",
+        image:"./assets/images/lavashpizza.png",
     ingredients:[{
       name:"grilled chicken",
       display:false
@@ -3422,7 +3193,8 @@ address:{
   id:"nojdmi0ednemid333399339e2882",
   food:[{
     item:"Coca-Cola",
-    id:"39ei3290832d2d2d33333928210010",
+    image:"./assets/images/coke.png",
+    id:"2923923ei3290832928210010",
     ingredients:[],
     modal:false,
     calories:300,
@@ -3431,16 +3203,8 @@ address:{
   },
   {
     item:"Orange Fanta",
-    id:"eecn222ief",
-    ingredients:[],
-    modal:false,
-    calories:300,
-    price:2.99,
-    description:""
-  },
-  {
-    item:"Coca-Cola",
-    id:"29ei32908329239043i309e82100103",
+    id:"392930203dj923jdcncnbvnf-2-",
+    image:"./assets/images/fanta.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -3449,16 +3213,19 @@ address:{
   },
   {
     item:"Diet Coca-Cola",
-    id:"29ei329083292302232121282103010",
+    image:"./assets/images/dietcoke.png",
+    id:"203298fdj82d2djjcnneocno2e",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
     description:""
   },
+
   {
     item:"Dr Pepper",
-    id:"29ei329083129238232310013",
+    id:"29ei32908329238210010222dc",
+      image:"./assets/images/drpepper.png",
     ingredients:[],
     modal:false,
     calories:300,
@@ -3467,8 +3234,9 @@ address:{
   },
   {
     item:"Sirra Mist",
-    id:"9029ei32908321219238210013",
+    id:"9029ei3290832928210010cmkc",
     ingredients:[],
+      image:"./assets/images/sprite.png",
     modal:false,
     calories:300,
     price:2.99,
@@ -3476,13 +3244,14 @@ address:{
   },
   {
     item:"Root Beer",
-    id:"w29ei32908329dxewdxw228210011",
+    id:"w29ei3290832928210010cpmrmp",
     ingredients:[],
     modal:false,
     calories:300,
     price:2.99,
-    description:""
-  },
+    description:"",
+    image:"./assets/images/rootbeer.png"
+  }
   ]
 }
 ],

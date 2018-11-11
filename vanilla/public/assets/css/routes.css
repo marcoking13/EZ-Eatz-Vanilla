@@ -7,3 +7,20 @@
 .r2{
   width:40%;
 }
+.mm3{
+  border-top:2px solid #f2f2f2 !important;
+  padding-top:2% !important;
+}
+.mm3:hover{
+  background:#f2f2f2;
+}
+.active-border{
+  border-color:red;
+  border:2px solid red;
+}
+.m88{
+  position:absolute;
+  right:0;
+  left:0;
+
+}

@@ -1,5 +1,6 @@
 
 if(window.innerWidth <490 ){
+  console.log(document.cookie);
 $.ajax({
   url:"http://localhost:8000/api/currentFoodtruckSample",
   method:"GET"
@@ -11,6 +12,7 @@ response = response[0];
     zip:response.address.zip,
     state:response.address.state
   }
+  var newRoute = "";
   var routes = response.routes;
   var ul = "<ul className='list-group'";
   var counter = 0;
@@ -31,16 +33,32 @@ response = response[0];
           var lat = geolocation.lat;
           var lng = geolocation.lng;
           var address  = response.data.results[0].formatted_address;
-        address = address.replace(',USA','');
-          $("<li>").addClass("list-group-item llC full cb bbw sans btf2 llC"+counter).appendTo(".routesEE");
+          address = address.replace(',USA','');
+          $("<li>").click((event)=>{
+            console.log( event.target.attributes.address.value)
+            var newRoute = event.target.attributes.address.value;
+            var lat = event.target.attributes.lat.value;
+            var lng = event.target.attributes.lng.value;
+            var geoData = {
+              lat:lat,
+              lng:lng
+            };
+            localStorage.setItem('lat', lat);
+            localStorage.setItem('lng', lng);
+            localStorage.setItem("flag",false);
+
+          }).addClass("list-group-item mm3 llC full cb bbw sans btf2 llC"+counter).attr("lng",lng).attr("lat",lat).attr("address",address).appendTo(".routesEE");
 
           $("<p>").addClass("fll f12 l2").appendTo(".llC"+counter).text(`${address}`);
 
           $("<p>").addClass("fllr f12 t-right r2").appendTo(".llC"+counter).text(`12:00am-1:30pm`);
           counter++;
+
         });
+
 },2000);
   });
+
   var geoKey = "AIzaSyC39c6JQfUTYtacJlXTKRjIRVzebGpZ-GM";
   var formatAddress = `${address.street} ${address.city} ${address.state}`;
   axios.get("https://maps.googleapis.com/maps/api/geocode/json",{
@@ -53,8 +71,8 @@ response = response[0];
     var lat = geolocation.lat;
     var lng = geolocation.lng;
     var address  = response.data.results[0].formatted_address;
-    var addressOutput = `<ul full mr10 list-group>
-    <li class="list-group-item full bf6"><strong>Current Address: </strong>${address}</li>
+    var addressOutput = `<ul class="list-group">
+      <li class="list-group-item m88">${address}</li>
     </ul>`
     var addressE = document.querySelector(".currentLocation").innerHTML=addressOutput;
     mapInit(lat,lng,address);
@@ -63,7 +81,7 @@ response = response[0];
 }else{
   $("body").text("Make Screen Smaller(490<)");
 }
-function mapInit(lat,lon,address){
+function mapInit(lat,lon){
   var mapE = document.querySelector(".mapE");
   var scope = {
     zoom:15,

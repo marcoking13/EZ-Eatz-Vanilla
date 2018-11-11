@@ -17,17 +17,17 @@ const Accounts = require("./models/accountSchema.js");
 app.use(Routers);
   mongoose.connect("mongodb://localhost:27017/EZ_db",()=>{
     db.trucks.remove({},(message)=>{
-    })
+    });
     db.trucks.insert(FoodTruck,(err,data)=>{
-    })
+    });
     db.currentCustomer.remove({});
     db.currentTruck.remove({});
-  })
+  });
 app.use(passport.initialize());
 app.use(passport.session());
 app.listen(8000,()=>{
   console.log("App is running on localhost:8000");
-})
+});
 app.post("/api/profileChange",(req,res)=>{
   var profile = req.body;
     db.currentCustomer.find({},(err,data)=>{
@@ -54,9 +54,7 @@ app.get("/",(req,res)=>{
 app.get("/finder",(req,res)=>{
   res.sendFile(path.resolve(__dirname+"/public/samples.html"));
 });
-app.get("/menu",(req,res)=>{
-  res.sendFile(path.resolve(__dirname+"/public/menu.html"));
-})
+
 app.get("/auth/google",passport.authenticate("google",{
   scope:["email","profile"],
   nonce:"NFCOI4N39RFCN0MMCIR0",
@@ -99,13 +97,13 @@ app.post("/api/currentFoodtruckSample",(req,res)=>{
   app.get("/routes",(req,res)=>{
     db.currentFoodtruckSample.find({},(err,data)=>{
       if(data){
-        return res.sendFile(__dirname+"/public/routes.html")
+        return res.sendFile(__dirname+"/public/routes.html");
       }
     });
   });
 
 app.get("/api/edit",(req,res)=>{
-  res.redirect("/profile")
+  res.redirect("/profile");
 });
 
 app.post("/data/cancel",(req,res)=>{
@@ -113,7 +111,7 @@ app.post("/data/cancel",(req,res)=>{
   res.redirect("/menu");
 })
 app.get("/checkout",(req,res)=>{
-    res.sendFile(path.resolve(__dirname+"/public/checkout.html"))
+    res.sendFile(path.resolve(__dirname+"/public/checkout.html"));
 });
 app.post("/api/currentCheckout",(req,res)=>{
     db.currentCheckout.insert(req.body);
@@ -124,3 +122,6 @@ app.get("/api/currentCheckout",(req,res)=>{
     });
   });
 });
+app.get("/menu",(req,res)=>{
+    return res.sendFile(__dirname+"/public/menuSample.html");
+  });
