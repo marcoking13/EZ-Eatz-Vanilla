@@ -12,20 +12,18 @@ $.ajax({
       catas+=` | ${truck.type[i]}`
     }
       if(flag){
-    $("<div>").addClass("row xx2 brow"+l).appendTo(".finderContainer");
-    $("<div>").addClass("col-1 x re c col-1b"+l).appendTo(".brow"+l);
-    $("<div>").addClass("col-10 truckC col-10b"+l).appendTo(".brow"+l).attr("_id",truck.objectID);
-    $("<img>").addClass("truckI truckmm").attr("src",truck.display).attr("_id",truck.objectID).appendTo(".col-10b"+l);
-
-    $("<h6>").addClass("nameT").text(truck.name).appendTo(".col-10b"+l);
-
-    $("<p>").addClass("p").text(catas).appendTo(".col-10b"+l);
-    $("<div>").addClass("col-1 x er c col-1b"+l).appendTo(".brow"+l);
+        $("<div>").addClass("row xx2 mt10 brow"+l).appendTo(".finderContainer");
+        $("<div>").addClass("col-1 x  w20 re c col-1b"+l).appendTo(".brow"+l);
+        $("<div>").addClass("col-10 truckC col-10b"+l).appendTo(".brow"+l).attr("_id",truck.objectID);
+        $("<img>").addClass("truckI h200px full br10px truckmm").attr("src",truck.display).attr("_id",truck.objectID).appendTo(".col-10b"+l);
+        $("<h6>").addClass("mt5 nameT").text(truck.name).appendTo(".col-10b"+l);
+        $("<p>").addClass("p").text(catas).appendTo(".col-10b"+l);
+        $("<div>").addClass("col-1 x  w20 er c col-1b"+l).appendTo(".brow"+l);
 
   }else if(!flag){
     $("<div>").addClass("col-4 truckC col-10b"+l).css({marginTop:"5%"}).appendTo(".brows").attr("_id",truck.objectID);
     $("<img>").addClass("truckI truckmm").css({width:"400px",height:"300px"}).attr("src",truck.display).attr("_id",truck.objectID).appendTo(".col-10b"+l);
-    $("<h6>").addClass("nameT").text(truck.name).appendTo(".col-10b"+l);
+    $("<h6>").addClass("nameT mt5").text(truck.name).appendTo(".col-10b"+l);
     $("<p>").addClass("p").text(catas).appendTo(".col-10b"+l);
   }
 }
@@ -37,19 +35,19 @@ $.ajax({
 });
     $(".truckC").on("click",(event)=>{
 
-    var _id = event.target.attributes._id.value;
+      var _id = event.target.attributes._id.value;
 
-    response.map((truck)=>{
+      response.map((truck)=>{
 
-      if(truck.objectID == _id){
+        if(truck.objectID == _id){
 
-          $.ajax({
+            $.ajax({
               url:"http://localhost:8000/api/currentFoodtruckSample",
               data:{code:truck.objectID},
               method:"POST"
             });
 
-          window.location.assign("/menu")
+            window.location.assign("/menu")
 
           }
         });

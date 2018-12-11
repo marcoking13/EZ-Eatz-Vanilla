@@ -1,0 +1,104 @@
+.checkboxContainer:hover > .checkbox{
+  background:#66a3ff;
+}
+.checkboxContainerS:hover > .checkbox{
+  background:#66a3ff;
+}
+.activeb > .checkbox{
+  background:#66a3ff;
+  opacity:1;
+}
+.activeb > .check{
+  opacity:1 !important;
+}
+.activeb{
+    opacity:1 !important;
+}
+.c-{
+  margin-top:1%;
+}
+.checkboxContainer:hover  > .checkbox > .check{
+  opacity:1 !important;
+}
+.checkboxContainerS:hover  > .checkbox > .check{
+  opacity:1 !important;
+}
+.quanText{
+  text-align:center;margin-top:2%;margin-bottom:2%;position:relative;right:10px;
+}
+.ghost{
+  opacity:0;
+}
+.check{
+  width:14px;margin-left:10%;height:15px;margin-bottom:15%;position:relative;bottom:2.5px;
+}
+.checkbox{
+  float:left;width:20px;background:white;height:20px;margin-left:5%;margin-top:5%;border:1px solid grey;border-radius:2px;
+}
+.orderButton{
+  position:absolute;left:20%;top:10%;
+}
+.insin{
+  margin-top:2.5%;width:100%;height:200px;text-align:center;padding:0;
+}
+.modifyContainer{
+  padding-top:10px;border-top:2px groove #f4f4f4;
+}
+.quanForm{
+  width:5%;margin-left:47%;
+}
+.sideContainer{
+  padding-top:10px;border-bottom:2px groove #f2f2f2;
+}
+.mt2.5{
+margin-top:2.5%;
+}
+.noMos{
+position:relative;top:15px;right:60px;
+
+}
+.checkboxContainer{
+margin-top:2.5%
+}
+.addCart{
+background:#339900;width:100%;color:white;padding:10px;
+}
+.cancelContainer{
+padding-top:5px;padding-bottom:5px;border-bottom:2px solid #f2f2f2;border-radius:10px;
+}
+.cancelM{
+position:relative;right:60px;text-align:center
+}
+.introductions{
+text-align:center;margin-top:2.5%
+}
+.bannerDetail{
+width:50%;margin-left:25%;
+}
+.bannerInfo{
+float:right: !important;
+
+}
+.quantity{
+border-bottom:1px groove #f2f2f2;padding-bottom:30px;
+}
+.addText{
+text-align:center;color:white;
+}
+.dep{
+text-align: right;
+margin-top:5%;
+}
+.detailI{
+padding-bottom:10%;
+}
+
+.bannerName{
+text-align:center;margin-top:10%;margin-right:5%;font-weight:normal
+}
+.bannerImage{
+width:25%;margin-left:35%;
+}
+.meni{
+width:90%;margin-left:5%;margin-top:2.5%;padding-bottom:2.5%;
+}

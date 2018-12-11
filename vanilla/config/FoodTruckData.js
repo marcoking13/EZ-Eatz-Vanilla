@@ -168,6 +168,7 @@ image:"./assets/images/samplebanner2.jpg"
       item:"Gyro",
       id:"skm1pdm12309e120esjm1209e102",
       image:"./assets/images/gyro.png",
+      buns:["wheat","gluten-free"],
       ingredients:[{
         name:"mixed greens",
         display:true
@@ -682,6 +683,7 @@ address:{
 
     {
       item:"Double Burger Meal",
+      buns:["leaf","gluten-free"],
       id:"2ewjsdxme2dcxk203x298292298",
       image:"./assets/images/burger3.png",
       ingredients:[{
@@ -720,6 +722,7 @@ address:{
   food:[{
     item:"6 burger slider",
     id:"33456789dmxewicm",
+    buns:["leaf","gluten-free"],
     image:"./assets/images/burger1.png",
     ingredients:[{
       name:"toasted bun",
@@ -979,83 +982,154 @@ address:{
   type:["all-american","burgers"],
   priceAverage:total,
   menu:[{
-    catagory:"Burgers",
-      id:"cmoicrewcvnew92290923923",
+    catagory:"Acai-Bowls",
+      id:"csmoicrercwnjwcvned2dw92290923923",
     food:[
 
     {
-      item:"Double Burger Meal",
-      id:"2ewjsdxme2dcxk203x298292298",
-
+      item:"Tropic Bowl",
+      id:"2ewjsdxme2dcxwddd2wk203x29829sss2298",
+      image:"./assets/images/acai1.png",
       ingredients:[{
-        name:"toasted bun",
+        name:"strawberry",
         display:true
       },
       {
-        name:"ground meat",
+        name:"nuts",
         display:true
       },
       {
-        name:"cheese",
+        name:"blueberries",
         display:true
       },
       {
-        name:"greens",
-        display:false
-      },
-      {
-        name:"side of fries",
+        name:"kale",
         display:true
       },
       {
-        name:"side of secret sauce",
+        name:"rasberry sorbet",
+        display:true
+      },
+      {
+        name:"cherries",
         display:true
       }
     ],
-      calories:870,
+      calories:370,
       price:6.50,
-      description:"A classic burger with a side of fries"
-    }]
+      description:""
+    },
+    {
+      item:"Strawberry Bowl",
+      id:"2ewjsdxme2dcxwdddddwk203x298292298",
+      image:"./assets/images/acai3.png",
+      ingredients:[{
+        name:"strawberry",
+        display:true
+      },
+      {
+        name:"nuts",
+        display:true
+      },
+      {
+        name:"blueberries",
+        display:true
+      },
+      {
+        name:"kale",
+        display:true
+      },
+      {
+        name:"rasberry sorbet",
+        display:true
+      },
+      {
+        name:"cherries",
+        display:true
+      }
+    ],
+      calories:370,
+      price:6.50,
+      description:""
+    },
+    {
+      item:"Classic Acai Bowl",
+      id:"2ewjsdxme2dcxwdd2wk203x298292298",
+      image:"./assets/images/acai2.png",
+      ingredients:[{
+        name:"strawberry",
+        display:true
+      },
+      {
+        name:"nuts",
+        display:true
+      },
+      {
+        name:"blueberries",
+        display:true
+      },
+      {
+        name:"kale",
+        display:true
+      },
+      {
+        name:"rasberry sorbet",
+        display:true
+      },
+      {
+        name:"cherries",
+        display:true
+      }
+    ],
+      calories:370,
+      price:6.50,
+      description:""
+    }
+
+
+  ]
 },
 {
-  catagory:"Sliders",
-    id:"-20239049fjjj--",
+  catagory:"Smoothies",
+    id:"-e20239042023904kvl9fjjj--",
+
   food:[{
-    item:"6 burger slider",
-    id:"33456789dmxewicm",
+    image:"./assets/images/smoothie2.png",
+    item:"Strawberry Smoothie",
+    id:"33456789dmxjidewicm",
     ingredients:[{
-      name:"toasted bun",
+      name:"strawberry",
       display:true
     },
     {
-      name:"ground beef",
+      name:"nuts",
       display:true
     },
     {
-      name:"cheese",
+      name:"blueberries",
       display:true
     },
     {
-      name:"tomato",
+      name:"kale",
       display:true
     },
     {
-      name:"secret sauce",
+      name:"rasberry sorbet",
       display:true
     },
     {
-      name:"side of fries",
+      name:"cherries",
       display:true
     }
   ],
-
-    calories:600,
+    calories:300,
     price:2.99,
-    description:"6 slider burgers with a side of fries"
+    description:""
   },
   {
-    item:"buffalo wings",
-    id:"2029e0i3290r203",
+    item:"Tropic Smoothie",
+      image:"./assets/images/smoothie5.png",
+    id:"20kj29e0i3290r203",
     ingredients:[{
       name:"buffalo wings",
       display:false
@@ -1068,29 +1142,34 @@ address:{
 
     calories:450,
     price:5.99,
-    description:"Our fresh seasoned buffalo wings"
+    description:""
   },
   {
-    item:"Greek Salad",
+    item:"Pineapple Smoothie",
+    image:"./assets/images/smoothie4.png",
     id:"aa2442020393939838jgjgjg",
     ingredients:[{
-      name:"olives",
+      name:"strawberry",
       display:true
     },
     {
-      name:"tomato",
+      name:"pineapple",
       display:true
     },
     {
-      name:"onion",
+      name:"blueberries",
       display:true
     },
     {
-      name:"greens",
+      name:"kale",
       display:true
     },
     {
-      name:"feta",
+      name:"rasberry sorbet",
+      display:true
+    },
+    {
+      name:"cherries",
       display:true
     }
   ],
@@ -1098,79 +1177,6 @@ address:{
     calories:400,
     price:4.99,
     description:"A classic greek salad"
-  }]
-},
-{
-  catagory:"Pizzas",
-  id:"nojdmi0ednemide",
-  food:[{
-    item:"Classic Cheese",
-    id:"19292929229384567438920394857",
-    ingredients:[{
-      name:"cheese",
-      display:false
-    },
-    {
-      name:"tomato sauce",
-      display:true
-    },
-    {
-      name:"sour dough bread",
-      display:false
-    }
-  ],
-
-    calories:1000,
-    price:9.53,
-    description:"Original cheese pizzas on sour dough bread"
-  },
-  {
-    item:"Veggie Pizza",
-    id:"jnnvnvnreivvnvnvnvnrvnvrrvnj22",
-    ingredients:[{
-      name:"olives",
-      display:false
-    },
-    {
-      name:"tomato",
-      display:true
-    },
-    {
-      name:"bell pepper",
-      display:false
-    },
-    {
-      name:"onion",
-      display:false
-    },
-    {
-      name:"spinach",
-      display:false
-    },
-    {
-      name:"tomato sauce",
-      display:true
-    }
-  ],
-    calories:550,
-    price:2.41,
-    description:"Veggie pizza on sour dough"
-  },
-  {
-    id:"r3j29fj2f92m9mc9m29",
-    item:"Chicken Pizza",
-    ingredients:[{
-      name:"grilled chicken",
-      display:false
-    },
-    {
-      name:"tomato sauce",
-      display:true
-    }
-  ],
-    calories:900,
-    price:4.50,
-    description:"Grilled chicken on top of a cheese pizza"
   }]
 },
 {
@@ -1249,21 +1255,7 @@ address:{
   state:"AZ",
   zip: 85260
 },
- sides:[{
-   name:"fries",
-   type:null,
-   price:2.99
- },
- {
-   name:"onion rings",
-   type:null,
-   price:2.99
- },
- {
-   name:"secret sauce",
-   type:null,
-   price:.4
- }]
+ sides:[]
 },
 {
   ownerID:"39384rh4854854th45gh54gh4u9g5hjufecnovtbnuivhw9jfi3rgn94uhn39gi4hdj8m",
@@ -1276,20 +1268,21 @@ address:{
   type:["all-american","burgers"],
   priceAverage:total,
   menu:[{
-    catagory:"Burgers",
-      id:"cmoicrewcvnew92290923923",
+    catagory:"Chicken Burgers",
+      id:"cmoicrew2cvnew92290923923",
     food:[
 
     {
-      item:"Double Burger Meal",
-      id:"2ewjsdxme2dcxk203x298292298",
+      item:"Classic Chicken Burger",
+      buns:["leaf","gluten-free"],
+      id:"2ewjsdxme2dcxk203x29m8292298",
       image:"./assets/images/burger1.png",
       ingredients:[{
         name:"toasted bun",
         display:true
       },
       {
-        name:"ground meat",
+        name:"tomatoes",
         display:true
       },
       {
@@ -1297,7 +1290,7 @@ address:{
         display:true
       },
       {
-        name:"greens",
+        name:"grilled chicken",
         display:false
       },
       {
@@ -1305,62 +1298,61 @@ address:{
         display:true
       },
       {
-        name:"side of secret sauce",
+        name:"side of honey sauce",
         display:true
       }
     ],
-      calories:870,
-      price:6.50,
-      description:"A classic burger with a side of fries"
+      calories:570,
+      price:5.50,
+      description:""
     }]
 },
 {
-  catagory:"Sliders",
+  catagory:"Meals",
     id:"-20239049fjjj--",
   food:[{
-    item:"6 burger slider",
-    id:"33456789dmxewicm",
-        image:"./assets/images/burger2.png",
+    item:"6 pieace meal",
+    id:"33456789eidmxewicm",
+        image:"./assets/images/meal1.png",
     ingredients:[{
-      name:"toasted bun",
+      name:"6 chicken pieces",
       display:true
     },
     {
-      name:"ground beef",
+      name:"drink",
+      flag:true,
+      catagory:"Drinks",
       display:true
     },
     {
-      name:"cheese",
-      display:true
-    },
-    {
-      name:"tomato",
-      display:true
-    },
-    {
-      name:"secret sauce",
-      display:true
-    },
-    {
-      name:"side of fries",
+      name:"medium fries",
       display:true
     }
   ],
 
-    calories:600,
-    price:2.99,
-    description:"6 slider burgers with a side of fries"
+    calories:700,
+    price:4.99,
+    description:""
   },
   {
-    item:"buffalo wings",
+    item:"Chicken Burger Meal",
     id:"2029e0i3290r203",
-        image:"./assets/images/wings.png",
+    buns:["leaf","gluten-free"],
+    image:"./assets/images/meal2.png",
     ingredients:[{
-      name:"buffalo wings",
-      display:false
+      name:"Classic Chicken Burger",
+      flag:true,
+      catagory:"Classic Chicken Burger",
+      display:true
     },
     {
-      name:"side of A01 sauce",
+      name:"drink",
+      flag:true,
+      catagory:"Drinks",
+      display:true
+    },
+    {
+      name:"fries",
       display:true
     }
   ],
@@ -1371,7 +1363,7 @@ address:{
   },
   {
     item:"Greek Salad",
-    id:"aa2442020393939838jgjgjg",
+    id:"aa2442ww020393939838jgjgjg",
     ingredients:[{
       name:"olives",
       display:true
@@ -1396,6 +1388,7 @@ address:{
 
     calories:400,
     price:4.99,
+    image:"./assets/images/salad2.png",
     description:"A classic greek salad"
   }]
 },
@@ -1578,199 +1571,225 @@ address:{
   type:["all-american","burgers"],
   priceAverage:total,
   menu:[{
-    catagory:"Burgers",
-      id:"cmoicrewcvnew92290923923",
+    catagory:"Salads",
+      id:"cmoicrew032--dedd---------------------------cvnew92290923923",
     food:[
 
     {
-      item:"Double Burger Meal",
-      id:"2ewjsdxme2dcxk203x298292298",
-
+      item:"Greek Salad",
+      id:"222www--ewj-3-3-3-33-sdxme2dcxk203x298292298",
+      image:"./assets/images/greeksalad.png",
       ingredients:[{
-        name:"toasted bun",
+        name:"Onions",
         display:true
       },
       {
-        name:"ground meat",
+        name:"Tomatoes",
         display:true
       },
       {
-        name:"cheese",
+        name:"Mixed Greens",
         display:true
       },
       {
-        name:"greens",
+        name:"Feta",
         display:false
       },
       {
-        name:"side of fries",
+        name:"Olives",
         display:true
       },
       {
-        name:"side of secret sauce",
+        name:"toasted bread crumbs",
         display:true
       }
     ],
-      calories:870,
+      calories:270,
       price:6.50,
-      description:"A classic burger with a side of fries"
-    }]
+      description:""
+    },
+    {
+      item:"Greek Salad",
+      image:"./assets/images/salad1.png",
+      id:"222w3-3--3-3ww--ewjsdxme2dcxk203x298292298",
+
+      ingredients:[{
+        name:"Onions",
+        display:true
+      },
+      {
+        name:"Tomatoes",
+        display:true
+      },
+      {
+        name:"Mixed Greens",
+        display:true
+      },
+      {
+        name:"Feta",
+        display:false
+      },
+      {
+        name:"Olives",
+        display:true
+      },
+      {
+        name:"toasted bread crumbs",
+        display:true
+      }
+    ],
+      calories:270,
+      price:6.50,
+      description:""
+    },
+    {
+      item:"Ceaser Salad",
+      id:"239223900932--22-33-3-www--ewjsdxme2dcxk203x298292298",
+      image:"./assets/images/salad2.png",
+      ingredients:[{
+        name:"Lemon Dressing",
+        display:true
+      },
+      {
+        name:"Parsely",
+        display:true
+      },
+      {
+        name:"Mixed Greens",
+        display:true
+      },
+      {
+        name:"Feta",
+        display:false
+      },
+      {
+        name:"Olives",
+        display:true
+      },
+      {
+        name:"toasted bread crumbs",
+        display:true
+      }
+    ],
+      calories:470,
+      price:4.50,
+      description:""
+    },
+    {
+      item:"Chicken Salad",
+      id:"222www--ew03303-3-3-jsdxme-33-3-2dcxk203x298292298",
+      image:"./assets/images/chickensalad.png",
+      ingredients:[{
+        name:"Grilled Chicken",
+        display:true
+      },
+      {
+        name:"Tomatoes",
+        display:true
+      },
+      {
+        name:"Mixed Greens",
+        display:true
+      },
+      {
+        name:"Kale",
+        display:true
+      },
+      {
+        name:"Olives",
+        display:true
+      },
+      {
+        name:"toasted bread crumbs",
+        display:true
+      }
+    ],
+      calories:670,
+      price:9.50,
+      description:""
+    }
+  ]
 },
 {
-  catagory:"Sliders",
-    id:"-20239049fjjj--",
+  catagory:"Juices",
+  id:"nojdm-3-3--3-3i0edne2-20-340-3403-30-2-2-2-2-2-2-2032032-2332-3mide",
   food:[{
-    item:"6 burger slider",
-    id:"33456789dmxewicm",
+    item:"Green Boost",
+    id:"19-2-329292922212193doi0jkf845670020202-222-2-2-2-2-2-2-2-2-2-323232438920394857",
     ingredients:[{
-      name:"toasted bun",
+      name:"kale",
       display:true
     },
     {
-      name:"ground beef",
+      name:"chard",
       display:true
-    },
-    {
-      name:"cheese",
-      display:true
-    },
-    {
-      name:"tomato",
-      display:true
-    },
-    {
-      name:"secret sauce",
-      display:true
-    },
-    {
-      name:"side of fries",
-      display:true
-    }
-  ],
-
-    calories:600,
-    price:2.99,
-    description:"6 slider burgers with a side of fries"
-  },
-  {
-    item:"buffalo wings",
-    id:"2029e0i3290r203",
-    ingredients:[{
-      name:"buffalo wings",
-      display:false
-    },
-    {
-      name:"side of A01 sauce",
-      display:true
-    }
-  ],
-
-    calories:450,
-    price:5.99,
-    description:"Our fresh seasoned buffalo wings"
-  },
-  {
-    item:"Greek Salad",
-    id:"aa2442020393939838jgjgjg",
-    ingredients:[{
-      name:"olives",
-      display:true
-    },
-    {
-      name:"tomato",
-      display:true
-    },
-    {
-      name:"onion",
-      display:true
-    },
-    {
-      name:"greens",
-      display:true
-    },
-    {
-      name:"feta",
-      display:true
-    }
-  ],
-
-    calories:400,
-    price:4.99,
-    description:"A classic greek salad"
-  }]
-},
-{
-  catagory:"Pizzas",
-  id:"nojdmi0ednemide",
-  food:[{
-    item:"Classic Cheese",
-    id:"19292929229384567438920394857",
-    ingredients:[{
-      name:"cheese",
-      display:false
-    },
-    {
-      name:"tomato sauce",
-      display:true
-    },
-    {
-      name:"sour dough bread",
-      display:false
-    }
-  ],
-
-    calories:1000,
-    price:9.53,
-    description:"Original cheese pizzas on sour dough bread"
-  },
-  {
-    item:"Veggie Pizza",
-    id:"jnnvnvnreivvnvnvnvnrvnvrrvnj22",
-    ingredients:[{
-      name:"olives",
-      display:false
-    },
-    {
-      name:"tomato",
-      display:true
-    },
-    {
-      name:"bell pepper",
-      display:false
-    },
-    {
-      name:"onion",
-      display:false
     },
     {
       name:"spinach",
-      display:false
+      display:true
     },
     {
-      name:"tomato sauce",
-      display:true
+      name:"water",
+      display:"false"
+    },
+    {
+      name:"orange juice",
+      display:"true"
     }
+
   ],
-    calories:550,
-    price:2.41,
-    description:"Veggie pizza on sour dough"
+
+    calories:400,
+    price:8.99,
+    description:"",
+    image:"./assets/images/boost.png"
   },
   {
-    id:"r3j29fj2f92m9mc9m29",
-    item:"Chicken Pizza",
+    item:"Fruit Blast",
+    id:"1929292922-2-2-2-2111111129384------5670020202-222-2-2-2-2-2-2-2-2-2-323232438920394857",
     ingredients:[{
-      name:"grilled chicken",
-      display:false
+      name:"oranges",
+      display:true
     },
     {
-      name:"tomato sauce",
+      name:"apples",
       display:true
+    },
+    {
+      name:"grapefruit",
+      display:true
+    },
+    {
+      name:"strawberries",
+      display:"true"
+    },
+    {
+      name:"water",
+      display:"false"
     }
+
   ],
-    calories:900,
-    price:4.50,
-    description:"Grilled chicken on top of a cheese pizza"
-  }]
+
+    calories:300,
+    price:6.99,
+    description:"",
+    image:"./assets/images/fruitblast.png",
+  },
+  {
+    item:"Grass Shake",
+      image:"./assets/images/grass.png",
+    id:"192929291-1-2-2332229384567000-0-0-020202-222-2-2-2-2-2-2-2-2-2-323232438920394857",
+    ingredients:[{
+      name:"soil",
+      display:true
+    },
+  ],
+
+    calories:20,
+    price:3.99,
+    description:""
+  },
+]
 },
 {
   catagory:"Drinks",
@@ -1880,8 +1899,9 @@ address:{
     food:[
 
     {
-      item:"Double Burger Meal",
+      item:"Double Cheese Meal",
       id:"2ewjsdxme2dcxk203x298292298",
+      buns:["leaf","gluten-free"],
     image:"./assets/images/burger2.png",
       ingredients:[{
         name:"toasted bun",
@@ -1904,100 +1924,87 @@ address:{
         display:true
       },
       {
-        name:"side of secret sauce",
+        name:"side of BBQ sauce",
         display:true
       }
     ],
-      calories:870,
-      price:6.50,
-      description:"A classic burger with a side of fries"
+      calories:1070,
+      price:9.99,
+      description:"A classic double cheeseburger with a side of fries"
     }]
 },
 {
-  catagory:"Sliders",
+  catagory:"Steaks",
     id:"-20239049fjjj--",
   food:[{
-    item:"6 burger slider",
-        image:"./assets/images/burger2.png",
-    id:"33456789dmxewicm",
+    item:"Top Sirloin",
+    image:"./assets/images/topsirloin.png",
+    id:"3345678hvtu4ebicbeicebcriebi9dmxewicm",
     ingredients:[{
-      name:"toasted bun",
+      name:"mashed potatoes",
       display:true
     },
     {
-      name:"ground beef",
+      name:"side of steak sauce",
       display:true
     },
     {
-      name:"cheese",
+      name:"fries",
+      display:true
+    }
+  ],
+    calories:600,
+    price:19.99,
+    description:"",
+    cooked:["medium","medium-rare","rare"]
+  },
+  {
+    item:"New York Steak",
+    image:"./assets/images/newyorksteak.png",
+    id:"33456789dmxewic930203f98juf08fj38fj08038jm",
+    ingredients:[{
+      name:"mashed potatoes",
       display:true
     },
     {
-      name:"tomato",
+      name:"side of steak sauce",
       display:true
     },
     {
-      name:"secret sauce",
+      name:"fries",
+      display:true
+    }
+  ],
+
+    calories:900,
+    price:29.99,
+    description:"",
+    cooked:["medium","medium-rare","rare"]
+  },
+  {
+    item:"Filet Milon",
+    image:"./assets/images/filetmilon.png",
+    id:"33456789dm2-2309-2309-2309-3-9023-0nrwoocrwnjxewicm",
+    ingredients:[{
+      name:"mashed potatoes",
       display:true
     },
     {
-      name:"side of fries",
+      name:"side of steak sauce",
+      display:true
+    },
+    {
+      name:"fries",
       display:true
     }
   ],
 
     calories:600,
-    price:2.99,
-    description:"6 slider burgers with a side of fries"
-  },
-  {
-    item:"buffalo wings",
-    id:"2029e0i3290r203",
-        image:"./assets/images/wings.png",
-    ingredients:[{
-      name:"buffalo wings",
-      display:false
-    },
-    {
-      name:"side of A01 sauce",
-      display:true
-    }
-  ],
-
-    calories:450,
-    price:5.99,
-    description:"Our fresh seasoned buffalo wings"
-  },
-  {
-    item:"Greek Salad",
-    id:"aa2442020393939838jgjgjg",
-    image:"./assets/images/salad1.png",
-    ingredients:[{
-      name:"olives",
-      display:true
-    },
-    {
-      name:"tomato",
-      display:true
-    },
-    {
-      name:"onion",
-      display:true
-    },
-    {
-      name:"greens",
-      display:true
-    },
-    {
-      name:"feta",
-      display:true
-    }
-  ],
-
-    calories:400,
-    price:4.99,
-    description:"A classic greek salad"
-  }]
+    price:19.99,
+    description:"",
+    cooked:["medium","medium-rare","rare"]
+  }
+]
 },
 {
   catagory:"Pizzas",
@@ -2073,6 +2080,37 @@ address:{
     calories:900,
     price:4.50,
     description:"Grilled chicken on top of a cheese pizza"
+  }]
+},
+{
+  catagory:"Sides",
+  id:"nojdmi0ednem-3-33--320-3-03-20-349-3094-230ide",
+  food:[{
+    item:"Grilled Artichoke",
+    id:"1929292922938421020-2---2-2-2-2--2-567438920394857",
+    image:"./assets/images/grilledartichoke.png",
+    ingredients:[],
+    calories:500,
+    price:9.99,
+    description:""
+  },
+  {
+    item:"Baked Potato",
+    id:"jnnv90239023903290---1--nvnreivvnvnvnvnrvnvrrvnj22",
+    image:"./assets/images/bakedpotato.png",
+    ingredients:[],
+    calories:350,
+    price:2.99,
+    description:""
+  },
+  {
+    id:"r3j29fj2f92m9mc0-0-0-0-0-0-0-0-09m29",
+    item:"Fries",
+    image:"./assets/images/fries.png",
+    ingredients:[],
+    calories:500,
+    price:5.50,
+    description:""
   }]
 },
 {
@@ -2377,6 +2415,7 @@ address:{
 
     {
       item:"Double Burger Meal",
+      buns:["leaf","gluten-free"],
       id:"2ewjsdxme2dcxk203x298292298",
           image:"./assets/images/burger1.png",
       ingredients:[{
@@ -2416,6 +2455,7 @@ address:{
   food:[{
     item:"6 burger slider",
     id:"33456789dmxewicm",
+    buns:["leaf","gluten-free"],
     ingredients:[{
       name:"toasted bun",
       display:true
@@ -2682,6 +2722,7 @@ address:{
       item:"Cheese Burger",
       id:"2ewjsdxme2dcxk23e13erdcqdrvc2qwq03x298292298",
           image:"./assets/images/burger3.png",
+          buns:["leaf","gluten-free"],
       ingredients:[{
         name:"toasted bun",
         display:true

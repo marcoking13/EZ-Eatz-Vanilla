@@ -1,153 +1,184 @@
-function renderMenu(){
+function renderMenu(flag){
+  // Make API call to the database holding the current foodtruck selected
+  // Use the get method to recieve the data in the form of a array
 $.ajax({
+  // api source
   url:"http://localhost:8000/api/currentFoodtruckSample",
+  // type of call
   method:"GET"
 }).done((response)=>{
+  // (response) holds all the foodtruck data
+  // Turns the array data type of the response into a object
   var truck = response[0];
-  renderBanner(truck);
-  $(".top").css({opacity:1});
-  $(".loader").remove();
-  for(var i =0; i<truck.menu.length; i++){
+// Prints the Name of the truck, a Route and Checkout button, and the types of food served
+  renderBanner(truck,flag);
+  // Render list of the Items catagories to be selected from
 
-    renderCatagoriesChoices(truck.menu[i])
+// If user adds to cart is will count all the active elements and database
 
-  }
-  var k , i =0;
-  truck.menu.map((item)=>{
-    item.catagory= capitalizeFirstLetter(item.catagory);
-      item.food.map((food)=>{
-        MenuRoll(food,i);
-        menuModal(truck,food,i);
-        i++;
+
+
+// ----------Looping Through Menu and Items ------------------
+  truck.menu.map((truck)=>{
+// 1.Loops through each catagory in the menu (burger,drinks etc)
+    renderCatagories(truck,flag);
+    if(!flag){
+    renderListCatagories(truck,flag);
+
+  }else{
+      $(".list").remove();
+    }
+// 2. Prints the Name of the Catagory to the page with an empty list under it
+      truck.food.map((item)=>{
+// 3. Loops through each item in the catagory of menu
+        renderItem(item,truck.catagory,flag);
+// 4. Prints each item in the menu and renders in the empty list rendered with its catagory
       });
-      k++;
   });
-
-  $("<a>").addClass("link1 link").attr("href","/checkout").appendTo(".n");
-  $("<button>").addClass("checkout btn-danger btn").appendTo(".link1");
-  $("<h5>").addClass("wc center").appendTo(".checkout").text("Checkout");
-
-  $(".list-group-item").on("click",(event)=>{
-      var chosen = event.target.attributes._id.value
-      $("#"+event.target.attributes._id.value).modal("show");
-      $(".modal").removeClass("gho");
-    });
-
-    $(".add").on("click",(event)=>{
-        var chosen = event.target.attributes._id.value;
-        response[0].menu.map((foodtruck)=>{
-        foodtruck.food.map((truck)=>{
-        if(chosen == truck.id){
-            $(".modal").modal("hide");
-              $.ajax({
-                    url:"http://localhost:8000/api/currentCheckout",
-                    method:"POST",
-                    data:truck
-                });
-          }
-        });
-      });
-    });
-
-  $(".catas").on("click",(event)=>{
-    var listID = event.target.attributes._id.value;
-    $(event.target).removeClass("catas");
-    var i =0;
-      truck.menu.map((item)=>{
-        if(item.id == listID){
-          item.food.map((food)=>{
-            $("."+food.id).remove();
-            renderChoices(food,item,i);
-          });
-        }
-      });
-        i++;
-   });
-
-   ///END///
+//------------------------------------------------------------------------------
+$(".vil").on("click",(event)=>{
+  var data = {
+    catagory:event.target.attributes.catagory.value,
+    item:event.target.classList[3]
+  }
+  console.log(data)
+  $.ajax({
+    url:"http://localhost:8000/api/currentItem",
+    data:{
+      catagory:event.target.attributes.catagory.value,
+      item:event.target.classList[3]
+    },
+    method:"POST"
+  }).done(()=>{
+    window.location.assign("/check");
+  });
 });
 
-//-----------------------------------------------------------------------------
-function renderCatagoriesChoices(catagory){
-  $("<li>").addClass("list-group-item catas i "+catagory.id).appendTo(".menux").attr("_id",catagory.id);
-  $("<h5>").addClass("hu").appendTo("."+catagory.id).text(catagory.catagory).attr("_id",catagory.id);;
-  $("<ul>").addClass("list-group d"+catagory.catagory).appendTo("."+catagory.id).attr("_id",catagory.id);
+});
 }
 
-function renderChoices(item,catagory,i){
+//--------------------------------- Main Function ------------------------------
+var innerWidth = window.innerWidth;
+if(innerWidth < 790){
+  renderMenu(true);
 
-      $("<li>").addClass("list-group-item list-order gh ccc "+item.id).appendTo(".d"+catagory.catagory).attr("_id",item.id).attr("food",item.id);
-      $("<div>").addClass("box gh b"+item.id).appendTo("."+item.id)
-      $("<p>").text(item.item).addClass("l").appendTo(".b"+item.id);
-      $("<p>").text("$"+item.price).addClass("r").appendTo(".b"+item.id);
+}
+else if(innerWidth > 800){
+  console.log("Desktop");
+  renderMenu(false);
+
+}
+//----------------------------------------Variable Functions--------------------------------
+function renderBanner(truck,flag){
+  // String which will hold the types of food served in a string
+  var types = "";
+
+  truck.type.map((type)=>{
+    // Loop Through Each Truck Food Type
+    types+=" "+type+" |";
+    // Add the new type to the string variable [types] with a | to divide each type
+  });
+// HTML of banner in backticks
+
+  var desktopOutput = `
+      <div class="row bannerContainerD "style="background:url(${truck.background});height:400px;width:100%;background-size:cover">
+        <div class="col-4 jumbotron bw"style="height:250px;border:2px solid #f2f2f2;margin-right:0;margin-top:2%;margin-left:5%;">
+          <h3 class="font-n t-center">${truck.name}</h3>
+          <p class="t-center gc">$ ${types} </p>
+          <div style="width:100%;" >
+          <a href="/routes">  <button class="btn menubtn chb"style="width:90%;margin-top:5%;">Directions
+          </button>
+          </a>
+
+          </div>
+        </div>
+
+
+
+      </div>
+  `
+  var output = `
+   <div class="row bannerContainer"style="height:380px">
+      <div class="col-12">
+        <img class="full h250px"style="height:280px"src='${truck.background}'/>
+        <div class="jumbotron rela ml bw almostFull shadowf2"style="bottom:35%;border:1px solid grey">
+          <h2 class="t-center font-n">${truck.name}</h2>
+          <p class="t-center gc">$ ${types} </p>
+          <a href="/routes">  <button class="btn menubtn chb">Routes/Directions
+          </button>
+          </a>
+          <a href="/checkout" > <button class="btn menubtn chr">Checkout
+          </button>
+          </a>
+          <br />
+        </div>
+      </div>
+    </div>`;
+    // HTML of the Banner Element that will be rendered it has the variables of the FoodTruck surrounded by brackets and a red dollar sign
+      if(flag){
+    $(".banner").append(output);
+  }else{
+      $(".banner").append(desktopOutput);
   }
+    // Banner div element will have HTML above be rendered inside it
+}
+function renderCatagories(catagory,flag){
+  // HTML of the Catagory being rendered in JQuery
 
-  function MenuRoll(food,i){
-    $("<div>").addClass("col-3 foodItem adjT  foodItem"+i).appendTo(".menu"+i).attr("data-toggle","modal").attr("data-target","#modal"+i);
-    $("<p>").addClass("bold left").text(food.item).appendTo(".foodItem"+i)
-    $("<p>").addClass("bold right").text("$"+food.price).appendTo(".foodItem"+i);
-    $("<p>").addClass("description adjT").text(food.description).appendTo(".foodItem"+i);
-  }
-
-function menuModal (menu,food,i){
-  var k =0;
-  var j=0;
-  var order = [];
-      $("<div>").addClass("modal fade").attr("id",food.id).addClass("item"+i).appendTo(".n");
-      $("<div>").addClass("modal-dialog md"+i).attr('role',"document").appendTo("#"+food.id);
-      $("<div>").addClass("modal-content mc"+i).appendTo(".md"+i);
-      $("<div>").addClass("modal-header mh"+i).appendTo("mc"+i);
-      $("<h5>").addClass("modal-title").appendTo(".mh"+i).text("Add Changes");
-      $("<button>").addClass("close cl"+i).attr("data-dismiss","modal").appendTo(".mh"+i);
-      $("span").text('&times').appendTo("cl"+i)
-      $("<div>").addClass("modal-body mb"+i).appendTo(".mc"+i);
-      $("<ul>").addClass("mods list-group mods"+i).appendTo(".mb"+i);
-      $("<h5>").addClass("c").text("Modify").appendTo(".mods"+i);
-      food.ingredients.map((item)=>{
-        if(item.display){
-        $("<li>").addClass("list-group-item modi"+j).text("No "+item.name).attr("order",item.name).appendTo(".mods"+i);
+      if(flag){
+        $("<div>").addClass("col-12 "+catagory.id).appendTo(".menux").attr("_id",catagory.id);
+        $("<h4>").addClass("t-center mt5").appendTo("."+catagory.id).text(catagory.catagory).attr("_id",catagory.id);
+        $("<ul>").addClass(" mrn list-group mt10 d"+catagory.catagory).appendTo("."+catagory.id).attr("_id",catagory.id);
+      }else if(!flag){
+        $("<div>").addClass(catagory.id).appendTo(".menux").attr("_id",catagory.id).css({padding:0,marginLeft:"5%"});
+        $("<h4>").css({marginLeft:"10%",marginTop:"2.5%",marginBottom:"2.5%"}).text(catagory.catagory).appendTo("."+catagory.id);
+        $("<div>").addClass(" mrn row d"+catagory.catagory).appendTo("."+catagory.id);
 
       }
 
-      });
-        $("<h5>").addClass("c").text("Sides").appendTo(".mb"+i);
-        $("<ul>").addClass("list-group add adds"+i).appendTo(".mb"+i);
-
-      menu.sides.map((add)=>{
-        $("<li>").addClass("list-group-item additem"+k).text(add.name).appendTo(".adds"+i);
-
-      });
-      $("<div>").addClass("modal-footer mf"+i).appendTo(".mc"+i);
-      $("<button>").addClass("btn btn-secondary").text("Close").appendTo(".mf"+i);
-      $("<button>").text("Add to Cart ").addClass("btn add btn-danger").attr("_id",food.id).appendTo(".mf"+i);
+}
+const ssp = `  <h4 style="text-align:left;margin-left:10%;margin-top:2.5%;margin-bottom:2.5%">Pizzas</h4>
+  <div class="row">
 
 
+    <div class="col-3"style="border:1px groove #f2f2f2;margin-left:6%;">
+      <div style="width:50%;float:left">
+        <p style="margin-bottom:45%">Cheese Pizza</p>
+        <p style="float:left;margin-right:5%;border-right:1px solid grey;padding-right:10px">$4.99 </p>
+          <p style="float:left;margin-right:5%"> 900 calories</p>
+      </div>
+      <div style="width:50%;float:right">
+        <img style="width:100%;float:left;margin-left:5%;margin-top:5%" src="./assets/images/cheesepizza.png"/>
+      </div>
 
+    </div>`
+
+function renderListCatagories(catagory){
+   var list = `<li style="color:black;float:left;text-align:center;padding-right:15px;list-style-type:none;margin-left:2.5%;color:black;font-size:15px;padding:0;"><p class="clist1 t-center">${catagory.catagory}</p></li>`
+  $(".listC").append(list);
+}
+function renderItem(item,catagory,flag){
+    // HTML of the Items in the menu being rendered in the UL for each catagory
+    console.log(item.id);
+    if(flag){
+  $("<li>").addClass("list-group-item vil chf4 "+item.id).attr("item",item.id).attr("catagory",catagory).appendTo(".d"+catagory);
+  $("<div>").addClass("fl w40 a12"+item.id).appendTo("."+item.id);
+  $("<p>").text(item.item).appendTo(".a12"+item.id);
+  $("<p>").addClass("gc").text("$"+item.price).appendTo(".a12"+item.id);
+  $("<div>").addClass("fr w30 b12"+item.id).appendTo("."+item.id);
+  $("<img>").addClass("fr w100px").attr("src",item.image).appendTo(".b12"+item.id);
+}else if(!flag){
+  $("<div>").addClass("col-3 menuxBox vil "+item.id).attr("item",item.id).attr("catagory",catagory).appendTo(".d"+catagory).css({border:"2px solid #f2f2f2",marginLeft:"5%",marginTop:"2.5%"});
+  $("<div>").addClass("fl half a12"+item.id).css({width:"50%"}).appendTo("."+item.id);
+  $("<h6>").text(item.item).css({marginBottom:"15%",marginTop:"10%"}).appendTo(".a12"+item.id);
+  $("<p>").text("$ "+item.price + " | "+item.calories+" Calories").appendTo(".a12"+item.id).css({position:"relative",top:"50px"});
+  $("<div>").addClass("fr half b12"+item.id).css({width:"50%",float:"right"}).appendTo("."+item.id);
+  $("<img>").attr("src",item.image).css({width:"110px",float:"right",position:"relative",bottom:"50px"}).appendTo(".b12"+item.id);
 
 }
-function renderBanner(truck){
-  var banner = `
-          <div class="imageContainer col-12">
-              <img class="foodtruckI" src="${truck.background}"/>
-          </div>
-          <div class="blackbanner col-12">
-            <img class="logot"src="${truck.logo}"/>
-            <p class="namef">${truck.name}</p>
-            <a href="/routes" class="link">Directions/Routes</a>
-          </div>`;
-var element = document.querySelector(".bannerContainer");
-element.innerHTML = banner;
-}
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
+
 }
 
-
-if(window.innerWidth < 490){
-  $(".top").css({opacity:0});
-  $("<img>").addClass("loader ll25").appendTo(".n").attr("src","./assets/images/loader.gif");
-setTimeout(()=>{renderMenu()},1000);
-}else{
-  $("body").text("Make Screen Smaller")
+function renderSelection(item){
+  console.log(item);
 }

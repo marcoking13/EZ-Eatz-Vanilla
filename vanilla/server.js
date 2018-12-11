@@ -36,7 +36,8 @@ app.post("/api/profileChange",(req,res)=>{
         name:profile.name,
         username:profile.username,
         phone:profile.phone,
-        language:profile.language
+        language:profile.language,
+        address:""
       },(err,data)=>{
         if(err){
           console.log(err);
@@ -52,7 +53,7 @@ app.get("/",(req,res)=>{
   res.sendFile(path.resolve(__dirname+"/public/index.html"));
 });
 app.get("/finder",(req,res)=>{
-  res.sendFile(path.resolve(__dirname+"/public/samples.html"));
+  res.sendFile(path.resolve(__dirname+"/public/finder.html"));
 });
 
 app.get("/auth/google",passport.authenticate("google",{
@@ -101,11 +102,49 @@ app.post("/api/currentFoodtruckSample",(req,res)=>{
       }
     });
   });
-
+app.get("/check",(req,res)=>{
+  res.sendFile(__dirname+"/public/check.html");
+})
 app.get("/api/edit",(req,res)=>{
   res.redirect("/profile");
 });
+//-----------------------------------------------------------------
+app.post("/api/currentItem",(req,res)=>{
+  console.log(req.body);
+  db.currentTruck.find({},(err,data)=>{
+    var menu = data[0].menu;
 
+    menu.map((catagory)=>{
+      if(req.body.catagory == catagory.catagory){
+        catagory.food.map((food)=>{
+          if(food.id == req.body.item){
+            db.currentItem.find({},(err,data)=>{
+              console.log(data);
+              if(data.length > 0){
+                console.log("FLAG")
+                db.currentItem.remove({});
+          }
+          });
+            db.currentItem.insert(food,(err,data)=>{
+              console.log("Data Successfully Enter",food.item);
+              res.redirect("/check");
+            });
+          }
+        });
+      }
+    });
+  });
+  db.currentFoodtruckSample.find({},(err,data)=>{
+    console.log(data.menu);
+  });
+});
+
+app.get("/api/currentItem",(req,res)=>{
+  db.currentItem.find({},(err,data)=>{
+    res.json(data);
+  });
+})
+//----------------------------------------------------------------------
 app.post("/data/cancel",(req,res)=>{
   db.currentCheckout.remove({});
   res.redirect("/menu");
@@ -123,5 +162,13 @@ app.get("/api/currentCheckout",(req,res)=>{
   });
 });
 app.get("/menu",(req,res)=>{
-    return res.sendFile(__dirname+"/public/menuSample.html");
+    return res.sendFile(__dirname+"/public/menu.html");
   });
+  app.get("/navbar",(req,res)=>{
+      return res.sendFile(__dirname+"/public/navs.html");
+    });
+
+app.post("/api/cancelItem",(req,res)=>{
+  db.currentItem.remove({});
+  res.redirect("/menu");
+});

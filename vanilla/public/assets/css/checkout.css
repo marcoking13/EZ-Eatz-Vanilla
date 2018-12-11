@@ -1,18 +1,6 @@
-.vis:hover{
-  background:#800000;
-}
-.cancel:hover{
-  color:#800000;
-}
+
 li{
   list-style-type: none;
-}
-.cancel:hover{
-  color:red !important;
-}
-@keyframes ghost{
-  0%{opacity:1}
-  100%{opacity:0}
 }
 .gho{
   opacity:0;

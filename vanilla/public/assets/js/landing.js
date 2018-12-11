@@ -1,9 +1,9 @@
 function renderModal(signup){
   $(".container2").empty();
-  $("<div>").addClass("modal modl col-6").attr("id","exampleModal").appendTo(".container2");
+  $("<div>").addClass("modal modl ml25 mt5 pb10 col-6").attr("id","exampleModal").appendTo(".container2");
   $("<div>").addClass("modal-dialog12").appendTo(".modl");
-  $("<div>").addClass("modal-content").appendTo(".modal-dialog12");
-  $("<div>").addClass("modal-header").appendTo(".modal-content");
+  $("<div>").addClass("modal-content bbsb pb5").appendTo(".modal-dialog12");
+  $("<div>").addClass("modal-header bb cw t-center").appendTo(".modal-content");
   $("<h5>").text("Title").addClass("modal-title").appendTo(".modal-header");
   $("<div>").addClass("modal-body").appendTo(".modal-content");
       if(signup){
@@ -26,8 +26,8 @@ function renderModal(signup){
 
 function inputMake(data,i,col){
   $("<div>").addClass("col-"+col+" col-g"+i).appendTo(".row-g");
-  $("<h5>").addClass("ce").text(data).appendTo(".col-g"+i);
-  $("<input>").attr("type",data).attr("name",data).addClass("form-control").attr("placeholder"," Enter "+data).appendTo(".col-g"+i);
+  $("<h5>").addClass("mt2.5").text(data).appendTo(".col-g"+i);
+  $("<input>").attr("type",data).attr("name",data).addClass("form-control mt2.5").attr("placeholder"," Enter "+data).appendTo(".col-g"+i);
 }
 //-------------------------------------------------------------------------
 $(".landButton").on("click",(event)=>{

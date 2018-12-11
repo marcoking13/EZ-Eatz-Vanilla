@@ -28,6 +28,7 @@ var profile = {
   picture:profile.photos[0].value,
   phone:"",
   language:"",
+  address:""
 }
     Customer.findOne({id:profile.id}).then((response)=>{
       if(response){

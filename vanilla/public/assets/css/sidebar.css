@@ -22,13 +22,6 @@
     display:block;
     transition: 0.3s;
 }
-.sidenav .item:hover{
-  background:#e6e6e6;
-  color:black !important;
-}
-.sidenav a:hover {
-    color: #f1f1f1;
-}
 .noborder{
   border:none !important;
 }
@@ -45,9 +38,7 @@
 
     border-radius:10px;
 }
-.closebtn:hover{
-  color:blue !important;
-}
+
 .profileImage{
   width:100px;height:100px;margin-left:20%;border-radius:50%;
 }
